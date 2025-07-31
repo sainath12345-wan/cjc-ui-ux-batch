@@ -1,0 +1,251 @@
+/* We write Grid CSS Here (Implementing the grid) */
+
+.container{
+    
+    
+    /* change the display property into grid(divide our div into rows and coloums)*/
+    
+    display: grid;
+
+    /* In how many coloumns divide this items. */
+    /* 
+    1) grid-template-columns: 100px 200px 300px;
+
+        here first coloums width is 100px 
+        here second coloums width is 200px
+        here third coloums width is 300px
+    
+    2) grid-template-columns: 100px 200px auto;
+
+        here firs coloumn width is 100px
+        here second coloumn width is 200px
+        here third coloumn width is remaning all width.
+
+    3) grid-template-columns: auto 200px auto;
+
+        here second coloumn acquires 200px width and remaning all width equally divided into 
+        coloumn first and third.
+    
+    4) grid-template-columns: auto auto auto;
+
+        here first coloumn, second coloumn and third coloumn divided whole width equally.
+    */
+    grid-template-columns: auto auto auto;
+
+
+
+    /* 
+    
+    grid-template-columns using fraction value (fr)
+
+    according to width of screen 1fr value will be sets. and then according 1fr value other value sets in multiple of 1fr.
+    
+    grid-template-columns: 1fr 2fr 3fr; 
+
+    1fr - set according to screen width.
+    2fr - 2 * 1fr
+    3fr - 3 * 1fr
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    1fr - set according to screen width.
+    here all coloumn width will be equal to 1fr.
+
+    
+    */
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /*
+    grid-template-columns: repeat(2,100px);
+    
+    In above property if we want to get similar width n no. of items then we use value as 
+    repeat(no. of coloumns in row , each item width)
+
+    repeat(first-parameter, second-parameter)
+
+    first-parameter - total number coloumns in row.
+    second-parameter - width of coloumn.
+    */
+    grid-template-columns: repeat(2,200px);
+
+
+    /* grid-template-rows: */
+
+    /* 
+    
+    grid-template-rows: 100px 200px 300px;
+
+    grid-template-rows is used to define the each row height.
+    
+    from above property values.
+
+    first-row height: 100px;
+    second-row height: 200px;
+    third-row height: 300px;
+    
+    */
+
+    /* grid-template-rows: 100px 200px 300px; */
+
+    /* 
+    
+    grid-template-rows: repeat(3,400px); 
+    
+    here above property apply gives three rows with same height (400px).
+
+    */
+    /* grid-template-rows: repeat(3,200px); */
+    
+
+    /* 
+    
+    grid-auto-rows: 200px; 
+    
+    By using above property we apply same height on all rows in grid (each row height is 200px).
+    */
+    grid-auto-rows: 50px;
+
+    
+    /* 
+    
+    grid-row-gap: 20px; 
+    
+    By using above property we can create gap between row.
+
+    grid-row-gap: 20px; means each row seperated by 20px.
+
+    */
+    grid-row-gap: 20px;
+
+    /* 
+    
+    grid-column-gap: 10px; 
+    
+    By using above property we can create gap between column
+
+    grid-column-gap: 10px; means each column seperated by 10px.
+    
+    */
+    grid-column-gap: 10px;
+
+    /* 
+    
+    grid-gap:20px ;
+
+    If We want to add same gap between row and colum then we use grid-gap.
+
+    grid-gap: 20px; means each row and column seperated by 20px.
+    
+    */
+    grid-gap:20px ;
+
+    /* 
+    
+    The grid-template-areas property specifies areas within the grid layout.
+
+    You can name grid items by using the grid-area property, and then reference to the name in the grid-template-areas property.
+
+    Each area is defined by apostrophes. Use a period sign to refer to a grid item with no name.
+
+
+
+    
+    grid-template-areas: 
+
+    "header header"
+    "sidebar content1"
+    "footer footer"
+    ; */
+   
+
+    /* 
+    
+    grid-auto-rows: 150px; 
+
+    Here all rows height will be 150px so that our text will be overflow but we have solve this problem in that so when our text is overflow the height of item will be increase as per text otherwise its height is must be equal as we defined the height.
+
+    above situation handled by following functin
+
+    grid-auto-rows: minmax();
+    */
+    grid-auto-rows: minmax(150px , auto);
+
+    /* Horizontally alignment */
+
+    /* justify-content: start; */
+    /* justify-content: end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly; */
+
+    /* Vertically alignment*/
+    align-items: center;
+    align-items: start;
+    align-items: end;
+    align-items: stretch;
+    align-items: baseline;
+    align-items: last baseline;
+    align-items: first baseline;
+    align-items: normal;
+
+}
+
+.grid-item-1{
+    /* grid-area: header; */
+    
+    /* 
+    
+    to change custom width of column as following way 
+    
+    grid-column-start: value;
+    grid-column-end: value;
+
+    value start from 1 to n;
+    */
+
+    
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+
+    /* 
+    
+    short hand for above 
+    
+    grid-column: start/end; 
+    
+    */
+
+    grid-column: 1/3;
+
+}
+
+.grid-item-2{
+    /* grid-area: sidebar; */
+    /* 
+    
+    to change custom height of column as following way 
+    
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    */
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    /* shorthand for above one */
+    grid-row: 2/4;
+
+
+   
+    
+}
+
+.grid-item-3{
+    /* grid-area: content1; */
+}
+
+.grid-item-4{
+    /* grid-area: footer; */
+}
+

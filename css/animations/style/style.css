@@ -1,0 +1,97 @@
+/*
+CSS : Animations
+
+*/
+
+.container{
+    width: 600px;
+    height: 600px;
+    background: darkblue;
+}
+
+.child{
+    width: 100px;
+    height: 100px;
+    background: red;
+
+    /* smoothness in animation is achived by using transition */
+
+    /* here apply transition at the time of transformation only  */
+    /* transition: transform 2s ease-in; */
+
+    /* here apply transition  on all parts when we hover the container (like on background also apply transition.) */
+    /* transition: all 2s ease-in; */
+
+
+    /* By using transition we can not move contiously to any element so that we use animations. */
+    
+    /* transition-timing-function: ease-in; */
+
+    /* animation : animation_name animation_time  animation_timing_function animation_iteration_count */
+
+    animation: round 2s ease-in backwards infinite alternate;
+    /* animation-direction: alternate; */
+
+    /* animation-fill-mode: forwards; */
+
+    /* animation-fill-mode: forwards; ---> where animationstop that its inital position. 
+    animation-fill-mode: backwards; ---> where from its animation start that its initial position.*/
+}
+
+
+/* transfrom effects : transform our text or elements in different ways.*/
+
+/* jab .container pe hover hoga tab .child pe kuch style chaiye */
+.container:hover > .child{
+
+    /* when we hover on container animation will be stoped and after removing from container animation will start again. */
+    animation-play-state: paused;
+
+    /* 
+    
+    transform: translateX(); ---> apply translation in x-direction  
+
+    transform: translateY(); ---> apply translation in y direction
+
+    transform: translateX() translateY(); ---> apply tranlation in tranlation in x-direction and y-direction at a time. as per defined value of translateX() translateY().
+
+    transform: translateX(20%); (moves 20% of child in x-direction)
+    transform: translate(100%); (moves 100% of child  in x-direction)
+    transform: translate(500%); (moves 500% of child  in x-direction)
+    
+    */
+
+    /* transform: translateX(500%); */
+    /* transform: translateY(500%); */
+    /* transform: translateX(500%) translateY(500%); */
+    
+    /* background-color: yellow;
+    transform: translateX(500%); */
+
+
+    
+}
+
+
+/* By using the @keyframes we define our animations (like round) */
+
+@keyframes round {
+    /* states in the animation */
+    /* initial , premidage, postmidage, end */
+
+    0%{
+        transform: translateX(0%);
+    }
+
+    33%{
+        transform: translateY(500%);
+    }
+
+    75%{
+        transform: translateX(500%) translateY(500%);
+    }
+
+    100%{
+        transform: translateX(500%);
+    }
+}

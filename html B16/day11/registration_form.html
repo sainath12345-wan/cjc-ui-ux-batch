@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+<!-- 
+    using form tag
+    
+    <form>
+        <label for="fname">Enter First Name : </label>
+        <input type="text" placeholder="Enter First Name" id="fname" name="first_name" required>
+
+        <br><br>
+
+        <label for="lname">Enter Last Name : </label>
+        <input type="text" placeholder="Enter Last Name" id="lname" name="last_name" required>
+
+        <br><br>
+
+        <label for="dob">Enter Date Of Birth : </label>
+        <input type="text" name="" id="dob" placeholder="yyyy/dd/mm"> 
+        <input type="date" name="" id="dob" name="dob" required >
+
+        <br><br>
+
+        <label for="email">Enter Mail : </label>
+        <input type="email" placeholder="Enter Mail" name="email" required>
+
+        <br><br>
+        <input type="submit" value="REGISTER">
+    </form>
+ -->
+
+    <form action="">
+        <table border="3pxS" cellspacing = '5px' cellpadding = '5px' style="border-collapse: collapse;">
+            <tbody >
+
+<!-- 
+                
+| Attribute                        | Description                                                                                         |
+| -------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `type="text"`                    | Specifies that this input is a single-line text field.                                              |
+| `placeholder="Enter First Name"` | Displays temporary text inside the input box to guide the user. Disappears when user starts typing. |
+| `id="fname"`                     | Assigns a unique identifier to the input field. Useful for linking with a `<label>` or JavaScript.  |
+| `name="first_name"`              | Specifies the name of the input. This is the key used when the form data is submitted.              |
+| `required`                       | Makes the input field mandatory. The form won't submit unless this field is filled.                 |
+| `style="width: 200px;"`          | Inline CSS style that sets the width of the input field to 200 pixels.                              |
+| `minlength="2"`                  | Specifies the **minimum number of characters** required. User must type at least 2 characters.      |
+| `maxlength="15"`                 | Specifies the **maximum number of characters** allowed. Prevents typing beyond 15 characters.       |
+
+-->
+                <tr>
+                    <td><label for="fname">Enter First Name : </label></td>
+                    <td><input type="text" placeholder="Enter First Name" id="fname" name="first_name" required style="width: 200px;" minlength="2" maxlength="15"></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Enter Last Name : </label></td>
+                    <td><input type="text" placeholder="Enter Last Name" id="lname" name="last_name" required style="width: 200px;"></td>
+                </tr>
+
+                    <!-- 
+                
+                    | Attribute               | Description                                                                                           |
+                    | ----------------------- | ----------------------------------------------------------------------------------------------------- |
+                    | `type="date"`           | Specifies that the input field is a date picker. It allows the user to select a date from a calendar. |
+                    | `id="dob"`              | Assigns a unique identifier to the input field. Useful for connecting to a `<label>` or JavaScript.   |
+                    | `name="dob"`            | The name assigned to the input field. Used as a key when submitting form data.                        |
+                    | `required`              | Makes the field mandatory. The form will not submit if this field is left empty.                      |
+                    | `style="width: 200px;"` | Sets the width of the date input field to 200 pixels using inline CSS.                                |
+
+
+                    | Attribute            | Description                                             |
+                    | -------------------- | ------------------------------------------------------- |
+                    | `min="YYYY-MM-DD"`   | Sets the **earliest** date that can be selected.        |
+                    | `max="YYYY-MM-DD"`   | Sets the **latest** date that can be selected.          |
+                    | `value="YYYY-MM-DD"` | Sets a default date that appears when the form loads.   |
+                    | `readonly`           | Makes the input non-editable but still visible.         |
+                    | `disabled`           | Disables the field so the user cannot interact with it. |
+
+                -->
+                <tr>
+                    <td><label for="dob">Enter Date Of Birth : </label></td>
+                    <td> <input type="date" id="dob" name="dob" required style="width: 200px;" ></td>
+                </tr>
+
+            <!-- 
+            
+            | Attribute                  | Description                                                                                                                         |
+            | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+            | `type="email"`             | Specifies that the input must be a valid email address. The browser will validate the format (e.g., must include `@` and a domain). |
+            | `placeholder="Enter Mail"` | Displays helper text inside the input box before the user types. It disappears once the user starts typing.                         |
+            | `name="email"`             | The key under which the input data is submitted in the form. Important for backend processing.                                      |
+            | `required`                 | Makes the input mandatory. The form won't submit unless the field is filled in with a valid email format.                           |
+            | `style="width: 200px;"`    | Sets the width of the input box to 200 pixels using inline CSS.                                                                     |
+
+            | Attribute   | Description                                                            |
+            | ----------- | ---------------------------------------------------------------------- |
+            | `id`        | Unique identifier for the element (useful for labels and scripts).     |
+            | `value`     | Pre-fills the input with a default email address.                      |
+            | `maxlength` | Sets the maximum number of characters the user can type.               |
+            | `pattern`   | Specifies a custom regular expression for more specific email formats. |
+            | `readonly`  | Makes the input visible but not editable.                              |
+            | `disabled`  | Disables the field completely.                                         | 
+            
+            -->
+
+
+                <tr>
+                    <td><label for="email">Enter Mail : </label></td>
+                    <td><input type="email" placeholder="Enter Mail" name="email" required style="width: 200px;"></td>
+                </tr>
+
+                <!-- 
+                
+                    | Attribute      | Description                                                                                                |
+                    | -------------- | ---------------------------------------------------------------------------------------------------------- |
+                    | `type="time"`  | Defines the input as a **time picker** for selecting a time (e.g., 14:30).                                 |
+                    | `name`         | The name used when submitting form data. Acts as the key in key-value pairs.                               |
+                    | `id`           | Unique identifier for the input field. Useful for labels or JavaScript access.                             |
+                    | `style`        | Inline CSS to control the appearance (e.g., `style="width: 200px;"`).                                      |
+                    | `required`     | Makes the field mandatory. The form cannot be submitted without selecting a time.                          |
+                    | `min`          | Sets the **earliest** selectable time. Format: `"HH:MM"` (e.g., `min="09:00"`).                            |
+                    | `max`          | Sets the **latest** selectable time. Format: `"HH:MM"` (e.g., `max="18:00"`).                              |
+                    | `value`        | Pre-fills the input with a default time. Format: `"HH:MM"` (e.g., `value="10:30"`).                        |
+                    | `step`         | Sets the interval between available times (in seconds). For example: `step="900"` for 15-minute intervals. |
+                    | `disabled`     | Disables the input so the user cannot select or change the time.                                           |
+                    | `readonly`     | Makes the input uneditable but keeps the value visible. Not supported by all browsers for time inputs.     |
+                    | `autocomplete` | Suggests previously entered values (not widely used for time inputs).                                      |
+
+                
+                -->
+                
+                <tr>
+                    <td><label for="time">Select Time : </label></td>
+                    <td><input type="time" name="time" id="time" style="width: 200px;"></td>
+                </tr>
+
+                <!-- 
+                
+                    | Attribute               | Description                                                                                                |
+                    | ----------------------- | ---------------------------------------------------------------------------------------------------------- |
+                    | `type="datetime-local"` | Specifies that the input allows the user to select both **date and time**, without a time zone.            |
+                    | `id="date_time"`        | Provides a unique identifier for the input field. Useful for linking with a `<label>` or using JavaScript. |
+                    | `name="date_time"`      | Used as the key when submitting form data. It helps identify the input's data on the server side.          |
+                    | `style="width: 200px;"` | Inline CSS that sets the input field’s width to 200 pixels.                                                |
+
+                    | Attribute                  | Description                                                                                                |
+                    | -------------------------- | ---------------------------------------------------------------------------------------------------------- |
+                    | `required`                 | Makes the field mandatory before the form is submitted.                                                    |
+                    | `min="YYYY-MM-DDTHH:MM"`   | Sets the **earliest** selectable date and time.                                                            |
+                    | `max="YYYY-MM-DDTHH:MM"`   | Sets the **latest** selectable date and time.                                                              |
+                    | `value="YYYY-MM-DDTHH:MM"` | Sets a default date and time.                                                                              |
+                    | `step="60"`                | Sets the allowed time intervals (in seconds). E.g., `step="900"` = 15-minute intervals.                    |
+                    | `disabled`                 | Disables the input field, making it non-editable.                                                          |
+                    | `readonly`                 | Prevents the user from editing the field directly (not fully supported on datetime-local in all browsers). |
+
+
+
+                -->
+                <tr>
+                    <td><label for="date_time">Select Date and Time : </label></td>
+                    <td><input type="datetime-local" id="date_time" name="date_time" style="width: 200px;"></td>
+                </tr>
+
+                <!-- 
+                
+                    | Attribute               | Description                                                                               |
+                    | ----------------------- | ----------------------------------------------------------------------------------------- |
+                    | `type="month"`          | Allows the user to select a **month and year** only (no specific day). Format: `YYYY-MM`. |
+                    | `id="month"`            | Unique identifier for the input element. Useful for labels or JavaScript.                 |
+                    | `name="month"`          | The key name under which the selected month will be submitted with the form data.         |
+                    | `style="width: 200px;"` | Inline CSS that sets the width of the input box to 200 pixels.                            |
+
+                    | Attribute         | Description                                                                   |
+                    | ----------------- | ----------------------------------------------------------------------------- |
+                    | `required`        | Makes the month selection mandatory.                                          |
+                    | `min="YYYY-MM"`   | Sets the **earliest** month the user can select (e.g., `min="2020-01"`).      |
+                    | `max="YYYY-MM"`   | Sets the **latest** month the user can select (e.g., `max="2025-12"`).        |
+                    | `value="YYYY-MM"` | Sets a **default** month value when the page loads (e.g., `value="2025-07"`). |
+                    | `disabled`        | Disables the input so it's not interactive.                                   |
+                    | `readonly`        | Prevents editing (though not well-supported for this input type).             |
+
+
+                
+                -->
+                <tr>
+                    <td><label for="month">Select Month and Year</label></td>
+                    <td><input type="month" id="month" name="month" style="width: 200px;"></td>
+                </tr>
+
+                <!-- 
+                
+                    | Attribute           | Description                                                                                 |
+                    | ------------------- | ------------------------------------------------------------------------------------------- |
+                    | `type="radio"`      | Defines the input as a radio button, allowing **single selection** within a group.          |
+                    | `id`                | Unique identifier for the radio button. Used to associate the `<label>` via `for`.          |
+                    | `name="gender"`     | All buttons with the **same name** belong to the same group — only **one can be selected**. |
+                    | `value`             | The actual data sent to the server when the radio button is selected.                       |
+                    | `required`          | Makes it mandatory to select **one** option before the form can be submitted.               |
+                    | `<label for="...">` | Clicking the label selects the radio button it's associated with via the matching `id`.     |
+
+                    | Attribute  | Description                                        |
+                    | ---------- | -------------------------------------------------- |
+                    | `checked`  | Preselects that radio button when the form loads.  |
+                    | `disabled` | Disables the radio button so it can't be selected. |
+
+                
+                -->
+                <tr>
+                    <td><label for="gender">Select Gender : </label></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+
+                        <input type="radio" id="other" name="gender" value="female" required>
+                        <label for="other">Other</label>
+                    </td>
+                </tr>
+
+                <!-- 
+                
+                    1. <select> 
+
+
+                        | Attribute   | Description                                                                                  |
+                        | ----------- | -------------------------------------------------------------------------------------------- |
+                        | `name`      | Specifies the **name** of the dropdown (used when submitting the form).                      |
+                        | `id`        | Specifies a **unique identifier**; useful for JavaScript and `<label for="id">`.             |
+                        | `required`  | Makes it mandatory to select a value before form submission.                                 |
+                        | `multiple`  | Allows **multiple selections** in the dropdown (user must hold Ctrl/Cmd to select multiple). |
+                        | `size`      | Displays the number of **visible options** in the dropdown without scrolling.                |
+                        | `disabled`  | Disables the dropdown (it becomes unselectable).                                             |
+                        | `autofocus` | Automatically focuses on this dropdown when the page loads.                                  |
+                        | `style`     | Used to apply **inline CSS styles**, like width or color.                                    |
+                        | `class`     | Used to apply **external or internal CSS styles** via class selectors.                       |
+                                                                             
+                    2. <option> Tag – Individual Items in Dropdown
+
+                        | Attribute  | Description                                                                                |
+                        | ---------- | ------------------------------------------------------------------------------------------ |
+                        | `value`    | The actual **data value** sent to the server if this option is selected.                   |
+                        | `selected` | Preselects this option when the page loads.                                                |
+                        | `disabled` | Disables this option (it appears grayed out and cannot be selected).                       |
+                        | `label`    | Provides a **short label** for the option (rarely used; used in mobile or assistive tech). |
+                        | `style`    | Inline styling for the option.                                                             |
+                        | `class`    | CSS class for styling the option.                                                          |
+                    
+                    3. <optgroup> Tag – Group of Related Options
+
+                        | Attribute  | Description                                                                           |
+                        | ---------- | ------------------------------------------------------------------------------------- |
+                        | `label`    | **Required**. Describes the group of options. Displayed as a heading in the dropdown. |
+                        | `disabled` | Disables the entire group of options.                                                 |
+                        | `style`    | Inline CSS styling for the group label.                                               |
+                        | `class`    | CSS class to style the group label.                                                   |
+
+
+                
+                -->
+                <tr>
+                    <td><label for="state">Select State : </label></td>
+                    <td>
+                        <select name="state" required id="state" size="3" style="width: 200px;" >
+                            <!-- if you want to apply required then remove value="" from select state to show proper error  -->
+                            <!-- <option value="" >Select State</option>  -->
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Gujrat">Gujrat</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="city">Select City : </label></td>
+                    <td>
+                        <select name="City" id="city" style="width: 200px;">
+                             <!-- if you want to apply required then remove value="" from select state to show proper error  -->
+                            <!-- <option value="">Select City</option> -->
+                            <optgroup label="Maharashtra">
+                                <option value="pune">Pune</option>
+                                <option value="mumbai">Mumbai</option>
+                                <option value="nagpur">Nagpur</option>
+                                <option value="amravati">Amravati</option>
+                            </optgroup>
+                            <optgroup label="Rajasthan">
+                                <option value="jaipur">Jaipur</option>
+                                <option value="bikaner">Bikaner</option>
+                                <option value="udaipur">Udaipur</option>
+                            </optgroup>
+                            <optgroup label="Madhya Pradesh">
+                                <option value="indor">Indor</option>
+                                <option value="bhopal">Bhopal</option>
+                            </optgroup>
+                    
+                            <optgroup label="Uttar Pradesh">
+                                <option value="kanpur">Kanpur</option>
+                                <option value="mirzapur">Mirzapur</option>
+                            </optgroup>
+                            <optgroup label="Himachal Pradesh">
+                                <option value="manali">Manali</option>
+                                <option value="shimala">Shimala</option>
+                            </optgroup>
+                            <optgroup label="Gujrat">
+                                <option value="surat">Surat</option>
+                                <option value="gandhinagar">Gandhinagar</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- 
+                
+                    | Attribute           | Description                                                                                       |
+                    | ------------------- | ------------------------------------------------------------------------------------------------- |
+                    | `cols="25"`         | Specifies the **visible width** of the textarea in characters (not pixels).                       |
+                    | `rows="5"`          | Specifies the **visible height** of the textarea in lines.                                        |
+                    | `name="address"`    | Sets the **name** used when submitting the form data. Acts as the key for this input’s value.     |
+                    | `id="address"`      | Unique identifier; links the textarea with `<label for="address">` and can be used in JavaScript. |
+                    | `placeholder="..."` | Displays **example or hint text** inside the textarea until the user types something.             |
+
+                    | Attribute                 | Description                                                    |
+                    | ------------------------- | -------------------------------------------------------------- |
+                    | `maxlength`               | Limits the number of characters that can be typed.             |
+                    | `required`                | Makes the field **mandatory** before form submission.          |
+                    | `readonly`                | Makes the field non-editable by the user (read-only).          |
+                    | `disabled`                | Disables the field entirely (grayed out and not sent in form). |
+                    | `wrap="soft"` or `"hard"` | Controls how text wraps inside the textarea.                   |
+
+
+                -->
+                <tr>
+                    <!-- if you want align Enter Address : label at top of td then apply follwing style in td tag (style="vertical-align: top;") -->
+                    <td><label for="address">Enter Address : </label></td>
+                    <td>
+                        <!-- 
+                        cols ==> represent how much character shown in single row.
+                        rows ==> represent how much rows present in text area.
+                        -->
+                        <textarea cols="25" rows="5" name="address" id="address" placeholder="Ex. Flat No. 302, Wing No. B, Shri Swami Saindhya Society, Karve Nagar - 411052"></textarea>
+                    </td>
+                </tr>
+
+                <!-- 
+                
+                    | Attribute         | Description                                                                                     |
+                    | ----------------- | ----------------------------------------------------------------------------------------------- |
+                    | `type="checkbox"` | Specifies that the input is a checkbox.                                                         |
+                    | `name`            | Groups the checkbox values under a specific name. Useful when submitting a form.                |
+                    | `value`           | The value sent to the server if the checkbox is checked.                                        |
+                    | `checked`         | Makes the checkbox **pre-selected (checked)** when the page loads.                              |
+                    | `id`              | Assigns a unique identifier to the checkbox. Used with `<label>` for accessibility.             |
+                    | `class`           | Assigns one or more CSS classes for styling.                                                    |
+                    | `disabled`        | Disables the checkbox so the user cannot interact with it.                                      |
+                    | `required`        | Makes it mandatory to check this box before submitting the form (used with only one checkbox).  |
+                    | `readonly`        | Not applicable for checkboxes (use `disabled` instead).                                         |
+                    | `onclick`         | Executes JavaScript when the checkbox is clicked.                                               |
+                    | `autofocus`       | Automatically focuses on this checkbox when the page loads.                                     |
+                    | `form`            | Associates the checkbox with a specific `<form>` by ID, if not nested inside the form directly. |
+
+
+                -->
+                <tr>
+                    <td><label for="course">Select Course : </label></td>
+                    <td>
+                        <input type="checkbox" name="courses" id="java" value="java">
+                        <label for="java">Java</label>
+                        <br>
+
+                        <input type="checkbox" name="courses" id="python" value="python">
+                        <label for="python">Python</label>
+                        <br>
+
+                        <input type="checkbox" name="courses" id="javascript" value="javascript">
+                        <label for="javascript">Javascript</label>
+                        <br>
+
+                        <input type="checkbox" name="courses" id="react" value="react">
+                        <label for="react">React</label>
+                        <br>
+
+                        <input type="checkbox" name="courses" id="angular" value="angular">
+                        <label for="angular">Angular</label>
+                        <br>
+
+                        <input type="checkbox" name="courses" id="bootstrap" checked disabled value="bootstrap">
+                        <label for="bootstrap">Bootstrap</label>
+                    </td>
+                </tr>
+
+                <!-- 
+                | Attribute     | Description                                                                                               |
+                | ------------- | --------------------------------------------------------------------------------------------------------- |
+                | `type="file"` | Specifies that the input allows file(s) selection.                                                        |
+                | `name`        | Name of the input field used when the form is submitted.                                                  |
+                | `id`          | Unique identifier for the element. Often used with `<label>`.                                             |
+                | `class`       | Assigns CSS classes for styling.                                                                          |
+                | `accept`      | Specifies the types of files that the server accepts (by MIME type or extension).                         |
+                | `multiple`    | Allows selecting **more than one** file.                                                                  |
+                | `disabled`    | Disables the input so users cannot interact with it.                                                      |
+                | `required`    | Makes it mandatory to select at least one file before submitting the form.                                |
+                | `form`        | Associates the file input with a specific form using its `id`, even if it is outside the `<form>` tag.    |
+                | `capture`     | (For mobile) Directly opens the camera or mic to capture media (e.g., photo/audio). Useful with `accept`. | 
+                -->
+
+                
+                <tr>
+                    <td><label for="file">Select File :</label></td>
+                    <td>
+                        <input type="file" id="file" accept=".pdf , .jpeg, .png" name="file" required multiple >
+                    </td>
+                </tr>
+
+                <!-- 
+                
+                Attributes Explanation (for <input type="submit">)
+
+                    | Attribute          | Description                                                                                     |
+                    | ------------------ | ----------------------------------------------------------------------------------------------- |
+                    | `type="submit"`    | Specifies that the input is a **submit button**. When clicked, it submits the form it's inside. |
+                    | `value="REGISTER"` | Sets the **label/text** displayed on the button (visible to the user).                          |
+
+                Attributes Explanation (for <input type="reset">)
+
+                    | Attribute                   | Description                                                                                                          |
+                    | --------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+                    | `type="reset"`              | Specifies that the input is a **reset button**. When clicked, it **clears all form fields** to their default values. |
+                    | `value="Clear All field’s"` | Sets the **text displayed** on the button. This is what the user sees.                                               |
+
+                    | Attribute  | Description                                                           |
+                    | ---------- | --------------------------------------------------------------------- |
+                    | `id`       | Provides a **unique identifier** for CSS or JavaScript.               |
+                    | `name`     | Gives a name to the button, though not often used with reset buttons. |
+                    | `class`    | Assigns a **CSS class** for styling the button.                       |
+                    | `style`    | Inline CSS styling (e.g., `style="background-color: red;"`).          |
+                    | `disabled` | Disables the button (it appears grayed out and cannot be clicked).    |
+
+
+                -->
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="REGISTER">
+                        <input type="reset" value="Clear All field’s">
+                    </td>
+                    
+                </tr>
+
+            </tbody>
+        </table>
+    </form>
+    
+</body>
+</html>
+
+
+<!-- http://127.0.0.1:5500/registration_form.html?
+first_name=sainath&
+last_name=sainath&
+dob=2025-06-19&
+email=wankhedesainath1431%40gmail.com&
+time=17%3A33&
+date_time=2025-07-12T17%3A32&
+month=2025-06&
+gender=male -->
+
+<!-- http://127.0.0.1:5500/registration_form.html?first_name=sainath&last_name=sainath&dob=2025-06-19&email=wankhedesainath1431%40gmail.com&time=18%3A55&date_time=2025-07-05T18%3A53&month=2025-06&gender=male&state=&City= -->
+
+<!-- http://127.0.0.1:5500/registration_form.html?first_name=sainath&last_name=sainath&dob=2025-07-04&email=wankhedesainath1431%40gmail.com&time=18%3A00&date_time=2025-07-19T18%3A57&month=2025-08&gender=female&state=Rajasthan&City=pune -->

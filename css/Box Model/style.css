@@ -1,0 +1,319 @@
+/* 
+
+Box Model
+
+*) Box Model helps you to understand how elements are positioned and displayed on a website.
+
+*) All elements on a web page are interpreted by the browser as "living" inside of a box. This is what is meant by the box model.
+
+*) The box model includes : 
+
+    - The dimensions of an element's box. (dimensions like width , height ).
+
+    - The borders of an element's box. ( border of element box is already learnt in the last topic. )
+
+    - The padding of an element's box.
+
+    - The margins of an element's box.
+    
+*) Box Model Properties
+
+    - The content of any HTML element has two dimensions width and height.
+
+    - The dimension of the element can be modified with the properties width and height.
+
+    - Example :
+
+        #main{
+            width : 400px;
+            height : 1000px;
+        }
+
+*) Borders
+
+    - A border is a line that surrounds an element, like a frame around a painting.
+
+    - Different styles, width, color, radius can be kept for HTML elements with help of border properties.
+
+        border-style
+        border-width
+        border-color
+        border-radius
+
+*)Padding
+    - The space between the content and the border of the box is known as the padding.
+
+    - For example, padding is a space between the picture and it's frame.
+
+    - The space can be modified by using the padding property in css.
+
+    -Exmaple : #main{ padding : 40px; }
+
+    - The padding property is often used to expand the background color and make the content look spacious.
+
+    - The padding property can be specifically used to all four sides :
+
+        padding-top : 40px;
+        padding-right : 30px;
+        padding-bottom : 20px;
+        padding-left : 10px;
+
+    - padding shorthand property let's you specify all the padding properties as values on a single line.
+
+    - 4 values - Example : padding : 6px 11px 4px 9px;
+
+        padding-top : 6px;
+        padding-right : 11px;
+        padding-bottom : 4px;
+        padding-left : 9px;
+
+    - 3 values - Example : padding : 5px 10px 20px;
+
+        padding-top : 5px;
+        padding-right : 10px; and padding-bottom : 10px;
+        padding-left : 20px;
+    
+    - 2 values - Example : padding : 6px 11px;
+
+        padding-top : 6px; and padding-bottom : 6px;
+        padding-right : 11px; and padding-left : 11px;
+    
+*)Margin
+
+    - Margin refers to the space directly outside the box, or margin can be referred to the space between the border of two elements.
+
+    - The margin property of the css is used to specify the size of the space between the borders of two elements.
+
+    - Example : 
+
+       #p{
+        margin : 20px; 
+       }
+    
+    - margin shorthand property.
+
+         - margin shorthand property let's you specify all the margin properties as values on a single line.
+
+        - 4 values - Example :margin : 6px 11px 4px 9px;
+
+            margin-top : 6px;
+            margin-right : 11px;
+            margin-bottom : 4px;
+            margin-left : 9px;
+
+        - 3 values - Example : margin : 5px 10px 20px;
+
+            margin-top : 5px;
+            margin-right : 10px; and margin-bottom : 10px;
+            margin-left : 20px;
+        
+        - 2 values - Example : margin : 6px 11px;
+
+            margin-top : 6px; and margin-bottom : 6px;
+            margin-right : 11px; and margin-left : 11px;
+
+    - Margin (margin : auto;)
+        
+        - The margin property also allows you to center content, with help of the value "auto".heading
+
+        - Example : 
+        div.headline{
+            width : 400px;
+            margin : 0 auto;        
+        }
+
+        - The top and bottom margin of the div element will be set to 0.
+
+        - The auto value instructs the browser to adjust the left and right margins until the element is centered within its containing element.
+
+    - Margin Collapse
+
+        - padding is space added inside an element's border, while margin is space added outside an element's border.
+
+        - one additional difference is that top and bottom margins, also called vertical margins, collapse, while top an bottom padding does not.
+
+        - Horizontal margins(left and right), like padding, are always displayed and added together.
+
+        - Example :
+        #elementa{
+            margin : 10px;
+        }
+        #elementb{
+            margin : 10px;
+        }
+        #elementc{
+            margin : 30px 10px;
+        }
+
+    - Minimum And Maximum Width And Height.
+
+        - The web page can be viewed though displays of differing screen size, the content on the web page can suffer from those changes in size.
+
+        - To avoid this problem, CSS differs two properties that can limit how narrow or how wide an element's box can be sized to:
+            
+            - min-width :  this property ensures a minimum width of an element's box.
+
+            - max-width : this property ensures a maximum width of an element's box.
+
+        - Example :
+        
+        p{
+         min-width : 300px;
+         max-width : 600px;
+        }
+
+        - similar to width, You can also limit the minimum and maximum height of an element : 
+
+            - min-height : this property ensures a minimum height for an element's box.
+
+            - max-height :  this property ensures a maximum height of an element's box.
+
+            - Example : 
+            p{
+                min-height : 150px;
+                max-height : 300px;
+            }
+    
+    - Overflow
+
+        - The overflow property controls what happens to content that spills, or overflows, outside its box. The most commonly used values are :
+
+        - hidden : when set to this value, any content that overflows will be hidden from view.
+
+        - scroll : when set to this value, a scroll bar will be added to the element's box so that the rest of the content can be viewed by scrolling.
+
+        - visible - when set to this value, the overflow content will be displayed outside of the containing element. Note, this is the default value.
+
+        - Exmaple
+        p{
+            overflow : scroll;3
+        }
+
+
+
+
+*/
+
+
+*{
+    background-color: #b0afaf;
+    /* apply margin on all elements inside body */
+    margin: 0;
+}
+
+
+/* h1{
+    border: 10px solid black;
+} */
+
+
+.heading{
+    background-color: rgb(90, 90, 243);
+    color: #fff;
+    border: 4px solid #111;
+    /* margin apply on all four sides */
+    margin: 0;
+    /* padding apply on all four sides */
+    padding: 20px;
+    /* it overrides previous margin of .heading class and apply margin to all four sides.*/
+    margin: 10px;
+
+
+    /* 
+    first-way to define padding
+    
+    padding-top: value;
+    padding-right: value;
+    padding-bottom: value;
+    padding-left: value;
+    
+    where we define each direction padding seperately by using seperate padding property.
+
+    */
+
+    padding-top: 10px; /*padding apply on top direction*/
+    padding-right: 20px; /*padding apply on right direction*/
+    padding-bottom: 30px; /*padding apply on bottom direction*/
+    padding-left: 40px; /*padding apply on left direction*/
+
+
+    /* 
+    
+    second-way to define padding
+    
+    padding : value1 value2;
+
+    value1 for top and bottom direction.
+    value2 for left and right direction.
+
+
+
+    */
+
+    padding: 10px 20px; /*padding 10px apply on top and bottom and 20px apply on left and right.*/
+
+    padding : 10px auto; /*padding 10px apply on top and bottom and and equal px padding apply on left and right because of auto value.*/
+
+    margin: 40px auto; /*margin apply on top and bottom is 40px and apply margin on left and right apply equal px so that it become align center.*/
+
+    width: 50%;
+    /* 
+    
+    third-way to define padding 
+    
+    padding : value1 value2 value3;
+
+    value1 for top direction
+    value2 for right and bottom direction
+    value3 for bottom direction
+
+    */
+} 
+
+p{
+    background-color: #fff;
+    padding: 10px 20px;
+    text-align: justify;
+    margin: 10px;
+    /* 
+
+    min-width is used to define the minimum width of the p element. 
+    
+    max-width is used to define the maximum width of the p element.
+    
+    min-height is used to define the minimum width of the p element. 
+    
+    max-height is used to define the maximum width of the p element.
+
+    if we want to apply any style mandatory / compulsory then we use !important for that style so that style will be get higher priority and it will be complusorily apply on that element.
+
+    when we apply max-width , max-height such time our content may overflow outside the element so that to avoid such overflowing of content will be achieved by using following property.
+
+    syntax : overflow : value;
+
+    overflow :  hidder;  the overflow content will be hide.
+    overflow : visible; it is default property that shows the overflowed content from the element on the website.
+    overflow : scroll; it is property that hides content in that element and provide scroll bar to see the hided content of that element.
+    
+
+    overflow-y: value; if our content overflow in vertical direction then such condition will be handle by this overflow-y : value property.
+
+    Exmaple : overflow-y: scroll;
+
+    overflow-x: value; if our content overflow in Horizontal direction then such condition will be handle by this overflow-x : value property.
+
+    Example :  overflow-x: scroll;
+
+    overflow : auto;  this property automatically detects in which direction content will be overflow out of element then in that direction it will provide scroll bar to handle such situation.
+
+
+
+
+
+
+    */
+    /* max-width: 50px !important; */
+    max-height: 50px !important;
+
+    
+}

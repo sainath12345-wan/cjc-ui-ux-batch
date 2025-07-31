@@ -1,0 +1,116 @@
+/* 
+
+Media Queries 
+
+Introduction to media queries.
+
+Media queries are a feature of css that allows you to apply different styles to a webpage basedon the characteristics of the device it is being displayed on. this can be useful for creating responsive designs that look good on a variety of different devices, such as smartphones, tablets, and desktop computers.
+
+Real-life scenario on how media queries are useful.
+
+
+
+Advantage to using media queries in Your web developement projects : 
+
+1. Responsive Design ( we reach to more users )
+2. Customized user experience
+3. Improved performance
+4. Enhanced accessibility
+5. Simplified maintenance
+
+
+Media Query In action 
+
+
+
+
+
+
+*/
+
+/* 
+
+Day 2:
+
+The General Syntax of Media Queries : 
+
+@media media_target media_feature and (media_feature : value){
+    // style //
+}
+
+@media : keyword for media query . it is mandetory.
+media_target : which type of screen / device want to apply style .  it is optional.
+media_feature : 
+
+viewport : all screen are where our webpage is seen all that area on screen is called viewport.
+
+As device dimesions are changes the viewport also changes as per device dimesions.
+
+<meta name = "viewport"  content="width = device-width , initial-scale = 1" />
+
+meta tag : By using meta we provide extra information about our webpage to browser.
+name="viewport" : browser understands this are viewport properties.
+width = device-width : webpage width (Viewport) width always equal to device - width.
+initial-scale = 1: content can not be zoomed in / zoomed out.
+
+note : if we remove the meta tag from the html page so that media query is not working properly in some of the devices so that we always add the meta tag in html file.
+
+
+@media (min-width : width_value){
+    // apply this style on width_value or greater than width_value width screen sizes.
+}
+
+@media (max-width : width_value){
+    // apply this style on width_value or less than width_value width screen sizes.
+}
+
+@media (width : width_value){
+    // apply this style only on defined width_value screen sizes.
+}
+
+
+
+- Writing Media Query for Different Screens
+
+Why Media Queries are Popular ?
+
+    - Media queires have become popular for several reasons : 
+        
+        1) The increasing number of devices.
+        2) The rise of mobile browsing.
+        3) Improving User Experience.
+        4) Better accessibility.
+        5) Better Performance.
+        6) Print Supp
+
+Typical Breakpoints 
+
+    - There are tons of screens and devices with different heights and width, os it is hard to create an exact breakpoint for each device. To keep things simple you could target five groups :
+
+    // Extra small devices (phones, 600px and down)
+    @media only screen and (max-width : 600px){
+    
+    }
+
+    //small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width : 600px){
+    
+    }
+
+    //Medium devices (landscape tablets, 768px and up)
+    @media only screen and (min-width : 768px){
+    
+    }
+
+    //Large devices (laptop/desktops , 992px and up)
+    @media only screen and (min-width : 992px){
+    
+    }
+
+    //Extra large devices (large laptops and desktops , 1200px and up)
+    @media only screen and (min-width  : 1200px){
+    
+    }
+
+
+*/

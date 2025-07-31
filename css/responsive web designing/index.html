@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Designing : Media Queries</title>
+    <link rel="stylesheet" href="./media queries/style.css">
+    <style>
+        body{
+            background-color: red;
+        }
+
+        div{
+            font-size: x-large;
+            text-align: center;
+        }
+
+        div::after{
+            content: 'welcome to the demo';
+        }
+
+
+        
+        /* 
+        
+        By using max-width property 
+
+        @media (max-width : 400px){
+            body{
+                background-color: lightgoldenrodyellow;
+
+            }
+            div::after{
+                content : 'very small';
+            }
+        } 
+            
+        */
+
+        /*
+        By using min-width property
+
+        @media (min-width : 900px){
+            
+            if viewport is atleast 900px then this style will apply.
+           
+            body{
+                background-color: aquamarine;
+            }
+
+            div::after{
+                content: 'Woah its working.';
+            }
+        } 
+            
+        */
+
+        /*         
+
+        @media (min-width : 900px){
+            
+            if viewport is atleast 900px then this style will apply.
+           
+            body{
+                background-color: rgb(255, 127, 251);
+            }
+        }
+        @media (min-width : 760px){
+            
+            if viewport is atleast 760px then this style will apply.
+           
+            body{
+                background-color: purple;
+            }
+
+            div::after{
+                content: 'smaller screen';
+            }
+        }
+            
+        */
+
+        /* Media Query apply in Range */
+        /* this media query apply in between 400px and 768px */
+        
+        /* 
+         @media (max-width : 400px){
+            body{
+                background-color: lightgoldenrodyellow;
+
+            }
+            div::after{
+                content : 'very small';
+            }
+        } 
+
+        @media (min-width : 400px) and (max-width : 768px){
+            body{
+                background-color: greenyellow;
+            }
+
+            div::after{
+                content : 'Mid size device';
+            }
+        }
+
+        @media (min-width : 768px) and (max-width : 900px){
+            body{
+                background-color: purple;
+            }
+
+            div::after{
+                content : 'smaller size device'
+            }
+        }
+       
+        @media (min-width : 900px){
+            body{
+                background-color: red;
+            }
+
+            div::after{
+                content  : 'large size device'
+            }
+        } 
+        
+        */
+
+        /* another way to write the css media query in ranges*/
+
+        @media (width < 400px){
+            body{
+                background-color:whitesmoke;
+            }
+
+            div::after{
+                content : 'very small screen size';
+            }
+        }
+
+        @media (400px <= width < 768px){
+            body{
+                background-color: greenyellow;
+            }
+
+            div::after{
+                content : 'small sized screen';
+            }
+        }
+
+        @media (768px <= width < 900px){
+            body{
+                background-color: purple;
+            }
+            
+            div::after{
+                content : 'medium sized screen';
+            }
+        }
+
+        @media (width >= 900px){
+            body{
+                background-color: red;
+            }
+
+            div::after{
+                content : 'large sized screen';
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

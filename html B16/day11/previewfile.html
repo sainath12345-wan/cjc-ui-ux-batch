@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Preview</title>
+</head>
+<body>
+
+    <h2>Upload and Preview Multiple Images</h2>
+
+    <form>
+        <input type="file"  id="fileUpload" accept="image/*" multiple onchange="showPreviews(event);">
+        <br><br>
+        <div id="imagePreviewContainer"></div>
+    </form>
+    
+    <script>
+        function showPreviews(event){
+            const files = event.target.files;
+            const previewContainer = document.getElementById('imagePreviewContainer');
+            previewContainer.innerHTML = '';
+
+            Array.from(files).forEach((file)=>{
+                if(file){
+                    const reader = new FileReader();
+                    reader.onload = function(e){
+                        const imgElement = document.createElement('img');
+                        imgElement.src = e.target.result;
+                        imgElement.style.maxWidth = '150px';
+                        imgElement.style.margin = '10px';
+                        previewContainer.appendChild(imgElement);
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

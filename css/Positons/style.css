@@ -1,0 +1,314 @@
+/* 
+
+
+Block Level Elements
+
+    - Block level elements create a full width of their parent elements, and they prevent other elements appearing in the same horizontal line.
+
+    - Block level elements take up their own line of space and do not overlap with each other.
+
+    - The default position of the block level elements is to appear on the left side of the browser.
+
+
+
+CSS :  Postions Property.
+
+    - The CSS position property is used to set position for an element.
+
+    - The CSS position property is also used to place an element behind another and also useful scripted animation effects.
+
+    - The CSS position property can take following possible values:
+
+        a) static
+        b) relative
+        c) absolute
+        d) fixed.
+
+position : static 
+
+    - The default value of the css position property is static.
+    - HTML elements are positioned static by default.
+    - An element with position: static; is not positioned in any special way.
+    - It is not affected by top , right, left, bottom properties.
+
+position : relative
+
+    - The relative position property is used to set the element relative to its normal (current) position.
+
+    - Example : 
+    .green-box{
+        background-color : green;
+        position : relative;
+    }
+
+    - The code in the above example instructs the browser to place the .green-box element in relative position.
+
+    - But it does not specify where the .green-box element should be positioned. This can be done by accompanying the position declaration with any one of the following offset properties.
+
+    - Offset properties : 
+
+        top : moves the element down from the top.
+        bottom : moves the element up from the bottom.
+        left : moves the element away from the left to right side.
+        right : moves the element from the right to left side.
+
+    - The values of the offset properties can be in pixels, ems, percentages,...
+
+position : absolute;
+
+    - When an element's position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page.
+
+    - The element will be positioned relative to its closet positioned parent element, while offset properties can be used to determine the final position from there.
+
+    - Example :
+    
+    header{
+        background-color : #466995;
+        border-bottom : 1px solid #466995;
+        position : absolute;
+        width : 100%;
+    }
+
+position : fixed;
+
+    - When the element position is set to absolute, the element will scroll when the user scrolls the document.
+
+    - We can fix an element to a specific position on the page(regardless of user scrolling) by setting its position to fixed, and accompanying it with the familiar offset properties top , bottom, left, and right.
+
+    - Example :
+    header{
+        background-color : #466995;
+        border-bottom :  1px solid #466995;
+        position : fixed;
+    }
+
+position : sticky;
+
+    - The sticky value is another position value that keeps an element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled further.
+
+    - This is done by using the sticky value along with the familiar offset properties, as well as one new one.
+
+    - A sticky element toggles between relative and fixed, depending on the scroll position. it is positioned relative until a given offset position is met in the viewport then it "sticks" in  place (like position:fixed).
+
+
+Z-index 
+
+    - When elements on a webpage have combinations of different positions, their content can overlap, making the content difficult to read.
+
+    - The z - index property specifies the start order of an element. z-index only works on positioned elements.
+
+    - The z-index property accepts integer values. Depending on thier values, the integers instruct browser on the order in which elements should be layered on the web page.
+    
+    
+
+
+
+
+
+*/
+
+
+/* universal style */
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(200, 241, 255);
+}
+
+.item{
+    width: 200px;
+    height: 200px;
+    background: rgb(145, 145, 240);
+    margin: 40px 0px 0px 40px;
+
+    position: static; /* it is a default value of position property.*/
+
+}
+
+.item{
+    width: 200px;
+    height: 200px;
+    background: rgb(145, 145, 240);
+    margin: 40px 0px 0px 40px;
+
+    /* it is a default value of position property.*/
+    /* position: static; */
+}
+
+
+.item > div{
+    width: 200px;
+    height: 200px;
+    background: rgb(9, 9, 207);
+    margin: 40px 0px 0px 0px;
+
+    /* 
+    
+    when we use position : relative property the position of the element will be move relative to its current position.
+
+    position: relative; the element position relative to its current position.
+    top: 20px; it moves 20px from its current postion of  top border.
+    left: 40px; it moves 40px from its current postion of  left border.
+    bottom: 10px; it moves 10px from its current position of  border.
+    right: 50px; it moves 50px from its current position of  right border.
+
+    
+    
+    */
+    position: relative;
+    /* apply top and left only both at a time */
+    top: 20px;
+    left: 40px;
+    /* apply bottom and right only both at a time */
+    bottom: 10px;
+    right: 50px;
+
+    /* we can not apply all top , bottom, left , right at a time. */
+}
+
+
+.item2{
+    width: 200px;
+    height: 200px;
+    background: rgb(5, 5, 52);
+    margin: 40px 0px 0px 40px;
+    position: relative;
+
+    
+}
+
+.item2 > div{
+    width: 50px;
+    height: 50px;
+    background: #ff0000;
+
+    /* 
+    
+    Position : absolute done in two ways.
+
+    1) position : absolute; direct (when does not define any position in its parent)
+
+        - if we does not defined any position property to its parent element yet we are giving the position absolute to the element then following will be done.
+
+        - it will ignore other html elements and then position itself with the body.
+
+        Example : 
+
+        .item2{
+            width: 200px;
+            height: 200px;
+            background: rgb(5, 5, 52);
+            margin: 40px 0px 0px 40px;
+        }
+
+        .item2 > div{
+            width: 50px;
+            height: 50px;
+            background: #ff0000;
+            position : absolute;
+            top: 20px;
+        }
+
+    2)position : absolute ; (when relative position property define in its parent)
+
+        - if we defined relative position property to its parent element and we are giving the position absolute to the element then following will be done.
+
+        - it ignore body element and then position with itselft with the parent element.
+
+        - Example 
+
+        .item2{
+            width: 200px;
+            height: 200px;
+            background: rgb(5, 5, 52);
+            margin: 40px 0px 0px 40px;
+            position: relative;
+        }
+
+        .item2 > div{
+            width: 50px;
+            height: 50px;
+            background: #ff0000;
+            position : absolute;
+            top: 20px;
+        }
+
+
+    3) we can not define the parent element to position rather than relative when we define the position : absolute to its child element.
+    
+}
+    */
+
+
+    position : absolute;
+    /* top: 20px;
+    left: 10px; */
+    bottom: 10px;
+    right: 20px;
+}
+
+.item3{
+    width: 200px;
+    height: 200px;
+    background: rgb(14, 14, 212);
+    margin: 50px 10px;
+    /* 
+    position : fixed;
+
+    it will fixed the position of the element on the webpage.
+
+    position : fixed;
+
+    top : 10px; fixed at 10px from top;
+    left : 100px; fixed at 100px from left.
+    bottom : 50px; fixed at 50px from bottom.
+    right : 20px; fixed at 20px from right.
+
+    */
+
+    position: fixed;
+    /* top: 0px;  */
+    /* left: 10px; */
+}
+
+.item4{
+    width: 200px;
+    height: 200px;
+    background: rgb(133, 36, 189);
+    margin: 0px 10px;
+
+    /* 
+    position : sticky
+
+    position : sticky is a property that will be fixed to element at conditional level.
+
+    top :  50px; this means that element when reach 50px from top then that element must be fixed.
+    bottom : 100px; this means that element when reach 100px from bottom then that element must be fixed.
+
+
+    */
+
+    position: sticky;
+    top: 20px;
+    /* bottom: 100px; */
+    /* z-index:100; */
+}
+
+/* p{
+    z-index: 10000;
+} */
+
+/* 
+
+Z-Index
+
+z-index : value;
+
+default value is 1.
+
+value is positive : we want more above inside the screen.
+
+
+value is neagative  : we want more deep inside the screen.
+*/

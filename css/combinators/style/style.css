@@ -1,0 +1,113 @@
+/* 
+CSS Combinators : 
+
+css combinators are nothing but special cases of selectors.
+
+A combinator is something that explains the relationship between the selectors. A CSS selectors contain more than one simple selector.
+
+Combinator explains the relationship between the selectors ( CSS selectors are the pattern used to select the elements for style purpose.)
+
+There can be more than one simple selector or complex selector in a CSS Selector, and between these selectors, we can include a combinator.
+
+Combinator combine the selectors to provide them a useful relationship and the position of content in the document.
+
+A CSS Combinator explains the relationship between one or more simple selectors.
+
+Types Of Combinators
+
+1) Descendant Selector
+2) Child Selector
+3) Adjacent Sibling Selector
+4) General Sibling Selector
+
+Selector               Symbol              Description
+
+Descendant         -   space        -   Selects all descendant elements of specific element.
+Child              -     >          -   Selects all child elements of specific element.
+Adjacent Sibling   -     +          -   Selects an element that is immediately following the specific element.
+General Sibling    -     ~          -   Selects all next sibling elements following the specific element.
+
+
+
+
+*/
+
+/* Combinators */
+/* space, > , + , ~ */
+
+/* style apply on class="container" */
+/* .container{
+    color: yellow;
+} */
+
+
+/* style apply on all paragraph present inside the class="container" */
+/* .container p{
+    color: orange;
+} */
+
+/* style apply on all paragraph which is child of class="container" */
+/* .container > p{
+    color: green;
+} */
+
+/* class="container" ke andar jo bhi paragraph child hoge class=".inside-container" ke unpe ye style apply karo.*/
+/* .container > .inside-container > p{
+    color: rgb(255, 0, 102);
+} */
+
+
+/* sibling - elements in the same order. */
+
+/* apply style on paragraph which just immediate after the ul tag. */
+/* ul + p{
+    color: blueviolet;
+} */
+
+/* apply style on all paragraph which next sibling of the ul tag */
+
+/* ul ~ p{
+    color: aqua;
+} */
+
+
+
+
+/* 
+
+Theory : 
+
+Descendant Selector (space)
+
+1) Descedant Selector selects all descendant elements of a specific element.
+
+2) It can be a direct child or deeper than five levels, but it will still be referred to as a descendant.
+
+3) It combines two selectors in which the first selector represents an ancestor(parent, parent's parent, etc.), and the second selector represents descendants. The elements matched by the second selector are selected if they have an ancetor element that matches the first selector.
+
+
+Child Selector ( > )
+
+1) Child Selector all children elements of a specific element.
+
+2) It selects the direct descendant of the parent.
+
+3) This combinator only matches the elements that are the immediate child in the document tree.
+
+4) It is stricter as compared to the descendant selector because it selects the second selector only when the first selector is its parent.
+
+Adjacent Sibling Selector ( + )
+
+1) Selects an element that is immediately followin the specific element.
+
+2) It matches the second element only when the element immediately follows the first element, and both of them are the children of the same parent.
+
+General Sibling Selector ( ~ )
+
+1) Selects all the elements that follow the elements of the first selector , and both of them are the children of the same parent.
+
+2) It can be used for selecting the group of elements that share the common parent element.
+
+
+
+*/

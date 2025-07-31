@@ -1,0 +1,20 @@
+:root{
+    --backgroundColor : #111;
+    --gridFont : #fff;
+    --gridFamily : 'sans serif';
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--backgroundColor);
+    color: var(--gridFont);
+    font-family: var(--gridFamily);
+}
+
+.grid-item{
+    padding: 20px 15px;
+    background: darkcyan;
+    border:2px solid var(--gridFont);
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Task 1</title>
+</head>
+<body>
+
+    <!-- center tag is used to placed table in the center -->
+     <!-- caption is used to table heading-->
+    <center>
+
+        <table border="2px" width="400px" style="border-collapse: collapse; font-family: Arial, Helvetica, sans-serif;" cellpadding="5px">
+
+            <caption style="font-size: 20px; font-weight: bold; background-color: orange;">Table With Rowspan and Colspan</caption>
+    
+            <thead style="background-color: black; color : yellow">
+                <tr>
+                    <th rowspan="3">Day</th>
+                    <th colspan="4">Seminar</th>
+                </tr>
+                <tr>
+                    <!-- <th></th> -->
+                    <th colspan="2">Shedule</th>
+                    <th rowspan="2">Topic</th>
+                </tr>
+                <tr>
+                    <!-- <th></th> -->
+                    <th>Start</th>
+                    <th>End</th>
+                    <!-- <th></th> -->
+                </tr>
+            </thead>
+            <tbody style="background-color: cornflowerblue; text-align: center;">
+                <tr>
+                    <td rowspan="2">Monday</td>
+                    <td rowspan="2">08:00AM</td>
+                    <td rowspan="2">05:00PM</td>
+                    <td>Introduction</td>
+                </tr>
+                <tr>
+                    <!-- <td></td>
+                    <td></td>
+                    <td></td> -->
+                    <td>Uses</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">Tuesday</td>
+                    <td>08:00AM</td>
+                    <td>11:00PM</td>
+                    <td>--</td>
+                </tr>
+                <tr>
+                    <!-- <td></td> -->
+                    <td>11:00AM</td>
+                    <td>02:00PM</td>
+                    <td>Learn</td>
+                </tr>
+                <tr>
+                    <!-- <td></td> -->
+                    <td>02:00PM</td>
+                    <td>08:00PM</td>
+                    <td rowspan="2">--</td>
+                </tr>
+                <tr>
+                    <!-- <td></td> -->
+                    <td>10:00AM</td>
+                    <td>01:00PM</td>
+                    <!-- <td></td> -->
+                </tr>
+                <tr>
+                    <td>Wed-Fri</td>
+                    <td colspan="2">Full Day</td>
+                    <td>Practical</td>
+                </tr>
+                <tr>
+                    <td>Sat-Sun</td>
+                    <td colspan="2">11:00AM - 05:00PM</td>
+                    <td>Extra Classs</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </center>
+
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+@media (max-width : 600px){ /* upto 600px*/
+    /* 
+    phones
+    */
+
+    body{
+        background-color: red;
+    }
+
+    div::after{
+        content : 'This is mobile compatible';
+    }
+}
+
+@media (min-width : 600px){ /* 600px to 768px*/
+    /* 
+    Portrait tablets and Big phones
+    */
+
+    body{
+        background-color: aquamarine;
+    }
+
+    div::after{
+        content: 'Portrait tablets and Big phones';
+    }
+}
+
+@media (min-width : 768px){ /*768px to 992px*/
+    /* 
+    landscape tablets
+    */
+
+    body{
+        background-color: blue;
+    }
+
+    div::after{
+        content: 'tablets';
+    }
+}
+
+@media (min-width : 992px) { /* 992px to 1200px*/
+    /* 
+    devices : (laptops / desktops)
+    */
+
+    body{
+        background-color: yellowgreen;
+    }
+
+    div::after{
+        content : 'device  : laptops / desktops'
+    }
+}
+
+@media (min-width : 1200px){ /*  beyond 1200px */
+    /* 
+    larger devices : large laptops /desktops
+    */
+
+    body{
+        background-color: violet;
+    }
+
+    div::after{
+        content : 'larger devices : large laptops / desktops'
+    }
+
+    
+
+}
+
+
+div{
+    text-align: center;
+    font-size: x-large;
+}

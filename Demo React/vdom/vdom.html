@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React VDOM Example Without useState</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- Load React and ReactDOM from CDN -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <script type="text/javascript">
+    // Manual state variable
+    let count = 0;
+
+    // Define the component
+    function Counter() {
+      console.log('Component rendered!');
+
+      return React.createElement(
+        'div',
+        null,
+        React.createElement('h1', null, 'Counter: ' + count),
+        React.createElement(
+          'button',
+          {
+            onClick: () => {
+              count++;        // Update the manual variable
+              render();       // Manually re-render the component
+            }
+          },
+          'Increase'
+        )
+      );
+    }
+
+    // Manual render function
+    function render() {
+      ReactDOM.render(
+        React.createElement(Counter),
+        document.getElementById('root')
+      );
+    }
+
+    // Initial render
+    render();
+  </script>
+</body>
+</html>

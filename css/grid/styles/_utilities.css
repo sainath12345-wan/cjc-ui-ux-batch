@@ -1,0 +1,48 @@
+/* Basic Style On div without Grid CSS. */
+
+
+/* 
+create variable in css for various properties : 
+
+step 1 : if we want to make variable in css firstly we write pseudo class :root{} selector.
+
+( Jo bhi :root ke andhar property and value hogi as a variable pure webpage apply hogi. )
+
+step 2 : create variable start with --variableName : value . 
+
+(here variable naming convention is similar to javascript variable naming convention)
+
+step 3 : use this variable in another selector as value of property by using var(--variableName).
+
+To Create Variable and use that vairable In CSS by using above steps.
+
+*/
+
+/* 
+
+The :root pseudo-class in CSS is used to target the highest-level parent element in the DOM—typically the <html> element. It’s most commonly used for defining CSS variables (also known as custom properties) that can be reused throughout your stylesheet.
+
+
+
+*/
+
+:root{
+    --backgroundColor : #111;
+    --textColor : #fff;
+    --gridFont : sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    font-family: var(--gridFont);
+}
+
+.grid-item{
+    padding: 20px 15px;
+    background: darkcyan;
+    border: 2px solid var(--textColor);
+}

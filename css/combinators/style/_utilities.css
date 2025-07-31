@@ -1,0 +1,27 @@
+/* Here alwasy write default style. */
+
+
+/* alwasy write this much style for each website developed by using css. this is default style for each and every website */
+:root{
+    --bg-Color : #000000;
+    --text-Color : #ffffff;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--bg-Color);
+    color: var(--text-Color); /* If this we apply on universal selector then it will not change so that we apply this on body tag*/
+}
+
+h1,h2,h3,h4,h5,h6,p,ul,li,span{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    scroll-behavior: smooth;
+    color: #fff;
+}

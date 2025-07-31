@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Student Profile Dashboard Project" />
+  <meta name="author" content="ABC Institute" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <title>Student Dashboard</title>
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header style="text-align: center;">
+    <a href="./index1.html" target="_blank"><img src="cjc_logo.png" alt="School Logo" width="200"  /></a>
+    <h1>Complete Java Classes Student Dashboard</h1>
+    <nav>
+      <a href="#profile">Profile</a> |
+      <a href="#courses">Courses</a> |
+      <a href="#grades">Grades</a> |
+      <a href="#media">Media</a> |
+      <a href="#feedback">Feedback</a>
+    </nav>
+  </header>
+
+  <hr />
+
+  <!-- Profile Section -->
+  <section id="profile" style="background-color: lightcyan; border-radius: 10px; width: 50%; margin: 0 auto; padding: 10px; ">
+    <div style="margin: 0px auto; width: 200px;">
+        <h2>Student Profile</h2>
+        <img src="student.png" alt="Student Photo" width="150" />
+        <p><strong>Name:</strong> John Doe</p>
+        <p><em>Enrollment No:</em> 12345678</p>
+        <p><strong>Skills:</strong></p>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Python</li>
+        </ul>
+    </div>
+  </section>
+
+  <hr />
+
+  <!-- Courses Section -->
+  <section id="courses" style="background-color: rgb(240, 235, 226); border-radius: 10px; width: 50%; margin: 0 auto; padding: 10px; text-align: center; ">
+    <h2>Enrolled Courses</h2>
+    <article>
+      <h3>Web Development</h3>
+      <p>Learn HTML, CSS, and JavaScript for building modern websites.</p>
+    </article>
+    <article>
+      <h3>Python Programming</h3>
+      <p>Understand the basics of Python and apply it in real-world projects.</p>
+    </article>
+    <aside>
+      <p><strong>Note:</strong> Electives can be added in the next semester.</p>
+    </aside>
+  </section>
+
+  <hr />
+
+  <!-- Grades Section -->
+<section id="grades" style="background-color: rgb(155, 185, 187); border-radius: 10px; width: 50%; margin: 0 auto; padding: 10px; text-align: center; ">
+    <h2>Grade Report</h2>
+    <table border="1" cellpadding="8" cellspacing="0" style="margin: 0px auto;">
+      <thead>
+        <tr>
+          <th rowspan="2">Subject</th>
+          <th colspan="2">Mid-Term</th>
+          <th colspan="2">Final Exam</th>
+          <th rowspan="2">Overall Grade</th>
+        </tr>
+        <tr>
+          <th>Marks</th>
+          <th>Grade</th>
+          <th>Marks</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HTML</td>
+          <td>48</td>
+          <td>A</td>
+          <td>47</td>
+          <td>A</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>45</td>
+          <td>B+</td>
+          <td>46</td>
+          <td>A</td>
+          <td>A</td>
+        </tr>
+        <tr>
+          <td>Python</td>
+          <td>42</td>
+          <td>B</td>
+          <td>43</td>
+          <td>B+</td>
+          <td>B+</td>
+        </tr>
+        <tr>
+          <td colspan="5" style="text-align: right;"><strong>Total Students Passed:</strong></td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  
+
+  <hr />
+
+  <!-- Media Section -->
+  <section id="media" style="background-color: rgb(224, 210, 222); border-radius: 10px; width: 50%; margin: 0 auto; padding: 10px; text-align: center; ">
+    <h2>Learning Media</h2>
+
+    <marquee><h3>Intro Video</h3></marquee>
+    <video width="320" controls autoplay muted style="border-radius: 10px;">
+      <source src="./video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <marquee  direction="right"><h3>Lecture Audio</h3></marquee>
+    <audio controls>
+      <source src="lecture.mp3" type="audio/mpeg" />
+      Your browser does not support the audio tag.
+    </audio>
+
+    <marquee  direction="left"><h3>Watch on YouTube</h3></marquee>
+    <iframe width="360" height="215" src="https://www.youtube.com/embed/6IRw_okkxGA?autoplay=1&mute=1" style="border-radius: 10px;" allow="autoplay" title="Become JAVA Developer In 2025🔥 | ROADMAP for Beginners &amp; Experienced Developers! | Kunal Sir" allowfullscreen></iframe>
+  </section>
+
+  
+
+  <hr />
+
+  <!-- Feedback Section -->
+  <section id="feedback" style="background: linear-gradient(135deg, #6a11cb, #2575fc); color: #ffffff;
+ border-radius: 10px; width: 50%; margin: 0 auto; padding: 10px; text-align: center; ">
+    <h2>Feedback Form</h2>
+    <form>
+      <fieldset>
+        <legend>Give us your feedback</legend>
+
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" /><br /><br />
+
+        <label for="course">Course:</label><br />
+        <select id="course" name="course">
+          <option value="web">Web Development</option>
+          <option value="python">Python Programming</option>
+        </select><br /><br />
+
+        <label>Rate our platform:</label><br />
+        <input type="radio" id="good" name="rating" value="good" />
+        <label for="good">Good</label><br />
+        <input type="radio" id="average" name="rating" value="average" />
+        <label for="average">Average</label><br />
+        <input type="radio" id="poor" name="rating" value="poor" />
+        <label for="poor">Poor</label><br /><br />
+
+        <label for="comments">Additional Comments:</label><br />
+        <textarea id="comments" name="comments" rows="4" cols="40"></textarea><br /><br />
+
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+  </section>
+
+  <hr />
+
+  <!-- Footer -->
+  <footer style="background-color: rgb(0, 0, 0); border-radius: 0px; width: 100%; margin: 0 auto; padding: 10px; color: #ffffff; text-align: center; " >
+    <p>&copy; 2025 ABC Institute. All rights reserved.</p>
+    <p>
+      Contact: <a href="mailto:support@abcinstitute.com">support@abcinstitute.com</a>
+    </p>
+  </footer>
+</body>
+</html>

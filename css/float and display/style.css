@@ -1,0 +1,129 @@
+/* 
+CSS Float : 
+
+    - float allows us to float the elements ahead of the layout.
+
+    - CSS float is positioning property.
+
+    - CSS float is property specifies how the element should be positioned.
+
+    - CSS float property is used to push an element left or right. Elements can be pushed either left or right only horizontally, not vertically.
+
+    CSS Float Properties :
+
+        property                                                 Description                                                                          values 
+
+        float            Specifies the position of the eleement, whether it should float or not, and where it should float.               left, right, none, inherit
+
+    Value Description :
+
+        Property     Value                             Description 
+
+        float        left       To make the element float to the left side of the container.
+        float        right      To make the element float to the right side of the container.
+        float        none       No float.
+        float        inherit    To inherit the float value of the parent element.
+
+
+CSS Clear :
+
+    - To clear the next element that flows around the floating element, a clear property is used.
+    - The clear property is used to specify what should happen to the next element that is next to the floating element.
+
+    CSS Clear properties : 
+
+    property :  clear;
+
+    Description : To clear the next element that flows around the floating element. If the next element is to be positioned below, now left or right of the floating element.
+
+    Values : left, rigth, both, none, inherit.
+
+CSS Display Property : 
+
+    - the display property is used to specify how the element should be displayed on the web page.
+    - The display property is used to control the layout of the display.
+    - Every HTML element has a default display property, depending on their type.
+        Block level element - starts on a new line.
+        Inline element - does not start in a new line, takes up necessary space.
+    
+    - To override the default display nature of the elements, the display property is used.
+
+    - The display property specifies the display behavior (type of rendering box - all elements are considered to be surrounded by the rectangular box in HTML) of an element.
+
+    - value and Description of display property
+
+        value                                Description
+
+        inline              Does not force the line break, makes the element take only the required space.
+        inline-block        Same as value inline, but addition to the height and width can be applied to the same elements.
+        block               Make the element take as much horizontal space as they can.
+        run-in              Displays the element as block or inline depending on the content.
+        none                Totally removes the element from the page. Does not provide any space.
+        flex                Displays an element as a block level flex container.
+        grid                Displays an element as a block level grid container.
+*/
+
+
+
+
+
+
+
+
+
+/* default style */
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: 0px auto;
+    background-color: #e7e2e2;
+    border: solid 2px #ccc;
+    padding: 10px;
+}
+
+.container > h1{
+    background-color: rgb(75, 227, 235);
+    padding: 20px 10px;
+    text-align: center;
+    color: rgb(12, 12, 129);
+}
+
+.container > img{
+    width: 200px;
+    height: 200px;
+    margin: 20px 15px 10px 0px;
+    background-color: rgb(100, 96, 96);
+    padding: 10px;
+    float: left;
+    /* float: right; */
+}
+
+.container > .text{
+    color: darkgray;
+    margin: 20px 10px;
+    text-align: justify;
+}
+
+
+
+.clear{
+
+    
+    /* 
+    
+    it means that the property in the same div or having the  float left  property we have to clear it then we use 
+    
+    clear : float-direction;  
+    
+    clear : left ; we want to remove the float : left property;
+
+    clear : right ; we want to remove the float : right property;
+    
+    */
+    clear: left;
+}
+
