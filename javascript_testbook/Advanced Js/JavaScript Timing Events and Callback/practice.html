@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: rgb(223, 220, 221);
+            width: 50%;
+            height: 1000px;
+            display: flex;
+            flex-direction: row;
+
+            /* flex-wrap: wrap; */
+            /* align-items:start; */
+            /* justify-content:start; */
+            /* align-self: flex-end; */
+            /* align-content: start; */
+            /* justify-content: center; */
+
+            margin: 0px auto;
+            padding: 5px;
+
+        }
+
+        .flex {
+            /* width: 200px;
+            height: 200px; */
+            width: 75px;
+            height: 75px;
+            background-color: #e0e0e0;
+            margin: 5px;
+            flex-grow: 1;
+
+        }
+
+        .flex-item-1 {
+            background: lightblue;
+            /* flex-shrink: 2; */
+            order: 5;
+        }
+
+        .flex-item-2 {
+            /* width: 300px; */
+            background: rgb(167, 0, 0);
+            /* flex-shrink: 0; */
+            /* flex-grow: 1; */
+            flex-grow: 3;
+            order: 3;
+        }
+
+        .flex-item-3 {
+            background: rgb(2, 28, 142);
+            order: 7;
+        }
+
+        .flex-item-4 {
+            background: rgb(205, 188, 0);
+            order: 1;
+
+        }
+
+        .flex-item-5 {
+            background: rgb(80, 0, 117);
+            order: 8;
+        }
+
+        .flex-item-6 {
+            background: rgb(243, 8, 255);
+            order: 4;
+        }
+
+        .flex-item-6 {
+            background: rgb(0, 0, 0);
+            order: 2;
+        }
+
+        .flex-item-7 {
+            background: rgb(0, 210, 175);
+            order: 6;
+        }
+
+        .flex-item-8 {
+            background: rgb(255, 0, 0);
+            order: 7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex flex-item-1">1</div>
+        <div class="flex flex-item-2">2</div>
+        <div class="flex flex-item-3">3</div>
+        <div class="flex flex-item-4">4</div>
+        <div class="flex flex-item-5">5</div>
+        <div class="flex flex-item-6">6</div>
+        <div class="flex flex-item-7">7</div>
+        <div class="flex flex-item-8">8</div>
+    </div>
+</body>
+
+</html>

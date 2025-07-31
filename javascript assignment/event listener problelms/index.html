@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Event Listener</title>
+</head>
+<body>
+
+    <!-- 
+    
+    📝 Problem Statement: Button Click Event Listener
+    Create a simple web page with a button and a paragraph. When the user clicks the button, the paragraph text should update to show a message like "Button was clicked!". 
+
+    💡 Requirements:
+        
+        Add a <button> element with an ID of "myButton".
+
+        Add a <p> tag with an ID of "output" below the button.
+
+        Write JavaScript to:
+
+        Select the button and paragraph using getElementById().
+
+        Add an event listener to the button for the "click" event.
+
+        When the button is clicked, change the paragraph text to "Button was clicked!".
+    
+    -->
+
+    <button id="btn">Click Me</button>
+    <p id="para"></p>
+
+
+    
+
+     <!-- 
+    
+        📝 Problem Statement: Key Press Detector
+        Create a webpage with a text input field and a paragraph. When the user types in the input field, show the last key they pressed in the paragraph. 
+    -->
+
+    <h2>Type Something in the box</h2>
+    <input type="text" id="inputBox" placeholder="Start typing...">
+    <p id="keyOutput">Last Key pressed : </p>
+
+    <script>
+        let btnRef = document.getElementById('btn')
+        btnRef.addEventListener("click" , showMsg)
+
+        function showMsg(){
+            document.getElementById('para').innerHTML = "Button was clicked !"
+        }
+
+        
+        //second probelm script
+
+        // select input and output elements
+
+        const inputBox = document.getElementById('inputBox');
+        const keyOutput = document.getElementById('keyOutput');
+
+        // Add keydown event listener to the input box
+        inputBox.addEventListener('keydown', showLastPressedKey)
+
+        function showLastPressedKey(event){
+            keyOutput.textContent = "Last key pressed: " + event.key;
+        }
+
+
+    </script>
+    
+</body>
+</html>

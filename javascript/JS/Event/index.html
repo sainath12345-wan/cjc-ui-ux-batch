@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize = "document.body.style.backgroundColor = 'red'">
+
+    <input type="text" id="keyEvents" >
+
+    <button onclick="document.getElementById('time').innerHTML = Date()" onfocus="alert('I got in focus.')" >show time</button>
+
+    <!-- onmouseover="document.body.style.backgroundColor = 'blue' "  -->
+    <div 
+    onmouseout="document.body.style.backgroundColor = 'white'"
+    id = "changecolor"
+    >Mouseover to change color of page of blue</div>
+
+    
+
+    <div id="time"></div>
+</body>
+<script type="text/javascript">
+
+    var i = 0;
+    document.getElementById("changecolor").onmouseover = function(){
+        i++;
+        document.getElementById('time').innerHTML = "Mouse Over is called with i : " + i;
+    }
+
+    document.getElementById("changecolor").onmousemove = function(){
+        i++;
+        document.getElementById('time').innerHTML = "Mouse move is called with i : " + i;
+    }
+
+    document.getElementById("changecolor").onmousedown = function(){
+        alert('mouse down is occured');
+    };
+
+    document.getElementById("changecolor").onmouseup = function(){
+        alert('mouse up is occured');
+    };
+
+
+    document.getElementById('keyEvents').onkeydown = function(){
+        document.getElementById('time').innerHTML = "Key is Down";
+    }
+
+    document.getElementById('keyEvents').onkeyup = function(){
+        document.getElementById('time').innerHTML = "key is up";
+    }
+
+    document.getElementById('keyEvents').onkeypress = function(){
+        document.getElementById('time').style.backgroundColor = "yellow";
+    }
+
+    document.body.onload = function(){
+        alert("Document is loaded.")
+    }
+
+    document.body.onunload = function(){
+        alert("Document is unloaded.")
+    }
+
+    window.onload = function(){
+        document.getElementById('time').innerHTML = "window is loaded";
+    }
+    
+</script>
+</html>

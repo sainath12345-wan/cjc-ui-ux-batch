@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+
+        /*
+
+        JSON Data Types : 
+
+        Example : 
+
+        let jsonObject = {
+        "firstName" : "Nitesh" ,
+        "lastName" : "Gupta",
+        "middleName" : null,
+        "age" : 32,
+        "isInCity" : true,
+        "subjects" : ['English' , 'Maths' , 'Computers'],
+        "address" : {
+            "city" : "Bangalore",
+            "country" : "India"
+        }
+        
+        }
+        console.log(jsonObject)
+
+        #####################################################
+
+        JSON Parse 
+        
+        //jsonObject Is an String.
+        let jsonObject = '{ "firstName" : "Nitesh" , "lastName" : "Gupta", "middleName" : null, "age" : 32, "isInCity" : true, "subjects" : ["English" , "Maths" , "Computers"], "address" : { "city" : "Bangalore", "country" : "India"} }'
+        console.log(jsonObject) // it is in String Type { "firstName" : "Nitesh" , "lastName" : "Gupta", "middleName" : null, "age" : 32, "isInCity" : true, "subjects" : ["English" , "Maths" , "Computers"], "address" : { "city" : "Bangalore", "country" : "India"} }
+        
+        //jsonParsedObject is not an String it is JS Object.
+        let jsonParsedObject = JSON.parse(jsonObject);
+        console.log(jsonParsedObject) // It is not a String Type is an JS Object {firstName: 'Nitesh', lastName: 'Gupta', middleName: null, age: 32, isInCity: true, …}
+        
+        //arr is an String.
+        let arr = '["A","B","C"]'
+        console.log(arr) // It is an String ["A","B","C"]
+        
+        //jsonParsedArray is not an String or JSObject It is JS Array.
+        let jsonParsedArray = JSON.parse(arr);
+        console.log(arr) // it is not an String or JS object it is JS Array ["A","B","C"]
+        
+        
+        //JSON.parse() works only if the valid JSON Structure and Valid Array OtherWise It will give you error. 
+        // let jsonObject1 = '{ firstName : "Nitesh" , "lastName" : "Gupta", "middleName" : null, "age" : 32, "isInCity" : true, "subjects" : ["English" , "Maths" , "Computers"], "address" : { "city" : "Bangalore", "country" : "India"} }'
+        // JSON.parse(jsonObject1);
+        // Error : VM197:1 Uncaught SyntaxError: Expected property name or '}' in JSON at position 2 (line 1 column 3) at JSON.parse (<anonymous>)
+            
+            #######################################################################################################################
+            
+            Exceptions
+            
+            1) Parsing Date
+            
+            - JSON does not allow date format.
+            -so write it as a string and convert it as a date object.
+            
+            
+            
+            let jsonObject = '{ "firstName" : "Nitesh" , "lastName" : "Gupta", "middleName" : null, "age" : 32, "isInCity" : true, "subjects" : ["English" , "Maths" , "Computers"], "address" : { "city" : "Bangalore", "country" : "India"} , "dob" : "2003-08-23"}'
+            let jsonParsedObject  = JSON.parse(jsonObject);
+            console.log(jsonParsedObject)
+            
+            {
+                firstName: 'Nitesh', 
+             lastName: 'Gupta', 
+             middleName: null, age: 32, 
+             isInCity: true,
+             address : {city: 'Bangalore', country: 'India'} ,
+             age : 32,
+             dob : "2003-08-23",  // here date in String Format So We Require to convert it in date formate as folow as
+             firstName: "Nitesh",
+             isInCity : true,
+             lastName: "Gupta",
+             middleName: null,
+             subjects: (3) ['English', 'Maths', 'Computers'],
+             [[Prototype]]: Object
+             }
+             
+             
+             jsonParsedObject.dob = new Date(jsonParsedObject.dob);
+           console.log(jsonParsedObject)
+           
+           {
+            firstName: 'Nitesh', 
+            lastName: 'Gupta', 
+            middleName: null, age: 32, 
+            isInCity: true,
+            address : {city: 'Bangalore', country: 'India'} ,
+            age : 32,
+            dob :  Sat Aug 23 2003 05:30:00 GMT+0530 (India Standard Time),  // here the dob convert into date format from String format.
+            firstName: "Nitesh",
+            isInCity : true,
+            lastName: "Gupta",
+            middleName: null,
+            subjects: (3) ['English', 'Maths', 'Computers'],
+            [[Prototype]]: Object
+            }
+           ##############################################################
+
+           Parsing function
+           
+           - JSON does not allow functions.
+           - So write it as String and convert it as a function.
+           
+           let jsonObject = '{ "firstName" : "Nitesh" , "lastName" : "Gupta", "middleName" : null, "age" : 32, "isInCity" : true, "subjects" : ["English" , "Maths" , "Computers"], "address" : { "city" : "Bangalore", "country" : "India"} , "dob" : "2003-08-23" , "print" : "function(){ console.log(this.firstName);}"}'
+           let jsonParsedObject = JSON.parse(jsonObject);
+           console.log(jsonParsedObject.print) // it will return the function in definition in string format. function(){ console.log(this.firstName);}
+           jsonParsedObject.print = eval("(" + jsonParsedObject.print +")"); // eval is used to convert the function in String format to javascript function format.
+           console.log(jsonParsedObject.print) // it will return the javascript function  ƒ (){ console.log(this.firstName);}
+           
+           ##############################################################################################################################3
+           
+           JSON Stringify
+           
+           
+           let jsonObject = 
+           { 
+            "firstName" : "Nitesh" , 
+            "lastName" : "Gupta", 
+            "middleName" : null, 
+            "age" : 32, 
+            "isInCity" : true, 
+            "subjects" : ["English" , "Maths" , "Computers"], 
+            "address" : { "city" : "Bangalore", "country" : "India"} , 
+            "dob" : "2003-08-23" , 
+            "print" : "function(){ console.log(this.firstName);}"
+            }
+            
+            let jsonStrinfigyObject = JSON.stringify(jsonObject) // it will used to convert javascript object into javascript string.
+            
+            console.log(jsonStrinfigyObject)  //{"firstName":"Nitesh","lastName":"Gupta","middleName":null,"age":32,"isInCity":true,"subjects":["English","Maths","Computers"],"address":{"city":"Bangalore","country":"India"},"dob":"2003-08-23","print":"function(){ console.log(this.firstName);}"} it is String.
+            
+            // JSON.Stringify() method also converts javascipt arrray into a String.
+            
+            const arr = ["sainath","tushar","pranav"];
+            const myJSON = JSON.stringify(arr); //here js array convert into js String.
+            console.log(myJSON) // ["sainath","tushar","pranav"] it is String format
+            
+            ####################################################################################
+            // Storing and Retriving Data In Browser
+            
+            
+            let jsonObject = 
+            { 
+            "firstName" : "Nitesh" , 
+            "lastName" : "Gupta", 
+            "middleName" : null, 
+            "age" : 32, 
+            "isInCity" : true, 
+            "subjects" : ["English" , "Maths" , "Computers"], 
+            "address" : { "city" : "Bangalore", "country" : "India"} , 
+            "dob" : "2003-08-23" , 
+            "print" : "function(){ console.log(this.firstName);}"
+            }
+            //    localStorage.setItem("jsonObject" , jsonObject); // here we try to set the JS Object / JS Array rather than JS String so that first convert it into JS String.
+            //    let text = localStorage.getItem("jsonObject"); // if we try to set the JS Objct / JS Array Then it will recturn [object Object]
+            
+            localStorage.setItem("jsonObject" , JSON.stringify(jsonObject)) // To Store Data IN localStorage (Browser)
+            let text = localStorage.getItem("jsonObject"); (To Retrive Data From LocalStorage (Browser))
+            console.log(text);
+            //  in the string format   {"firstName":"Nitesh","lastName":"Gupta","middleName":null,"age":32,"isInCity":true,"subjects":["English","Maths","Computers"],"address":{"city":"Bangalore","country":"India"},"dob":"2003-08-23","print":"function(){ console.log(this.firstName);}"}
+            
+            ######################################################################################################################################################################################
+
+            JSON Stringify()
+
+            Exceptions 
+
+            1) Strigify Date
+
+            2) Stringify Function
+
+
+            
+            
+            
+            
+            
+            let jsonObject = 
+            { 
+            "firstName" : "Nitesh" , 
+            "lastName" : "Gupta", 
+            "middleName" : null, 
+            "age" : 32, 
+            "isInCity" : true, 
+            "subjects" : ["English" , "Maths" , "Computers"], 
+            "address" : { "city" : "Bangalore", "country" : "India"} , 
+            "dob" : "2003-08-23" , 
+            "today" : new Date(),
+            "print" : function(){ console.log(this.firstName);}
+            }
+            
+            console.log(jsonObject);
+ 
+            // When we Stringify the jsonObject there removed function from js object after apply JSON.Stringify() to avoid this we
+            // we first convert function into String and then apply JSON.Stringify() so that function is not removed from js Object.
+ 
+            console.log(JSON.stringify(jsonObject));
+            //{"firstName":"Nitesh","lastName":"Gupta","middleName":null,"age":32,"isInCity":true,"subjects":["English","Maths","Computers"],"address":{"city":"Bangalore","country":"India"},"dob":"2003-08-23","today":"2025-05-02T05:44:51.104Z"} HERE convert date as a String it is an exception in json Stringify()
+ 
+            // To convert print function into String we use toString() method.
+ 
+            jsonObject.print = jsonObject.print.toString();
+            console.log(JSON.stringify(jsonObject));
+             //    {"firstName":"Nitesh","lastName":"Gupta","middleName":null,"age":32,"isInCity":true,"subjects":["English","Maths","Computers"],"address":{"city":"Bangalore","country":"India"},"dob":"2003-08-23","today":"2025-05-02T06:01:09.676Z","print":"function(){ console.log(this.firstName);}"} here not removed the method becuase it convert into string before strigify.
+
+            ####################################################################################
+
+            JSON OBJECT
+
+            Creation of Javascript Objects.
+
+            1) From a JSON Object Literal
+            
+            myObj = {"name" : "John" , "age" : 30 , "car" : null};
+            console.log(myObj) //{name: 'John', age: 30, car: null}age: 30car: nullname: "John"[[Prototype]]: Object
+
+            2) By parsing a JSON String.
+            
+            myJson = '{"name" : "John" , "age" : 30 , "car" : null}';
+            myobj = JSON.parse(myJson);
+            console.log(myobj) //{name: 'John', age: 30, car: null}age: 30car: nullname: "John"[[Prototype]]: Object
+            
+            Accessing Object Values:
+
+            1) The Dot Notation(.) -> when you know the key of an object at that time use dot notation.
+            
+            const myJson = '{"name" : "John" , "age" : 30 , "car" : null}';
+            const myObj = JSON.parse(myJson);
+            x = myObj.name;
+            console.log(x) // John
+            
+
+            2) The Array like Notation ([]) ->  When you not know the key of an object and key is an variable then use Array like notation 
+            
+            const myJson = '{"name" : "John" , "age" : 30 , "car" : null}';
+            const myObj = JSON.parse(myJson);
+            x = myObj["name"];
+            console.log(x) // John
+            
+            Lopping an object (for-in loop)
+            
+            const myJson = '{"name" : "John" , "age" : 30 , "car" : null}';
+            const myObj =JSON.parse(myJson);
+            
+            let text = " "
+ 
+            for(const x in myObj){
+             text += x  + "=" + myObj[x] + " , ";
+             }
+             
+            console.log(text);
+
+            #########################################################3
+
+            JSON Arrays
+
+            String
+            number 
+            object
+            array
+            boolean
+            null
+            
+            Arrays in json are similar to js arrays and can have values of the following types.
+            
+            Creating JSON Array : 
+            
+            1) Arrays can be created using a literal
+            
+            myArray = ["ford","bmw","fiat"]
+            console.log(myArray) //['ford', 'bmw', 'fiat']
+            
+            2) Arrays can be created by parsing a JSON String.
+            
+            myJson = '["ford","bmw","fiat"]';
+            myArray = JSON.parse(myJson);
+            console.log(myArray); //    ['ford', 'bmw', 'fiat']
+            
+            Accessing Array Values :
+            
+            console.log(myArray[0]) // 'ford'
+            
+            Arrays in Objects
+            
+            const myJson = '{"name" : "John" , "age" : 30 , "car" : ["ford", "bmw", "fiat"]}'
+            const myObj = JSON.parse(myJson);
+            console.log(myObj.car[1]); //'bmw'
+
+            Looping Through an object
+            
+            
+            const myJson = '{"name" : "John" , "age" : 30 , "car" : ["ford", "bmw", "fiat"]}'
+            const myObj = JSON.parse(myJson);
+ 
+            let text = '';
+ 
+            for(let i = 0 ; i < myObj.car.length ; i++){
+             text += myObj.car[i] + " , ";
+            }
+ 
+            console.log(text) //ford , bmw , fiat ,
+            
+            */
+           
+           
+           
+           
+        </script>
+
+        
+</body>
+</html>

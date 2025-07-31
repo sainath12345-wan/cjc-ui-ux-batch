@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Loops : for Loop</title>
+</head>
+<body>
+    <h2>For Loop</h2>
+    <p id="demo"></p>
+    <script type="text/Javascript">
+        
+        /*
+
+        For loop : the for loop is used when the number of iterations is known.
+
+        for(intitalization , condition , increment){
+            code to be executed 
+        }
+
+        intitalization - optional , add multiple intitalization by using comma.
+        condition - mandatory , not multiple. (can't skip)
+        increment / decrement - optional , add multiple increment/decrement by using comma.
+
+        */
+
+        
+        var num = 10;
+
+        // for loop with single initailization and single increment/decrement expression
+        for(var i = 0 ; i < num ; i++){
+            console.log(i);
+        }
+
+        // for loop with multiple initialization and multiple increment/decrement expression.
+        for(var i=0 , j=10 ; i<num ; i++,j--){
+            console.log(i,j);
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables In JavaScript</title>
+</head>
+<body>
+    <h1>Var Keyword</h1>
+
+    <script>
+        var num1 = 10
+        var num2 = 30
+        var num1 = 20
+        var result = num1 + num2
+
+        document.write(`The Value of num1 = ${num1} </br>`)
+        document.write(`The Value of num2 = ${num2} </br>`)
+        document.write(`The Addition of ${num1} + ${num2} = ${result}`)
+    </script>
+
+    <h1>let keyword</h1>
+
+    <script>
+
+        let a1 = 50
+        let a2 = 100
+        // let a2 = 200 //error SyntaxError
+        let result1 = a1 + a2;
+
+        document.write(`
+        The value of a1 = ${a1} </br>
+        The value of a2 = ${a2} <br>
+        The addition of ${a1} + ${a2} = ${result1}
+        `)
+    </script>
+
+    <h1>Scope Of var and let</h1>
+    <script>
+        var x1 = 100
+        {
+            var x1 = 200
+            document.write(`The value of x1 = ${x1} - inside the block <br>`)
+        }
+        document.write(`The value of x1 = ${x1} - outside the block <br>`)
+
+        //100 100
+        //200 100
+        //200 200
+        //error
+
+        let y1 = 500
+        {
+            let y1 = 1000
+            document.write(`the value of y1 = ${y1} - inside the block - let keyword <br>`)
+        }
+        document.write(`the value of y1 = ${y1} - outside the block - let keyword`)
+    </script>
+
+    <h1>Const Keyword</h1>
+    
+    <script>
+        const num3 = 10
+        const num4 = 90
+        // const num4 = 190  // Error SyntaxError.
+        const result3 = num3 + num4
+        document.write(`
+            The Value of num3 = ${num3} <br>
+            The Value of num4 = ${num4} <br>
+            The addition of ${num3} + ${num4} = ${result3} <br><br>
+        `)
+
+        const myNum = 70
+        {
+            const myNum = 100
+            document.write(`The value of myNum = ${myNum} - inside the block - const <br>`)
+        }
+
+        document.write(`The value of myNum = ${myNum} - outside the block - const `)
+    </script>
+
+    <h1>let vs const</h1>
+
+    <script>
+        let z1 = 50;
+        z1 = 1   // value updated
+        document.write(`The value of z1 = ${z1} - using let keyword <br>`)
+
+        const z2 = 100;
+        //z2 = 500  //Uncaught TypeError: Assignment to constant variable.
+        //const z2 = 600 //Uncaught SyntaxError: Identifier 'z2' has already been declared 
+        document.write(`The value of z2 = ${z2} - using const keyword `)
+    </script>
+
+
+</body>
+</html>

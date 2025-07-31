@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice JS</title>
+</head>
+<body>
+    <div id="id">
+
+    </div>
+    <script>
+
+        function createButton(name)
+        {
+
+            let btnRef = document.createElement("button")
+                btnRef.innerHTML = name
+            
+            let divRef = document.getElementById("id")
+                divRef.appendChild(btnRef)
+        }
+
+        for(let i=1 ; i<=10 ; i++){
+            let name = prompt("Enter Button Name : ");
+            createButton(name)
+        }
+    </script>
+</body>
+</html>

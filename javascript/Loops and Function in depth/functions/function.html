@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Function</title>
+</head>
+<body>
+    <h2>JavaScript Function</h2>
+    <script type="text/JavaScript">
+
+        // Parametrized function to perform addition
+
+        function addition(a,b){
+            console.log(a+b);
+        }
+
+        addition(10,20); //30
+        addition(10.20 ,  20.30); //30.50
+        addition("hello " , "world"); // hello world
+        addition(true, true); // 2
+
+        // Zero Parametrized function to print first 10 numbers.
+
+        function print10numbers(){
+            for(var i=0 ; i<10 ; i++){
+                console.log(i);
+            }
+        }
+
+        console.log("***************************************First Call*************************************");
+        print10numbers();
+        console.log("***************************************Second Call*************************************");
+        print10numbers();
+        console.log("***************************************Third Call*************************************");
+        print10numbers();
+
+
+        // Note : Function invocation / calling  without parentheses returns the whole function definition without executing as below example.
+
+        console.log(print10numbers);
+
+        // using return statement inside the function
+
+        function add(a,b){
+            return a+b;
+        }
+
+        var addition = add(10,20);
+        console.log(addition); 
+
+        // local variable exmaple
+
+        console.log("Code here cannot use car Name because it is outside the function");
+
+        function myFunction() {
+            let carName = "volvo";
+            console.log("Code here can use carName.")
+        }
+
+        console.log( " Code here cannot use carName because it is outside the function.")
+
+        myFunction();
+    </script>
+</body>
+</html>

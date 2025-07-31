@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Operators and Assignments</title>
+</head>
+<body>
+    <p id="heading">  </p>
+    <p id="demo"></p>
+    
+    <!-- javascript here  -->
+
+    <script type="text/javascript">
+
+        /*
+        
+        Javascript Operators
+
+        An Operator is a symbol reserved for performing a special task.
+        Operators perform operations on one or more operands.
+        Operands can be variables, strings or numeric literals for e.g. 2+3 = 5 (operands -> 2,3 and operator -> +)
+
+        Types of Operators 
+
+        1) Arithmetic Operators
+        2) Relational Operators
+        3) Bitwise Operators
+        4) Logical Operators 
+        5) Assignment Operators
+        6) Miscellneous Operatos (Conditional or Ternary Operators , TypeOf Operator)
+        7) string Operators.
+
+        Arithmetic Operators : Arithmetic Operators perform arithmetic operations on numbers.
+
+        operators      Descriptions
+        + ------------- Addition
+        - ------------- Substraction
+        *               Multiplication
+        /               Division
+        **              Exponentiation
+        %               Modulus
+        ++              Increment 
+        --              Decrement
+
+        Note :  Increment and decrement operators are only work with variables.
+
+
+        Relational Operators :  Relational Operators perform comparision between two operands, and boolean value will be returned as a result of this operations.
+
+        Operators        Description
+        ==               Is equal to 
+        ===              Identical (equal and of same type)
+        !=               Not equal to
+        !==              Not identical 
+        >                Greater than
+        >=               Greater than or equal to
+        <                less than 
+        <=               less than or equal to 
+        
+        */
+
+        // Example of Arithmetic Operator
+
+        var x  = 5;
+        var y = 7;
+        var z = x+y ; 
+        document.getElementById('demo').innerHTML = z;
+
+        // Example of Comparision Operator 
+
+        var a = x<y;
+        document.getElementById('demo').innerHTML = a;
+
+        // Example of Bitwise Operator 
+        
+        var a = ~x ;
+        document.getElementById('demo').innerHTML = a;
+
+        // Example of Logical Oprator 
+
+        var b = (x<y) && (x>y);
+        document.getElementById('demo').innerHTML = b;
+
+
+        // Example of Ternary Operator
+        var x = 30; 
+        var y = 20;
+        var d = (x>y) ? 100 : 200;
+        document.getElementById('demo').innerHTML = d;
+
+        // Example of Assignment Operator
+
+        var x =10;
+        x += 4;
+        document.getElementById('demo').innerHTML = x;
+
+        // Example of TypeOf() Operator 
+
+        var str = "hello";
+        var result = (typeof str == "string" ? "str is string" : "str is Numeric");
+        var result2 = (typeof x == "string" ? "x is string" : "x is Numeric");
+        document.write(result);
+        document.write("<br>");
+        document.write(result2)
+    </script>
+</body>
+</html>

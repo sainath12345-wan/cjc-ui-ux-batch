@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root">
+
+    </div>
+    <section id="name">
+
+    </section>
+
+    <script>
+
+        let btnRef = React.createElement('button',{},"hello");
+        
+        const container1 = document.getElementById('root');
+        const root = ReactDOM.createRoot(container1)
+        root.render(btnRef)
+        
+        let btnRef1 = React.createElement('button',{},"world");
+        const container2 = document.getElementById('name');
+        const root1 = ReactDOM.createRoot(container2)
+        root1.render(btnRef1)
+        
+    </script>
+</body>
+</html>

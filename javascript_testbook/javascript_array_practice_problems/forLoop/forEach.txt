@@ -1,0 +1,9 @@
+ Looping Array Elements
+ ● Onlyfor loopandarray.forEach()is used to loopthrough the array.
+ ● InforEach()the function is calledonceforeachelement in an array
+
+ Advantages of For each loop
+ ● For Each loop makes the code shorter and easier to understand.
+ ● Noneed to create an extra counter variable in for each loop, which will help in easy
+ debugging.
+ ● For each loop automatically stops after iterating all elements in an array.

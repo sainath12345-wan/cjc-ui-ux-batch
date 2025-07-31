@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Based Program</title>
+</head>
+<body>
+    <h1>getElementById</h1>
+    <img src="./bulb-off-img2.png" alt="bulb-on-img" width="200px" id="bulb">
+
+    <button onclick="bulbOn()">Bulb On</button>
+    <button onclick="bulbOff()">Bulb Off</button>
+
+    <script>
+        const bulbOn = ()=>{
+            document.getElementById('bulb').src = './bulb-on-img.jpg'
+        } 
+
+        const bulbOff = ()=>{
+            document.getElementById('bulb').src = './bulb-off-img2.png'
+        }
+    </script>
+
+</body>
+</html>

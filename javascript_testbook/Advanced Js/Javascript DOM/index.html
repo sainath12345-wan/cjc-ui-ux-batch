@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div id="inner">
+
+    </div>
+
+    <h1 id="sainath" style="color : red" >sainath wankhede</h1>
+
+    <p class="t1 t2 t3" id="para-class-1"></p>
+    <p class="t1 t2" id="para-class-2"></p>
+    <p class="t1" id="para-class-3"></p>
+
+    <p id="para">This is paragraph with ID : Para</p>
+
+    <p id="para-name-1" name="paragraph" class="para"></p>
+    <p id="para-name-2" name="paragraph" class="para"></p>
+    <p id="para-name-3" name="paragraph" class="para"></p>
+    <p id="para-name-4" name="paragraph" class="para"></p>
+
+    <button id="myIntro-btn">My Introduction</button>
+    <p id="myIntro-para"></p>
+
+    <script>
+
+        // used to change the html content inside of html element.
+        // element.innerHTML = new html content
+        document.getElementById('inner').innerHTML = "<b>Hello World</b>"
+        document.write("Welcome to CJC")
+
+        // used to change the attribute of the 
+        //element.attribute = new value
+        document.getElementById('sainath').style = "color : green"
+        // document.getElementById('sainath').style = "color : orange"
+        // document.getElementById('sainath').id = "sainath1"
+
+        // used to change the style of the element
+        //element.style.property = new style
+        document.getElementById('sainath').style.backgroundColor = 'yellow'
+
+        
+        //write the content on the document
+        document.write('</br> </br> Hello Everyone <br/> <br/>')
+
+        // returns the element having the given ID value
+        let pId = document.getElementById('para')
+        document.write(pId.innerHTML)
+
+        // returns all the elements having the given name value
+        let listParagraph = document.getElementsByName('paragraph')
+        console.log(listParagraph)
+
+        // returns all the elements having the given class value
+        let  t1ClassElements = document.getElementsByClassName('t1')
+        let  t2ClassElements = document.getElementsByClassName('t2')
+        let  t3ClassElements = document.getElementsByClassName('t3')
+
+        console.log(t1ClassElements)
+        console.log(t2ClassElements)
+        console.log(t3ClassElements)
+
+        //return all the element having given tag name
+        let allParagraphs = document.getElementsByTagName('p')
+        console.log(allParagraphs)
+
+        //return all the element that matches the specified css selectors
+        let x = document.querySelectorAll('p.para')
+        console.log(x)
+
+        //returns the first element that matches the specified css selectors
+        let y = document.querySelector('p.para')
+        console.log(y)
+
+        //addEventListener
+
+        let element = document.getElementById('myIntro-btn');
+        
+        element.addEventListener("click" , myFunction);
+
+        // another example
+
+        // element.addEventListener("mouseenter" , myFunction);
+        // element.addEventListener("mouseleave" , myFunction2);
+
+        // function myFunction(){
+        //     document.getElementById('myIntro-para').innerHTML = 'Hi! My name is sainath . I am Front End Developer. I have Knowledge about React Js.'
+        // }
+        
+        // function myFunction2(){
+            //     document.getElementById('myIntro-para').innerHTML = ''
+            // }
+            
+            
+            function myFunction(){
+                document.getElementById('myIntro-para').innerHTML = 'Hi! My name is sainath . I am Front End Developer. I have Knowledge about React Js.'
+            }
+
+
+
+    </script>
+</body>
+</html>
+
+<!-- 
+
+JAVASCRIPT DOMc(Document Object Method) : 
+
+- The document object represents the whole html document.
+
+- When an html doucment is loaded in the browser, it becomes a document object.
+
+- <html> is the root element that represents its the html document. it has properties and methods.
+
+- By the help of document object, we can add dynamic content to our web page.
+
+- The HTML DOM is a standard object model and programming interface for HTML. It defines.
+    - The HTML elements as objects.
+    - The properties of all HTML elements.
+    - The methods to access all HTML elements.
+    - The events for all HTML elements.
+
+DOM Properties : 
+
+property                                            Description
+
+element.innerHTML = new html content             change the inner HTML Of an eleement.
+
+element.attribute = new value                     change the attribute value of an HTML Element.
+
+element.style.property = new style                 Change the style of an HTML element.
+
+DOM Methods : 
+
+Methods                                                Desciption
+
+write("String")                                     Write the given string on the document.
+
+getElementById()                                    Returns the element having the given ID value.
+
+getElementsByName()                                 returns all the elements having the given name value.
+
+get Elements
+
+
+
+Event Listeners
+
+- The addEventListener() method is used to attach an event handler to a particular element.
+
+- It does not override the existing even handlers. Events are said to be an essential part of javascript.
+
+- The addEventListener() method is an inbuilt function of javascript.
+
+- We can add multiple event handlers to a particular element without overwriting the existing event handlers.
+
+- Syntax :  element.addEventListener(event, function, useCapture);
+
+- The parameters event and function are widely used. The third parameter is optional to define.
+
+    - event : it is a required parameter. It can be defined as a String that specifies the event's name.
+
+    - function : it is also a required parameter. it is a javascript function which is invoked on the event.
+
+    - useCapture : it is an optional parameter. it is a boolean type value that specifies whether the event is executed in the bubbling or capturing phase. Its possible values are true and false.
+
+-->
+
+<!-- https://codesandbox.io/p/sandbox/cjfd8g -->

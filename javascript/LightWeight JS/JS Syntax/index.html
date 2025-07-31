@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Syntax : Lecture 2</title>
+</head>
+<body>
+    <!-- 
+    
+    Javascript Variables
+
+    1) Variables are the name of the data storing containers.
+    2) Variables can be initialized at any point in the code.
+    3) The keywords var, let and const are used to declare the variables.
+    4) same variable should not be redeclared twice.
+    5) Javascript is a untyped language i.e. variable can hold any data type values.
+
+    Example Var money; , Var name;
+
+    IMP : When variable doesn't contain any value the default value is "Undefined".
+
+    Type of Variables:
+
+    1) Global Variable : The Gobal variable can be defined anywhere in the JS code.
+    
+    2) Local Variable : The Local Variable will be visible only within a particular function where it is defined.
+    
+    Parameters of a function are always local to that particular function.
+
+    Ex ; 
+    var data = 200; -> Global Variable declaration.
+    function a(){
+    document.writeln(data);
+    }
+
+    function b(){
+    var data  = 80; -> local variable declaration.
+    document.writeln(data);
+    }
+
+    *) Literals and it's features
+
+    Literals : 
+
+    Literals are fixed values.
+    
+    Before ES6 (Engine Used in javascript), the strings were created using single quotes ('') or double quotes ("") and had very limited functionality.
+
+    In ES6, the strings are created using backtick (`) and gives more control over dynamic strings.
+
+    Syntax
+
+    var p = 1000;
+    var n = 1;
+    var r = 7;
+    var SI = `Simple Interest is ${(p * n * r)/100};
+
+
+    Features of Literals 
+
+    1) Multiline string is the ability to span multiple lines. Before Template Literals an escape sequece \n was used to give new line character in Template Literals, no need to add \n.
+
+    // with template literal 
+    console.log(`List of Fruits 
+    Apple
+    Orange
+    Mango`);
+
+    2) String formating is the ability to substitute a part of a string for expression or variable values. ${} syntax expression prodcues the value.This value can be any computation operations or even a string.
+
+    3) Tagged Template like function definition but the only difference is at the time of call there will be no parenthesis() and simply array of string will be passed as parameter.
+
+    Example 
+
+    //TaggedLiteral
+
+    function TaggedLiteralEg(strings){
+        document.write(strings);
+    }
+    TaggedLiteralEg `Hello Javascript`;
+
+
+   4) String.raw() creates a raw string just like the default function and does string concatenation.
+
+   // String.raw
+    var s = String.raw `Value of expression is ${2+3}. `;
+    alert(s);
+
+    5) Nested Template allows checking multiple conditions.
+
+    //nested Template
+    function maximum(x,y,z){
+    var c = `value ${ y>x && y>z} ? 'y is greater ' : `${x>z ? 'x is greater ' : 'z is greater '}`}`;
+    return (C);
+    }
+
+
+    ################# Operators and its types ###################
+
+    #) Operators 
+
+    An Operators is a symbol reserved for performing a special task.
+
+    Operators perform operations on one or more operands. Operands can be variables, string or numeric literals.
+
+    #) Types Of Operators
+
+    Arithmetic Operators
+    Relational Operators
+    Bitwise Operators
+    Logical Operators
+    Assisgnment Operators
+    Ternary Operators
+    TypeOf Operators
+
+    #)  Javascript comment statement
+
+    Comment Statement
+
+        Javascript Comment is used to add information about the code, warnings or suggestions etc and helps in the easy interpretation of the code.
+
+        these comments will be ignored by the javascript engine.
+    
+    Advantages of comment statement.
+
+        it helps in easy understanding of the code.
+
+        it is also used to disable a part of code from being executed.
+
+    Sinle Line Comment - Double forward slashes (//) is used before or after the statement.
+
+    let x  = 5;  // Declare x , give it the value of 5
+
+    Multi Line Comment - It can be used as a single or multi line comment. it is represented as /* comment */
+
+    /*
+    The code
+    for multiple
+    line is 
+    that.
+    */
+
+    #) Javascript identifiers
+
+    The names given to variables, functions , parameters, classes etc are called identifiers.
+
+    Rules for declaring a Javascript variable.
+
+        Names can begin with a letter ( a to z or A to Z).
+        Names can also begin with (_) or ($).
+        Varaibles names should not start with digits (0-9).
+        Variables names are case sensitive ( a and A different variables).
+        Variable names can have letters, digits (0-9), underscore(_) or dollar($)
+        Javascript Keywords cannot be used as variable names.
+
+
+    #) JavaScipt Datatypes
+
+    javascript is a dynamic type language because the JS engine choose the data type itself dynamically.
+
+    The Variables can hold different data types.
+
+    Types of Data Types 
+
+    1) Primitive Data types
+
+        String -> represents Sequence of characters e.g. "hello"
+        Number -> represents numeric values e.g. 100
+        Boolean -> represents boolean value either false or ture.
+        Undefined -> represents undefined value.
+        null -> represent null value.(no value at all.)
+
+    2) Non - primitive Data types
+
+        Objects -> represents instance thorugh which we can access members.
+        Array -> represents group of similar values.
+        RegExp. -> represents regular expression
+
+
+     
+
+
+
+
+
+
+    -->
+
+
+    <!-- HTML Start -->
+    <span id="fruitName"></span>
+    <span id="fruitPrice"></span>
+
+
+</body>
+
+<script type="text/Javascript">
+
+    var fruit = 'Mango';
+    var price = 100;
+    document.getElementById("fruitName").innerHTML  = fruit;
+    document.getElementById("fruitPrice").innerHTML = price;
+
+    console.log(`
+    This is my line1
+    This is my line 2
+    This is my line 3
+    `)
+
+    // By Double quote
+    console.log(" This is my line 1 \n This is my line 2 \n This is my line 3");
+
+    // By single quote
+    console.log(' This is my line 1 \n This is my line 2 \n This is my line 3');
+
+    console.log(`my fav fruit is ${fruit} and it costs Rs. ${price}`);
+
+    var a = 10;
+    var b = 20;
+
+    // Arithmetic Operators
+
+    console.log( a + b); //addition
+    console.log( a - b); //Substract
+    console.log( a * b); //multiply
+    console.log( a / b); //divide
+    console.log( a % b); //modulus
+    
+</script>
+</html>

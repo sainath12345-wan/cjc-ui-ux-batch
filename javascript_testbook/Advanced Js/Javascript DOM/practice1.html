@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>JavaScript addEventListener()</h2>
+    <p>This example uses the addEventListener() method to add two click events to
+        the same button.</p>
+    <button id="myBtn">Try it</button>
+    <button id="myBtn-2">Toggle Color</button>
+    <button id="myBtn-3">Click for Actions</button><br><br>
+    
+        
+            <img src="https://cdn.pixabay.com/photo/2023/12/21/13/49/ferris-wheel-8461874_1280.jpg" alt="demo.jpg"  width="300px" id="img" style="border: 2px solid black">
+    
+        
+       
+    
+            <img src="https://cdn.pixabay.com/photo/2023/12/21/13/49/ferris-wheel-8461874_1280.jpg" alt="demo.jpg"  width="300px" cla style="border: 2px solid black">
+        
+    
+            <img src="https://cdn.pixabay.com/photo/2023/12/21/13/49/ferris-wheel-8461874_1280.jpg" alt="demo.jpg"  width="300px" class="img" style="border: 2px solid black">
+        
+    
+            <img src="https://cdn.pixabay.com/photo/2023/12/21/13/49/ferris-wheel-8461874_1280.jpg" alt="demo.jpg"  width="300px" class="img" style="border: 2px solid black">
+        
+    
+            <img src="https://cdn.pixabay.com/photo/2023/12/21/13/49/ferris-wheel-8461874_1280.jpg" alt="demo.jpg"  width="300px" class="img" style="border: 2px solid black"> -->
+        
+    
+    
+    <script>
+        var x = document.getElementById("myBtn");
+        x.addEventListener("click", myFunction);
+        x.addEventListener("click", someOtherFunction);
+        function myFunction() {
+            alert("Hello World!");
+        }
+        function someOtherFunction() {
+            alert("This function was also executed!"); 
+        }
+
+        var y = document.getElementById('myBtn-2')
+        y.addEventListener("click",()=>{
+            document.body.style.backgroundColor = document.body.style.backgroundColor === "lightblue" ? 'white' : 'lightblue'
+        })
+
+        var z = document.getElementById('myBtn-3')
+
+        z.addEventListener('click' , ()=>alert("Action 1"))
+        z.addEventListener('click' , ()=>console.log("Action 2"))
+        z.addEventListener('click' , z.style.color = 'red')
+
+        var image = document.getElementById('img')
+        image.addEventListener('mouseenter',()=> image.style.width='500px')
+        image.addEventListener('mouseleave' , ()=> image.style.width = '300px')
+
+        var image = document.getElementById('img')
+    </script>
+</body>
+
+</html>
