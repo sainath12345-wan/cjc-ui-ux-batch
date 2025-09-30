@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap workshop : session - 5 (Nav and Tabs)</title>
+     <!-- Bootstrap CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body>
+    
+    <!-- navbar -->
+
+    <h1>Shopper</h1>
+    <ul class="nav nav-tabs "> <!-- nav-pills for different sturcture of nav-tabs.-->
+        <!-- data-bs-target is only required for button not for links. same data-bs-target working do in achor tag by help of href attribute -->
+        <li class="nav-item "><a class="nav-link active" href="#login" data-bs-toggle="tab" >Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="#register" data-bs-toggle="tab">Register</a></li>
+        <li class="nav-item"><a class="nav-link" href="#recover" data-bs-toggle="tab">Recover Account</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <!-- tab-pane -->
+        <div class="tab-pane active" id="login">
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text"></dd>
+                <dt>Password</dt>
+                <dd><input type="password"></dd>
+            </dl>
+            <button class="btn btn-primary">Login</button>
+        </div>
+
+        <div class="tab-pane" id="register">
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text"></dd>
+                <dt>Password</dt>
+                <dd><input type="password"></dd>
+                <dt>Mobile</dt>
+                <dd><input type="text"></dd>
+                <dt>Age</dt>
+                <dd><input type="number"></dd>
+            </dl>
+            <button class="btn btn-primary">Register</button>
+        </div>
+
+        <div class="tab-pane" id="recover">
+            <input type="email" name="" id="" placeholder="Your email">
+            <button class="btn btn-primary">Recover</button>
+        </div>
+    </div>
+
+</body>
+</html>

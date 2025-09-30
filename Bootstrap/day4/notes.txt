@@ -1,0 +1,648 @@
+###################### Bootstrap Components #######################
+
+5.) Bootstrap Components (very very important)   : Interactions
+
+        - Till Now we work with bootstrap classes to design  but now we work with some functionalites also.
+
+        - There are so many Bootstrap compoents we seen as follow as :
+
+        1) Alerts 
+
+            - main use case of Alert Component which is displays the message box and control it dynamically (open and close at dynamically).
+
+            - these message box are embedded on webpage(i.e. these box are part of web page).
+
+
+            - it is an embedded message box displayed in page.
+            - You can dynamically close the message box.
+
+            Classes :
+             
+                - following are the classes required for Alerts compoents.
+
+                .alert
+                .alert-dismissable
+                .alert-{contextual}
+                .alert-title
+                .alert-subtitle 
+                .alert-link 
+
+            - There classes are not enough so some of the attributes are also present as follow as :
+
+            Attributes :  [ to control interactions ]
+                
+                - Attributes are used to control the interactions.
+
+                data-bs-dismiss       - it is used to close any component pm click.
+
+            Example :
+
+                    <!DOCTYPE html>
+                    <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Bootstrap workshop : session - 3 (Alert Component) </title>
+
+                            <!-- Bootstrap CDN Links -->
+                            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+                        </head>
+                        <body class="container-fluid d-flex flex-column gap-3 p-5 align-items-center" style="height: 100vh;">
+
+                            <!-- Example 1 -->
+                            <form action="" class="alert alert-warning alert-dismissible " >
+                                <h3 class="bi bi-person-fill "> User Login </h3>
+                                <button class="btn btn-close" data-bs-dismiss="alert"></button>
+
+                                <!-- <button class="btn btn-link bi bi-cart " data-bs-dismiss="alert"></button> -->
+                                <dl>
+                                    <dt>User Name</dt>
+                                    <dd>
+                                        <input type="text" name="username" id="username" class="form-control">
+                                    </dd>
+                                    <dt>Password</dt>
+                                    <dd>
+                                        <input type="password" name="password" id="password" class="form-control">
+                                    </dd>
+                                </dl>
+                                <button class="btn btn-warning w-100">Login</button>
+                            </form>
+
+                            
+
+                            <!-- Example 2  : Delete Record-->
+                            <!-- if we use all alert classes appropriately then it will be make alert container as uniform. -->
+                            <div class="alert alert-danger alert-dismissible">
+                                <!-- write alert-title class for heading / title -->
+                                <h2 class="alert-title">Delete Record</h2>
+                                <button class="btn btn-close" data-bs-dismiss="alert"></button>
+                                <!-- write alert-subtitle for sub heading / sub title -->
+                                <p class="alert-subtitle">Record will be deleted permanently</p>
+                                <!-- write alert-link for links in the alert container -->
+                                <a href="#" class="alert-link">Help</a>
+                            </div>
+
+                            <!-- Example 3 : Insert Record -->
+
+                            <div class="alert alert-success alert-dismissible">
+                                <h2 class="alert-title">Inser Record</h2>
+                                <p class="alert-subtitle">Record Inserted</p>
+                                <a href="#" class="alert-link">Help</a>
+                                <br><br>
+                                <button class="btn btn-success" data-bs-dismiss="alert">OK</button>
+                            </div>
+                        </body>
+                    </html>
+
+        2) modal
+
+            - We have another component modal similar to Alert Component.
+
+            - Difference between alerts and modals are the alerts are embedded on the webpage (i.e. part of page ) modals are pop-up with content in the background.
+
+            - modal can pop-up with content in the background.
+
+            - modal is a dialog that we can control dynamically.
+
+            - Bootstrap provides some classes for desiging the modals. 
+                Classes
+
+                .modal 
+                .modal-dialog
+                .modal-content
+                .modal-header
+                .modal-body
+                .modal-footer
+                .modal-dialog-centered
+                .modal-dialog-scrollable
+                .modal-fullscreen
+                .fade ---> used for animation. (at various places)
+
+                - to design modal we use above classes.
+
+                - inside the modal we have to create dialog. and inside the dialog there will be modal content. and modal content have three section modal-footer ---> modal-body  --->  modal-footer.
+
+                - to control the dialog how it will keep that will be possible by using the other classes like .modal-dialog-centered ---> .modal-dialog-scrollable ----> .modal-fullscreen
+
+                - In HTML we learn element called <dialog>. here dialog is not display automatically. it is an hidden state. to show it we use open attribute there. open attribute we have add manually there and same mechanism learn as follow as example.
+
+                - In a page there can be several models one for login, one for register , one for product details etc. then every modal needs an id for (unique id).
+
+                - we create the modal but we cannot seen on the webpage. because modal are the dialog and and dialogs are usually hidden.
+
+                - Now we need to open this modal when user click on button.
+
+                - to handle such scenario modal have some attributes. 
+
+                - If we have to dismiss any component we have attribute like data-bs-dismiss. data-bs-dismiss attribute is used to close component on click.
+
+                Attributes : 
+
+                    data-bs-dismiss  : used to close component on click.
+                    data-bs-target : it referes to the ID of element
+                    data-bs-toggle : It refers to click event for element.
+                    You have to define component to function on click.
+
+                Syntax : 
+
+                    <button data-bs-toggle="modal" data-bs-target="#login"></button>
+
+                Example :
+
+                    <!DOCTYPE html>
+                    <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Bootstrap workshop : session 3</title>
+
+                            <!-- Bootstrap CDN Links -->
+                            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+                        </head>
+                        <body class="container-fluid">
+
+                            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+                            <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#details">Fashion</button>
+
+
+
+                            <!-- Details Modal -->
+                            <div class="modal fade" id="details">
+                                <div class="modal-dialog modal-fullscreen">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h2>Women Fashion</h2>
+                                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="./images/young-woman-beautiful-yellow-dress.jpg" alt="women fashion img" height="200" width="200">
+                                        </div>
+                                        <div class="modal-footer">
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 
+                            Modals
+
+                                In a page there can be several models one for login, one for register , one for product details etc. then every modal needs an id for (unique id).
+                            -->
+
+                            <!-- modal creation -->
+                            <!-- Login Modal -->
+                            <div class="modal fade" id="login">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="bi bi-person-fill">User Login</h1>
+                                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <dl>
+                                                <dt>User Name</dt>
+                                                <dd>
+                                                    <input type="text" name="username" id="username" class="form-control">
+                                                </dd>
+                                                <dt>Password</dt>
+                                                <dd>
+                                                    <input type="password" name="password" id="password" class="form-control">
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary">Login</button>
+                                            <button class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 
+                                we create the modal but we cannot seen on the webpage. because modal are the dialog and and dialogs are usually hidden.
+
+                                Now we need to open this modal when user click on button.
+
+                                to handle such scenario modal have some attributes. 
+
+                                If we have to dismiss any component we have attribute like data-bs-dismiss. data-bs-dismiss attribute is used to close component on click.
+                            -->
+
+                            <!-- 
+                            steps to open a modal  on click.
+
+                            we have to add attribute data-bs-toggle of modal on where we can click on that element after the modal open. (toggle means if it first click it open and next click it close of that event. e.g. theme color of websites.)
+
+                            write the data-bs-toggle value as modal.
+
+                            but there are many modals are present so to identify particular modal  Modal have another attribute as data-bs-target which value is id of that particular modal when we click on that button it will open.
+
+                            If we want to add animation at the time of open that modal so there another class is present .fade.
+
+                            If we want to close the any modal on click then we have attribute like data-bs-dismiss and its value will be modal.
+
+                            If you want to open modal at centered of page then you have use modal-dialog-centered  in modal-dialog continer.
+
+                            If you want to open modal as full screen then you have to use modal-fullscreen in modal-dialog container.
+
+                            If your modal have lots of fileds or content and you want to make it scrollable then you have to use class modal-dialog-scrollable in contianer modal-diaglog.
+                            -->
+
+
+                            <button class="btn btn-danger mt-2" data-bs-toggle="modal" data-bs-target="#register">Register</button>
+
+                            <!-- Register Modal -->
+
+                            <div class="modal " id="register">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <form action="">
+                                        <div class="modal-header">
+                                            <h1 class="bi bi-person-fill">Registration Form</h1>
+                                            <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <dl>
+                                                <dt class="form-label">User Name</dt>
+                                                <dd>
+                                                    <input type="text" name="username" id="username" class="form-control">
+                                                </dd>
+                                                <dt class="form-label">Email</dt>
+                                                <dd>
+                                                    <input type="email" name="email" id="email" class="form-control">
+                                                </dd>
+                                                <dt class="form-label">DOB</dt>
+                                                <dd>
+                                                    <input type="date" class="form-control" name="dob" id="dob">
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-primary w-100 " type="submit">Register</button>
+                                            <button class="btn btn-warning w-100" type="reset">Reset</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </body>
+                    </html>
+            
+        3) Offcanvas : 
+
+            - In latest version very recently introduce new one like Alerts and modal like Offcanvas.
+
+            - Offcanvas is Recently Added Component In Bootstrap.
+
+            - Offcanvas is similar to modal but provides a dialog that can span in any orientation.
+
+            - Offcanvas is good for Desingings nav-bars.
+
+            Classes : 
+
+                .Offcanvas
+                .Offcanvas-start
+                .Offcanvas-end
+                .Offcanvas-top
+                .Offcanvas-bottom
+                .Offcanvas-header
+                .Offcanvas-body
+                .Offcanvas-footer
+
+            Attributes : 
+
+                tab-index = "-1"  ---> by default it is not active ( dialog are by default are inactive but offcanvas are by default active so to change their state we have to use tab-index = -1 to change it state active to inactive). 
+
+                data-bs-dismiss
+                data-bs-target
+                data-bs-toggle
+            
+            - There are three type of alerts in bootstrap Alerts, Modals, Offcanvas.
+
+            - Offcanvas is mostly used to design toolbar, navbar etc.
+
+            Example : 
+
+                <!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Bootstrap workshop : session 4 (offcanvas)</title>
+
+                        <!-- Bootstrap CDN Links -->
+                        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+                    </head>
+                    <body class="container-fluid">
+
+                        
+                        <!-- 
+                            
+                        offcanvas - this class apply for nav element.
+                        
+                        id - to select unique element.
+                        
+                        tabindex - tabindex means by default it is not active its value is '-1'  by default active means its value is '0'. 
+                        
+                        dialog  by default inactive that means by default they not display. 
+                        
+                        but offcanvas by default active (display) so to make it as inactive (non display) we have to use tabindex as -1 (don't open at all).
+                        
+                        start--- left  and end --- right
+                        offcanvas needs a direction it will get by using offcanvas-{start | end | top | bottom} this class of offcanvas.
+                        
+                        offcanvas will be open when we click on button. it will be achieve by data-bs-toggle as 'offcanvas'. target to paticular offcanvas component we use data-bs-target with its id_name. and to close that we use data-bs-dismiss value as offcanvas.
+                        
+                        
+                        -->
+
+                        <button class="btn btn-primary bi bi-justify mt-4 " data-bs-toggle="offcanvas" data-bs-target="#navbar"></button>
+                        
+                        <nav class="offcanvas offcanvas-top" id="navbar" tabindex="-1">
+                            <div class="offcanvas-header bg-dark text-white">
+                                <h1>Amazon</h1>
+                                <button class="btn btn-close" data-bs-dismiss="offcanvas"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ol>
+                                    <li>Electronics</li>
+                                    <li>Footwear</li>
+                                    <li>Fashion</li>
+                                </ol>
+                            </div>
+                        </nav>
+                    </body>
+                </html>
+
+
+            Alerts are emebedded.
+
+            Modals are pop ups. (centered | scroolable | fullscreen)
+
+            Offcanvas are (orientational : top | start | end | bottom | )
+    
+        4) Carousel :
+
+            - It is Important Bootstap Component used in many of the website to show case hero-section of website.
+
+            - It is used to design sliding and fading content in page.
+
+            - It can be controlled manually or with auto timing.
+
+            Basic Carousel Classes : 
+
+                - This are three important classes.
+
+                .carousel 
+                .carousel-inner
+                .carousel-item 
+
+                - Make sure that one carousel-item is should be "active". not all carousel-item should not be "active".
+
+                    <div class="carousel-item active"></div>
+
+                - Carousel will not have any default animation, to start animation you have to define the attribute "data-bs-ride=carousel"
+
+                - Carousel will not have a smooth animation, to define animation you have to apply the classes "slide" or "carousel-fade".
+
+                - these are the basic carousel. in many website these types of carousel are used which will be (slide or fade) scroll. 
+
+                - But some of the website carousel are like to visit previous carousel-item and visit next carousel-item. that means carousels needs next button and previous button 
+
+                - Basic Carousel Example : 
+
+                     <!-- Basic Carousel -->
+                    <div class="carousel carousel-fade" data-bs-ride="carousel" id="banners">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./images/slide1.png" alt="slide1" height="200" class="w-100 d-block">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/slide2.png" alt="slide2" height="200" class="w-100 d-block">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./images/slide3.png" alt="slide3" height="200" class="w-100 d-block">
+                            </div>
+                        </div>
+                    </div>
+
+                - Carousel Controls :
+
+                    - it is not mandetory but if required then you can use it for control the carousel(like previous or next).
+
+                    - Carousel Provide following classes to control carousel.
+
+                        .carousel-control-previous 
+                        .carousel-control-next
+                        .carousel-control-prev-icon
+                        .carousel-control-next-icon
+                    
+                    - The above carousel control require some attributes as follow :
+
+                        data-bs-slide = "prev"
+                        data-bs-slide = "next"
+                        data-bs-target = "#carousel_id"
+                        data-bs-theme ="dark"
+
+                    - If the contols are darker we can appply 
+                        data-bs-theme = "dark"
+
+                    - There no controls to the carousel control button right now so we have to use following attributes in that button
+
+                    data-bs-slide = "prev/next"
+                    data-bs-target = "banners(carousel id)"
+            
+            s   - Carousel Indicators : 
+
+                    - If have 10 images in carousel. to visit 10th image generally we have to click 10 times on next or previous button. but that is hectick.
+
+                    - To solve above problem we have caruousel indicators it helps to choose directly to any image in the carousel.
+
+                    - Classes
+
+                        .carousel-indicators
+                    
+                    - Attributes : 
+
+                        data-bs-slide-to = "0\indexNumber" [ indexNumber stars from 0 to n-1]
+
+
+                        Example : 
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                            <head>
+                                <meta charset="UTF-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <title>Bootstrap workshop : session 4 (carousel)</title>
+
+                                <!-- Bootstrap CDN Links -->
+                                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+                            </head>
+                            <body class="container-fluid">
+
+                                <!-- 
+                                
+                                - .carousel this class is used to create carousel.
+                                - banners id is used to to select particular carousel for perform task from many of the carousel.
+
+                                - .carousel-inner give the container to the .carousel class container.
+                            
+                                - inside .carousel-inner container there have carousel items which are define by using .carousel-item class.
+
+                                            - It is Important Bootstap Component used in many of the website to show case hero-section of website.
+
+                                        - It is used to design sliding and fading content in page.
+
+                                        - It can be controlled manually or with auto timing.
+
+                                        Basic Carousel Classes : 
+
+                                            - This are three important classes.
+
+                                            .carousel 
+                                            .carousel-inner
+                                            .carousel-item 
+
+                                            - Make sure that one carousel-item is "active". not all carousel-item should not be "active".
+
+                                                <div class="carousel-item active"></div>
+
+                                            - Carousel will not have any default animation, to start animation you have to define the attribute "data-bs-ride=carousel"
+
+                                            - Carousel will not have a smooth animation, to define animation you have to apply the classes "slide" or "carousel-fade".
+
+                                        
+                                            
+
+                                -->
+
+                                <!-- Basic Carousel -->
+                                <div class="carousel carousel-fade" data-bs-theme="dark" data-bs-ride="carousel" id="banners">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="./images/slide1.png" alt="slide1" height="200" class="w-100 d-block">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./images/slide2.png" alt="slide2" height="200" class="w-100 d-block">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="./images/slide3.png" alt="slide3" height="200" class="w-100 d-block">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banners">
+                                        <span class="carousel-control-prev-icon"></span>
+                                    </button>
+                                    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banners">
+                                        <span class="carousel-control-next-icon"></span>
+                                    </button>
+                                    <!-- add carousel indicators -->
+                                    <div class="carousel-indicators">
+                                        <button class="active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+                                        <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+                                        <button data-bs-slide-to="2"data-bs-target="#banners"></button>
+                                    </div>
+                                </div>
+                                
+                            </body>
+                        </html>
+                    
+            - Note : You can control the timing of every slide in carousel by using the  attribute "data-bs-interval=1000">
+            1000 ms = 1 sec.
+
+            - Exmple : carousel with interval
+
+                <!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Bootstrap workshop : session 4 (carousel)</title>
+
+                        <!-- Bootstrap CDN Links -->
+                        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+                    </head>
+                    <body class="container-fluid">
+
+                        <!-- 
+                        
+                        - .carousel this class is used to create carousel.
+                        - banners id is used to to select particular carousel for perform task from many of the carousel.
+
+                        - .carousel-inner give the container to the .carousel class container.
+                    
+                        - inside .carousel-inner container there have carousel items which are define by using .carousel-item class.
+
+                                    - It is Important Bootstap Component used in many of the website to show case hero-section of website.
+
+                                - It is used to design sliding and fading content in page.
+
+                                - It can be controlled manually or with auto timing.
+
+                                Basic Carousel Classes : 
+
+                                    - This are three important classes.
+
+                                    .carousel 
+                                    .carousel-inner
+                                    .carousel-item 
+
+                                    - Make sure that one carousel-item is "active". not all carousel-item should not be "active".
+
+                                        <div class="carousel-item active"></div>
+
+                                    - Carousel will not have any default animation, to start animation you have to define the attribute "data-bs-ride=carousel"
+
+                                    - Carousel will not have a smooth animation, to define animation you have to apply the classes "slide" or "carousel-fade".
+
+                                
+                                    
+
+                        -->
+
+                        <!-- Basic Carousel -->
+                        <div class="carousel slide" data-bs-theme="dark" data-bs-ride="carousel" id="banners">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="1000">
+                                    <img src="./images/slide1.png" alt="slide1" height="200" class="w-100 d-block">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <img src="./images/slide2.png" alt="slide2" height="200" class="w-100 d-block">
+                                </div>
+                                <div class="carousel-item" data-bs-interval="6000">
+                                    <img src="./images/slide3.png" alt="slide3" height="200" class="w-100 d-block">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banners">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banners">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                            <!-- add carousel indicators -->
+                            <div class="carousel-indicators">
+                                <button class="active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+                                <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+                                <button data-bs-slide-to="2"data-bs-target="#banners"></button>
+                            </div>
+                        </div>
+                        
+                    </body>
+                </html>
+

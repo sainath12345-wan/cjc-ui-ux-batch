@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap-workshop : session-6 (badge)</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+</head>
+<body class="container-fluid">
+    
+    <!--  it will used to how much percent downloading will done. -->
+    <h2>HTML Progress Bar</h2>
+    <progress min="1" max="100" value="20"></progress> 20% completed
+
+    <!-- bootstrap progress bar -->
+     <h2>Bootstrap Progress Bar</h2>
+     <div class="progress">
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated me-1" style="width: 25%;"> 25% Completed </div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated  bg-warning me-1" style="width: 50%;"> 50% pending </div>
+        <div class="progress-bar bg-danger" style="width: 25%;"> Unknown </div>
+     </div>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap-workshop : session-6 (badge)</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <!-- style for create bread crumb using css (without bootstrap ) -->
+    <style>
+        ul{
+            list-style: none;
+            display: flex;
+        }
+
+        li::after{
+            /* content : " > "0 */
+            content : " ----> "
+        }
+        
+        li:last-child::after{
+            content : ""
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    
+    <!-- Bread Crumb by using bootstrap -->
+
+    <!-- <h2>Shopper</h2>
+    
+    <ul class="breadcrumb" >
+        <li class="breadcrumb-item" >Home</li>
+        <li class="breadcrumb-item">Electornics</li>
+        <li class="breadcrumb-item active text-primary">Mobiles</li>
+        <li class="breadcrumb-item">Apple</li>
+        <li class="breadcrumb-item">Iphone 14</li>
+    </ul> -->
+    
+    <!-- Bread Crumb by using bootstrap -->
+    
+    <h2>Shopper</h2>
+    
+
+    <ul >
+        <li >Home</li>
+        <li >Electornics</li>
+        <li >Mobiles</li>
+        <li >Apple</li>
+        <li >Iphone 14</li>
+    </ul>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+</body>
+</html>

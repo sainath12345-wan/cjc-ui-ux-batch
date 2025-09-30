@@ -8,4 +8,103 @@
 <body>
     <iframe width="640" height="360" src="https://www.youtube.com/embed/FZLadzn5i6Q?autoplay=1&mute=1&loop=1" title="Sainath Wankhede songs" frameborder="0" allow="accelerometer; autoplay; muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen  ></iframe>
 </body>
+
+
+HTML <iframe> Tag – Notes
+✅ What is an Iframe?
+An iframe (Inline Frame) is an HTML element used to embed another HTML page or external content within the current web page.
+
+Represented by the <iframe> tag.
+
+
+Web pages
+Videos
+Maps
+Forms
+Widgets
+
+Basic Syntax
+
+<iframe src="URL" title="description"></iframe>
+src: URL of the embedded document.
+
+title: Description for accessibility.
+
+Common Use Cases
+
+Embedding multimedia (YouTube videos, audio players, animations).
+Embedding maps (Google Maps).
+Embedding forms or widgets (from external services).
+
+Example 1: Basic Iframe
+
+<iframe src="https://example.com" height="370" width="400"></iframe>
+
+Example 2: Using Height and Width
+
+<iframe src="https://example.com" height="395" width="400"></iframe>
+Example 3: Removing Borders
+
+<iframe src="https://example.com" height="300" width="400" style="border: none;"></iframe>
+Example 4: Styling Iframe Border
+
+<iframe src="https://example.com" height="400" width="400" style="border: 4px solid orange;"></iframe>
+Example 5: Targeting an Iframe from a Link
+
+<iframe src="default.html" name="iframe_a" height="400" width="350"></iframe>
+
+<a href="page2.html" target="iframe_a">Open Page 2</a>
+
+Supported Attributes of <iframe>
+
+Attribute	        Description
+
+src	                URL of the document to embed
+height	            Sets height of the iframe
+width	            Sets width of the iframe
+name	            Assigns a name to the iframe for targeting
+title	            Description for accessibility
+style	            Inline CSS (e.g., border styling)
+loading	            Defines lazy loading behavior (lazy, eager)
+allow	            Specifies extra permissions for iframe content (e.g., camera, fullscreen)
+allowfullscreen	    Allows fullscreen display
+sandbox	            Applies extra restrictions for security (e.g., block scripts/forms)
+scrolling	        Controls scrollbars (yes, no, auto)  deprecated
+referrerpolicy	    Controls the Referer header sent when loading the iframe content
+srcdoc	            Directly defines the HTML content to be shown in the iframe
+allowpaymentrequest	Enables embedded payment interfaces within the iframe
+
+🔐 Best Practices for Using Iframes
+Security: Use the sandbox attribute unless you fully trust the content.
+
+Performance: Only embed necessary content to reduce page load time.
+
+Accessibility: Always provide alternative text or links for unsupported environments.
+
+🌐 Supported Browsers
+✅ Google Chrome
+
+✅ Microsoft Edge
+
+✅ Firefox
+
+✅ Opera
+
+✅ Safari
+
+Let me know if you’d like these notes as a PDF, Word file, or need a visual guide!
+
+
+
+
+
+
+
+
+Is this helpful so far?
+
+
+
+Ask ChatGPT
+
 </html>

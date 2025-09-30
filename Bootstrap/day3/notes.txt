@@ -1,0 +1,521 @@
+Bootstrap Classes
+
+-Container
+-Box Model
+    Margin
+    Padding
+    Border
+    Radius
+    Width & Height
+-Position
+-Display
+-Text & Background
+
+
+########################### Text Style & Format ###################
+
+
+
+Classes : 
+
+    1) Heading: 
+        
+        -For headings Bootstrap provoide following classes.
+
+        classes :
+
+            .h1     (Most Important Heading)
+            .h2
+            .h3
+            .h4
+            .h5
+            .h6     (Least Important Heading)
+
+        Syntax : 
+
+        <div class="h3"> Text </div>
+
+
+            <!-- Bootstrap Headings -->
+            <div class="m-5 p-2 border border-danger border-3">
+                    <div class="p text-center text-success">Heading In Bootstrap</div>
+                    <div class="h1">Bootstrap</div>
+                    <div class="h2">Bootstrap</div>
+                    <div class="h3">Bootstrap</div>
+                    <div class="h4">Bootstrap</div>
+                    <div class="h5">Bootstrap</div>
+                    <div class="h6">Bootstrap</div>
+            </div>
+
+    2) Font Related Classes :
+
+        Font Size : 
+
+            -For font size Bootstrap Provide .fs class
+
+                .fs-{size}      font size 1 to 6 level [6 is least and 1 is highest]
+        
+                <!-- Bootstrap font size -->
+
+                    <div class="m-5 p-2 border border-3 border-dark">
+                        <div class="p text-center text-success">Font Size in Bootstrap</div>
+                        <div class="fs-1">Bootstrap</div>
+                        <div class="fs-2">Bootstrap</div>
+                        <div class="fs-3">Bootstrap</div>
+                        <div class="fs-4">Bootstrap</div>
+                        <div class="fs-5">Bootstrap</div>
+                        <div class="fs-6">Bootstrap</div>
+                    </div>
+
+        Font Weight :
+
+            -For font weight Bootstrap Provide .fw class
+
+                .fw-{bold|bolder|medium}
+
+                <!-- Bootstrap font weight -->
+                
+                    <div class="m-5 p-2 border border-3 border-dark">
+                        <div class="p text-center text-success">Font Weight in Bootstrap</div>
+                        <div class="fw-light">Bootstrap</div>
+                        <div class="fw-lighter">Bootstrap</div>
+                        <div class="fw-normal">Bootstrap</div>
+                        <div class="fw-medium">Bootstrap</div>
+                        <div class="fw-bold">Bootstrap</div>
+                        <div class="fw-bolder">Bootstrap</div>
+                    </div>
+
+        Font Style : 
+
+            -For font style Bootstrap Provide .fst class
+
+                .fst-{italic|normal}
+
+                <!-- Bootstrap font style -->
+                    <div class="m-5 p-2 border border-3 border-dark">
+                        <div class="p text-center text-success">Font Style in Bootstrap</div>
+                        <div class="fst-italic">Bootstrap</div>
+                        <div class="fst-normal">Bootstrap</div>
+                    </div>
+        
+
+        Text Decoration : 
+
+            -For Text Decoration Bootstrap Provide .text-decoration class.
+
+                .text-decoration-{underline | linethrough | none}
+
+                <!-- Bootstrap text decoration -->
+                
+                    <div class="m-5 p-2 border border-3 border-dark">
+                        <div class="p text-center text-success">Font Style in Bootstrap</div>
+                        <div class="text-decoration-underline">Bootstrap</div>
+                        <div class="text-decoration-line-through">Bootstrap</div>
+                        <div class="text-decoration-none">Bootstrap</div>
+                    </div>
+
+        Link Color :
+
+            -For Link Text Color Bootstrap Provide .link-{contextual} class
+
+                .link-{primary|success|danger|dark|info|warning..}
+
+                <!-- Bootstrap Link Text Color -->
+                    <div class="m-5 p-2 border border-3 border-dark">
+                        <div class="p text-center text-success">Font Style in Bootstrap</div>
+                        <a href="#" class="link-primary">primary</a><br>
+                        <a href="#" class="link-danger">danger</a><br>
+                        <a href="#" class="link-dark">dark</a><br>
+                        <a href="#" class="link-warning">warning</a><br>
+                        <a href="#" class="link-secondary">secondary</a><br>
+                        <a href="#" class="link-success">success</a><br>
+                        <a href="#" class="link-light">light</a><br>
+                        <a href="#" class="link-info">info</a>
+                    </div>
+            
+        Text Transformation :
+
+            -For Text Transformation Bootstrap provides .text-{value}
+
+                .text-{uppercase | lowercase | capitalize}
+
+                this are text tranformation related classes.
+
+        Summay : 
+
+            .h{1|2|3|4|5|6}
+            .fs-{1|2|3|4|6}
+            .fw-{bold|bolder|medium}
+            .fst-{italic|normal}
+            .text-decoration-{underline | linethrough | none}
+            .link-{primary|success|danger|dark|info|warning..}
+            .text-{uppercase | lowercase | capitalize}
+            .text-{start,end,center}
+    
+    3.) Button Classes :
+
+        - To Work With Buttons Bootstrap Provide Button Related Classes.
+
+        - following are classes provided by Bootstrap to work with buttons.
+
+            .btn (it is base class for button)
+            .btn-{contextual}
+            .btn-outline-{contextual}
+            .btn-sm
+            .btn-lg
+            .btn-group
+            .btn-group-vertical
+            .btn-toolbar
+            .btn-link
+            .btn-close
+
+            <!-- Bootstrap button -->
+                <dl>
+                    
+                    <dt>Toolbar</dt>
+                    <!-- to make tool bar bootstrap provide btn-toolbar class. Toolbar means spreads from left to right. -->
+                    <dd class="btn-toolbar bg-danger">
+                        <button class="btn btn-danger">Home</button>
+                        <button class="btn btn-danger">About</button>
+                        <button class="btn btn-danger">Shop</button>
+                        <button class="btn btn-danger">Pages</button>
+                    </dd>
+                    <dt>Ordinary</dt>
+                    <dd>
+                        <button>Insert</button>
+                    </dd>
+                    <dt>Bootstrap Base</dt>
+                    <dd>
+                        <button class="btn">Insert</button>
+                    </dd>
+                    <dd>
+                        <!-- always apply first btn and class and then btn-primary (contextual)-->
+                        <button class="btn btn-primary">Insert</button>
+                        <button class="btn btn-success">Update</button>
+                        <button class="btn btn-danger">Delete</button>
+                    </dd>
+                    <dd>
+                        <!-- always apply first btn and class and then btn-outline-primary (contextual)-->
+                        <button class="btn btn-outline-primary">Insert</button>
+                        <button class="btn btn-outline-success">Update</button>
+                        <button class="btn btn-outline-danger">Delete</button>
+                    </dd>
+                    <dd>
+                        <!-- always apply first btn and class and then btn-primary (contextual)-->
+                        <button class="btn btn-primary btn-sm">Insert</button>
+                        <button class="btn btn-success">Update</button>
+                        <button class="btn btn-danger btn-lg">Delete</button>
+                    </dd>
+
+                    <!-- all button grouped together by using btn-group -->
+                    <dd class="btn-group">
+                        <!-- always apply first btn and class and then btn-primary (contextual)-->
+                        <button class="btn btn-primary ">Insert</button>
+                        <button class="btn btn-success">Update</button>
+                        <button class="btn btn-danger ">Delete</button>
+                    </dd> <br>
+                    
+                    <!-- all button grouped together Vertically by using btn-group-vertical -->
+                    <dd class="btn-group-vertical">
+                        <!-- always apply first btn and class and then btn-primary (contextual)-->
+                        <button class="btn btn-primary ">Insert</button>
+                        <button class="btn btn-success">Update</button>
+                        <button class="btn btn-danger ">Delete</button>
+                    </dd>
+
+                    <!-- 
+                    There are some special buttons in bootstrap.
+
+                    special button like close button, sign up button, log in button etc are the buttons called special button.
+
+                    button like btn-close this class give special button in bootstrap.
+
+                    button like sign up , log in are used to link so that the class like btn-link provided by bootstrap to achieve such buttons.
+                    -->
+
+                    <dd>
+                        <button class="btn btn-close"></button>
+                        <button class="btn btn-link">Sign up</button>
+                        <button class="btn btn-link">Log in</button>
+                    </dd>
+                </dl>
+
+        - Remember it not neccessary you have to apply these classes only for buttons generally in real development we put these classes for links also. 
+
+        - Mostly these classes are apply on anywhere clickable event is present.
+
+    4.) Form Classes : 
+
+        - following classes are provides bootstrap to working with the forms.
+
+            .form-label     - it is used for element like <label>
+            .form-check-label - it is used for element like <label> for radio or checkbox.
+            .form-control       - it is used for text, password, number, date, url, email, textarea etc..
+            
+            .form-select    - it is used for <select> element or creating dropdown menus
+
+            .form-control-color     - it is used for <input type="color">
+
+            .form-control-file      - it is used for <input type="file">
+
+            .form-range         - it is used for <input type="range" >
+
+            .form-check-input       - it used for radio or checkbox.
+
+            .form-switch        - it is used for radio or checkbox container. (radio or checkbox container means in which container kept radio button or checkbox button for that container we have to use class called .switch)
+
+
+            - Now We want to design a form traditionally  you learned in HTML how to create a professional form.
+            Order for form designing like this.
+
+                - In side form every category kept in seperate Div. category means username, password , address like are the different categories.
+
+                - Inside Every category have its corresponding label and element.
+
+                - these are rules for developing professional forms you have to Remember this rule at the developing the form.
+
+            - This all are the classes which are reqired to develop professional forms. to design forms this classes are enough.
+
+
+            Example
+
+                <!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Bootstrap workshop : session - 3 (forms) </title>
+
+                        <!-- Bootstrap CDN Links -->
+                        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+                    </head>
+                    <body class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+
+                        <form action="" class="border borde-2 rounded border-dark p-3 w-25 bg-dark text-white">
+                            <h3 class="bi bi-person-fill text-center">Register User</h3>
+
+                            <!-- category 1 : username -->
+                            <div class="mb-3">
+                                <label for="username" class="form-label">User Name</label>
+                                <div>
+                                    <input type="text" class="form-control" name="UserName" id="username">
+                                </div>
+                            </div>
+                            
+                            <!-- category 2 : password -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <div>
+                                    <input type="password" class="form-control" name="password" id="password">
+                                </div>
+                            </div>
+
+                            <!-- category 3 : Age -->
+                            <div class="mb-3">
+                                <label for="Age" class="form-label">Age</label>
+                                <div>
+                                    <!-- slider for age -->
+                                    <input type="range" class="form-range" name="Age" id="Age">
+                                </div>
+                            </div>
+
+                            <!-- category 4 : City  -->
+                            <div class="mb-3">
+                                <label for="" class="form-label">Your City</label>
+                                <div>
+                                <select name="" id="" class="form-select">
+                                        <option value="">Select City</option>
+                                        <option value="delhi">Delhi</option>
+                                        <option value="pune">Pune</option>
+                                        <option value="mumbai">Mumbai</option>
+                                        <option value="nanded">Nanded</option>
+                                </select>
+                                </div>
+                            </div>
+
+                            <!-- category 5 : Subscribe  -->
+                            <!-- The form-check-label class in Bootstrap is used to apply styling and accessibility improvements to the label element of a checkbox or radio button -->
+                            <div class="mb-3">
+                                <label for="" class="form-label">Subscribe</label>
+                                <div class="form-switch">
+                                    <input type="checkbox" class="form-check-input" name="" id="" > <label for="" class="form-check-label">Yes</label>
+                                </div>
+                            </div>
+                            <!-- category 6 : Register  -->
+                            <div class="mb-3">
+                                <button class="btn btn-light w-100">Register</button>
+                            </div>
+                        </form>
+                        
+                    </body>
+                </html>
+
+        - Input Group Classes
+
+        Working with form another two classes provide bootstrap as following :
+
+            .input-group
+            .input-group-{sm|lg}
+            .input-group-text
+
+            these classes are used to design froms
+
+            Syntax : 
+             
+                <div class="input-group">
+                    <span class="input-group-text"> Text </span>
+                    ...your elements...
+                </div>
+
+            Example :
+
+                <!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Bootstrap Workshop - Session : 3 (Input-group class)</title>
+
+                        <!-- Bootstrap CDN Links -->
+                        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+                    </head>
+                    <body class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+                        <form action="">
+
+                            <!-- Amazon Search Bar Example -->
+
+                                <!-- If you want to group mutiple input filed in single palce then use input-group class. -->
+                                <div class="input-group ">
+                                    <!-- If anyone content to highlight then use input-group-text class for that content -->
+                                    <select name="" id="" class="input-group-text">
+                                        <option value="">All</option>
+                                    </select>
+                                    <input type="text" class="form-control" name="" id="" placeholder="Search Amazon.in">
+                                    <button class="bi bi-search btn btn-warning"></button>
+                                </div>
+
+                    
+                            <!-- Netflix Register component Example -->
+                                <div class="mt-3 input-group">
+                                    <input type="email" name="" id="" placeholder="Your email address" class="form-control" >
+                                    <button class="btn btn-danger ms-2">Get Started <span class="bi bi-chevron-right"></span></button>
+                                </div>
+
+                            <!-- General password component example -->
+
+                            <div class="mt-4 input-group">
+                                <span class="bi bi-key-fill input-group-text"></span>
+                                <input type="password" class="form-control" name="" id="">
+                                <span class="bi bi-check-square input-group-text"></span>
+                            </div>
+
+                            <!-- We can not insert the icons inside the input but we can attach the icons with the input filed by uisng input-group class as per above code. -->
+                        </form>
+                    </body>
+                </html>
+
+    5.) Bootstrap Components (very very important)   : Interactions
+
+        - Till Now we work with bootstrap classes to design  but now we work with some functionalites also.
+
+        - There are so many Bootstrap compoents we seen as follow as :
+
+        1) Alerts 
+
+            - main use case of Alert Component which is displays the message box and control it dynamically (open and close at dynamically).
+
+
+            - it is an embedded message box displayed in page.
+            - You can dynamically close the message box.
+
+            Classes :
+             
+                - following are the classes required for Alerts compoents.
+
+                .alert
+                .alert-dismissable
+                .alert-{contextual}
+                .alert-title
+                .alert-subtitle 
+                .alert-link 
+
+            - There classes are not enough so some of the attributes are also present as follow as :
+
+            Attributes :  [ to control interactions ]
+                
+                - Attributes are used to control the interactions.
+
+                data-bs-dismiss       - it is used to close any component pm click.
+
+            Example :
+
+                    <!DOCTYPE html>
+                    <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <title>Bootstrap workshop : session - 3 (Alert Component) </title>
+
+                            <!-- Bootstrap CDN Links -->
+                            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+                        </head>
+                        <body class="container-fluid d-flex flex-column gap-3 p-5 align-items-center" style="height: 100vh;">
+
+                            <!-- Example 1 -->
+                            <form action="" class="alert alert-warning alert-dismissible " >
+                                <h3 class="bi bi-person-fill "> User Login </h3>
+                                <button class="btn btn-close" data-bs-dismiss="alert"></button>
+
+                                <!-- <button class="btn btn-link bi bi-cart " data-bs-dismiss="alert"></button> -->
+                                <dl>
+                                    <dt>User Name</dt>
+                                    <dd>
+                                        <input type="text" name="username" id="username" class="form-control">
+                                    </dd>
+                                    <dt>Password</dt>
+                                    <dd>
+                                        <input type="password" name="password" id="password" class="form-control">
+                                    </dd>
+                                </dl>
+                                <button class="btn btn-warning w-100">Login</button>
+                            </form>
+
+                            
+
+                            <!-- Example 2  : Delete Record-->
+                            <!-- if we use all alert classes appropriately then it will be make alert container as uniform. -->
+                            <div class="alert alert-danger alert-dismissible">
+                                <!-- write alert-title class for heading / title -->
+                                <h2 class="alert-title">Delete Record</h2>
+                                <button class="btn btn-close" data-bs-dismiss="alert"></button>
+                                <!-- write alert-subtitle for sub heading / sub title -->
+                                <p class="alert-subtitle">Record will be deleted permanently</p>
+                                <!-- write alert-link for links in the alert container -->
+                                <a href="#" class="alert-link">Help</a>
+                            </div>
+
+                            <!-- Example 3 : Insert Record -->
+
+                            <div class="alert alert-success alert-dismissible">
+                                <h2 class="alert-title">Inser Record</h2>
+                                <p class="alert-subtitle">Record Inserted</p>
+                                <a href="#" class="alert-link">Help</a>
+                                <br><br>
+                                <button class="btn btn-success" data-bs-dismiss="alert">OK</button>
+                            </div>
+                        </body>
+                    </html>
+
+
+
+
+

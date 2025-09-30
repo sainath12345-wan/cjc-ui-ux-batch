@@ -1,0 +1,265 @@
+############# Bootstrap Classes for CSS Attributes ################
+
+- Bootstrap Classes are the important part of Bootstrap.
+- In Bootstrap have different type of classes which are used to different purpose.
+- As per following classes are used.
+- classes are defined by dot (.) .
+- there is no order require to for this classes at the time defining the classes.
+
+Advantage of Bootstrap :
+
+    - Bootstrap Provides Ready-made Inbuilt classes tp make the page Reponsive that will can easily fit the content According to the device(mobile , tablet, pc's etc..)
+
+
+1. Container Classes : 
+
+    .container 
+    .container-sm (small) ---> targeting with small screens  (mobiles)
+    .container-md (medium) ---> targeting with medium screens (tabs)
+    .container-lg (large) ---> targeting with large screens (PC)
+    .container-xl (extra large) ---> targeting with extra large screens (laptop)
+    .container-xxl (extra extra large) ---> targeting with extra extra large screens (laptop wide)
+    .container-fluid (adjust any device according to screens) ---> reponsive accoding to device ---> is best option for all screens
+
+    Syntax :  <body  class="container-fluid"></body>
+
+2. Box Model :
+
+    In Box Model Contains Margin, Padding, Border etc.
+
+    Margin :  
+    
+        space between outside the border to other element border.
+
+        if you have apply margin bootstrap provide class called "m"
+
+        .m-{break-point}  break-point ---> margin all directions size 1 to 4 
+
+        .ms-{}      left margin [start]
+        .me-{}      right margin [end]
+        .mt-{}      top margin [top]
+        .mb-{}      bottom margin [bottom]
+        .mx-{}      both left and right
+        .my-{}      both top and bottom
+
+        syntax : <div class="mt-4"> </div>
+    
+    Padding :
+
+        space between content and border.
+
+        .p-{}       Padding all directions
+        .pt-{}
+        .pb-{}
+        .ps-{}
+        .pe-{}
+        .px-{}
+        .py-{}
+    
+    Border :
+
+        .border
+        .border-{size}          0 to 4
+        .border-{contextual}    primary, secondary, danger, warning, success, info... ( color classes)
+
+
+        primary - blue
+        secondary - gray
+        danger - red
+        warning - orange
+        success - green
+        info -  sky blue
+
+        syntax : <p class="border border-3 border-danger p-4"> </p> 
+
+    Border Radius (curved corners) :
+
+        .rounded
+        .rounded-{size}     size from 1 to 4
+        .rounded-circle     ---> when it apply on img height and width must be same for proper circle.
+        .rounded-pill       ---> when it apply on img width must be larger than height for pill like shape.
+
+
+        Syntax :
+         
+         // rounded-circle
+         <img  src="./images/young-woman-beautiful-yellow-dress.jpg" alt="tradition-women-cloth-img" width="200" height="200"  class="ms-5 mb-5 rounded-circle""> 
+
+         // rounded-pill
+         <img  src="./images/young-woman-beautiful-yellow-dress.jpg" alt="tradition-women-cloth-img" width="400" height="200" class="ms-5 mb-5 rounded-pill"">
+            
+            -
+
+                If you practise web-development at that time you require media's like images, videos and etc for testing purpose so all that access from FREEPIK.COM  following is link of that site.
+
+
+                    https://www.freepik.com/
+
+                You will use many website which have copyright issues for that media uses without its permission then your website will may block so that we use free media's by using the above website.
+
+                Steps to use image (without copyright) from google.
+
+                ---> search images releated topic (fashion) ---> go to images section ---> click on tools ---> click on commercials & other licences .
+        
+        Bootstrap classes margin , padding, border, border-radius these are just alignment/placement related classes.
+
+
+    Width and Height : 
+
+        .w-{size}       25,50,100 (only this values are allowed other and not allowed)
+
+        .h-{size}       25,50,100 (only this values are allowed other and not allowed)
+
+        syntax : 
+
+            <p class="w-50 h-100"> </p>  (width : 50  and height : 100)
+
+        so these all concept get while working with the box-model.
+
+
+        0 - 0% of window 
+        25 - 25% of window 
+        50 - 50% of window 
+        75 - 75% of window 
+        100 - 100% of window 
+
+    Summary Box Model : 
+
+        -Margin
+        -Padding
+        -Border
+        -Border Radius
+        -Width
+        -Height
+
+        above all bootstrap classes only for box-model.
+
+3. Text & Background colors :
+
+    .bg-{contextual}       ---> for background
+    .text-{contextual}     ---> for text colors
+
+    contextual means primary, secondary, danger, warning, success etc.
+
+    we can change the background color and font color by using above boostrap classes.
+
+    syntax : 
+
+        <p class=" bg-dange text-white">Paragraph</p>
+        <h1 class="bg-warning text-dange">Most Imp Heading</h1>
+
+4. Positions 
+
+    .position-static
+    .position-absolute
+    .position-relative
+    .position-fixed
+    .position-sticky
+    .start-{size}       size usually 0, 25, 50, 100
+    .end-{size}
+    .top-{size}
+    .bottom-{size}
+
+
+    syntax :
+
+     <!-- sticky position example -->
+
+        <nav class="bg-dark text-white p-2 position-sticky top-0">
+        <h3>CJC Classes</h3>
+        </nav>
+
+    <!-- position relative -->
+
+        <div class="mt-4">
+            <button class="btn btn-dark bi bi-cart4 position-relative"><span class="badge bg-danger position-absolute top-0 rounded rounded-circle">3</span></button>
+
+
+            <button class="position-relative">
+                <span>Subscribed</span>
+                <span class="position-absolute top-0">3</span>
+            </button>
+        </div>
+
+    <!-- fixed positions -->
+
+        <aside class="text-info position-fixed start-0 bottom-50">
+            <div class="bi bi-facebook"></div>
+            <div class="bi bi-twitter"></div>
+            <div class="bi bi-instagram"></div>
+            <div class="bi bi-linkedin"></div>
+            <div class="bi bi-google"></div>
+        </aside>
+
+     <!-- relative and absolute  -->
+
+        <div class="women m-5 position-relative">
+            <div class="bg-danger text-white p-2 rounded rounded-circle offer position-absolute top-0 end-0">
+                <div>save</div>
+                <div>50%</div>
+            </div>
+        </div>
+
+        <!-- custom css style (without bootstrap) -->
+        <style>
+            .women{
+                background-image: url(./images/young-woman-beautiful-yellow-dress.jpg);
+                background-size: cover;
+                height: 300px;
+                width: 400px;
+                padding: 30px;
+            }
+
+            .offer{
+                width: 80px;
+                height: 80px;
+                text-align: center;
+
+            }
+        </style>
+
+5. Display
+
+    - To apply css display property bootstrap provide .d class.
+
+    .d          display
+    .d-none
+    .d-inline
+    .d-inline-block
+    .d-block
+    .d-flex
+    .flex-wrap
+    .flex-row
+    .flex-column
+    .justify-content-between
+    .justify-content-around
+    .justify-content-center
+    .align-items-center
+    .align-items-start
+    .align-items-end
+    .align-items-baseline
+
+    like this we have so many options.
+
+    all this properties present in the css and this are used in bootstrap by using the classes provided by bootstrap library. 
+
+    so that in bootstrap we have to learn all this classes for to these properties.
+
+6. Text Align 
+
+    .text-start
+    .text-end
+    .text-center
+
+    like this we have so many options.
+
+    all this properties present in the css and this are used in bootstrap by using the classes provided by bootstrap library. 
+
+    so that in bootstrap we have to learn all this classes for to these properties.
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+Pseudo Classes : 
+
+    - Used to define special states of HTML elements.
+    - Syntax : selector:pseudo-class{styles}.
+    - Common examples : :hover , :active , :first-child...etc.
+    - Target eleemnts based on their position or user actions.
+
+Transitions : 
+
+    - CSS transition is a property that enables smooth animation between changes in CSS property values.
+    
+    * transition-property : Defines which CSS properties will transition.
+    * transition-duration : Sets how long the tranistion lasts.
+    * transition-timing-function : Controls the speed curve of the transition.
+    * transition-delay : Specifies a delay before the transition starts.
+
+Transform :
+
+    - Allow modification of an element's shape and position.
+    - Can perform operations like rotate, scale,  and translate.
+    - Does not affect the layout of surrounding elements.
+    - Used to create visual effects 
+
+    Transform : Rotate 
+
+        - Rotates an element around a fixed point.
+        - Defined using the rotate() function within the transform property.
+        - Default rotation point is the element's center
+
+    Transform : scale 
+
+        - By using this we can increase (scale) / decrease (Scale)  the size of the element.
+        
+    Transform : translate
+
+        - Translation means shifting of element from one position to another position.
+
+    Transform : Skew 
+
+        - The CSS transform: skew() property is used to distort an element by slanting it along the x and y axes, creating a slanted or tilted effect. 
+
+
+Animation : 
+
+    - animation name which is specified in animation-name property.
+
+    - The keyframes at rule rule start with "@Keyframes" keyword.
+
+    - Specify when the style change will happen. you can write 0% as well, which is same as " from"
+       
+       CSS Properties.
+
+    - Specify where animation should end. you can write 100% as well instead of "to".
+
+    - Animation Properties :
+
+    animation-name : Specifies the name of the @keyframes defined animation.
+
+    animation-duration : Defines the total time the animation takes to complete one cycle.
+
+    animation-timming-function : controls the pacing of the animation (e.g. linear, ease-in).
+
+    animation-delay : sets a delay before the animation starts, allowing for a pause before initiation.
+
+    animation-iteration-count : indicateds the number of times the animation should repeat.
+
+    animation-direction : specifies the direction of the animation allowing for reverse or alternate cycles.
+    

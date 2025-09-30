@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bootstrap : container</title>
+
+  <!-- bootstrap style sheet links -->
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+  <!-- custom style sheet links -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+</head>
+
+
+<body>
+
+  <!-- it will take 100% width -->
+  <div class="container-fluid">
+    <!-- it will take medium width -->
+    <div class="container">
+      <!-- firstly create row to divided it into multiple columsn -->
+      <div class="row">
+
+        <!-- apply all container .col class to create columns inside the row -->
+        <!-- col-xxl-4 means above xxl screen size each div take 3 colums space out of 12 columns, in that way create 3 columns inside first row -->
+        <div class="col-xxl-4">hello</div>
+        <div class="col-xxl-4">div</div>
+        <div class="col-xxl-4">IIp</div>
+      </div>
+    </div>
+
+
+    <!-- it will operate on lg screen size or more than its range i.e. (>= 992px) -->
+
+    <!-- when you have to work on desktop and more than desktop screen size then use following way. -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 bg-danger">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam eaque vitae
+          iusto earum accusantium fugit consectetur, facere incidunt consequatur at doloremque expedita! Quidem,
+          voluptates temporibus! Aliquam hic culpa qui itaque.</div>
+        <div class="col-lg-3 bg-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, est autem quibusdam
+          deleniti corrupti consequatur quisquam animi nemo accusantium nostrum. Magni quia eveniet deserunt magnam
+          numquam mollitia unde, harum animi?</div>
+        <div class="col-lg-3 bg-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos molestiae quos
+          alias sequi accusamus, obcaecati ut iste qui dicta saepe sint. Dolore at quidem possimus. Odio delectus rerum
+          consequuntur officiis!</div>
+        <div class="col-lg-3 bg-success">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus soluta magni
+          incidunt dignissimos non nihil at alias tempore cupiditate, aperiam expedita perferendis impedit reprehenderit
+          autem eligendi, omnis nam, eius earum.</div>
+
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-6 bg-secondary">
+          It will take 50% width screen size >= 992px
+        </div>
+        <div class="col-lg-6 bg-warning">
+          It will take 50% width screen size >= 992px
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm-6 col-lg-3 bg-dark text-white">
+          it will take 50% when screensize >= 576px and it will take 25% when screen size >= 992px
+        </div>
+        <div class="col-sm-6 col-lg-3 bg-danger">
+          it will take 50% when screensize >= 576px and it will take 25% when screen size >= 992px
+        </div>
+        <div class="col-sm-6 col-lg-3 bg-warning">
+          it will take 50% when screensize >= 576px and it will take 25% when screen size >= 992px
+        </div>
+        <div class="col-sm-6 col-lg-3 bg-success">
+          it will take 50% when screensize >= 576px and it will take 25% when screen size >= 992px
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-4 bg-danger">
+          it will take 33.33%
+        </div>
+        <div class="col-8 bg-warning">
+          it will take 66.66%
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-3 bg-danger">
+          it will take 25%
+        </div>
+        <div class="col-6 bg-warning">
+          it will take 50%
+        </div>
+        <div class="col-3 bg-dark text-white">
+          it will take 25%
+        </div>
+      </div>
+
+      <!-- it will want to divided the similar width of columns then we use .col class without mention number of columns. -->
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col bg-danger">bg-danger</div>
+          <div class="col bg-success">bg-success</div>
+          <div class="col bg-warning">bg-warning</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Auto-Column layouts -->
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 bg-danger">
+          <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore cum molestias voluptates quod expedita a
+            dolor numquam possimus voluptatibus, doloribus alias repudiandae eaque omnis minima cupiditate molestiae!
+            Modi, sit consequatur!
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 bg-warning">
+          <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore cum molestias voluptates quod expedita a
+            dolor numquam possimus voluptatibus, doloribus alias repudiandae eaque omnis minima cupiditate molestiae!
+            Modi, sit consequatur!
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 bg-dark text-warning">
+          <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore cum molestias voluptates quod expedita a
+            dolor numquam possimus voluptatibus, doloribus alias repudiandae eaque omnis minima cupiditate molestiae!
+            Modi, sit consequatur!
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore cum molestias voluptates quod expedita a
+            dolor numquam possimus voluptatibus, doloribus alias repudiandae eaque omnis minima cupiditate molestiae!
+            Modi, sit consequatur!
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- bootstrap scripts -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+
+
+</body>
+
+</html>

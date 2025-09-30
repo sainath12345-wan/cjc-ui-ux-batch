@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap workshop : session 5</title>
+
+    <!-- Bootstrap CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body class="container-fluid">
+    <h1 class="text-center">Frequetly Asked Questions</h1>
+
+    <!-- all Questions are there in this contianer (accordion) -->
+     <div class="accordion" id="faq">
+        <!-- every question as item (accordion-item) -->
+         <div class="accordion-item">
+            <!-- accordion header -->
+            <div class="accordion-header">
+                <!-- accordion-button -->
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">What is Netflix</button>
+            </div>
+            <div class="accordion-collapse collapse" id="q1" data-bs-parent="#faq">
+                <div class="accordion-body">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+                    <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                </div>
+            </div>
+         </div>
+         <div class="accordion-item">
+             <!-- accordion header -->
+            <div class="accordion-header" >
+                <!-- accordion-button -->
+                <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q2">How Much does Netflix Cost</button>
+            </div>
+            <div class="accordion-collapse collapse" id="q2" data-bs-parent="#faq">
+                <div class="accordion-body">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+                    <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                </div>
+            </div>
+         </div>
+
+         <!-- We can give cutomize button also rather than accordion button -->
+         <div class="accordion-item">
+            <!-- accordion header -->
+            <div class="accordion-header">
+                <!-- accordion-button -->
+                <button class="btn btn-dark w-100 text-start" data-bs-toggle="collapse" data-bs-target="#q3">What is Netflix</button>
+            </div>
+            <div class="accordion-collapse collapse" id="q3" data-bs-parent="#faq">
+                <div class="accordion-body">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+                    <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                </div>
+            </div>
+         </div>
+         <div class="accordion-item">
+             <!-- accordion header -->
+            <div class="accordion-header" >
+                <!-- accordion-button -->
+                <button class="btn btn-warning w-100 text-start" data-bs-toggle="collapse" data-bs-target="#q4">How Much does Netflix Cost</button>
+            </div>
+            <div class="accordion-collapse collapse" id="q4" data-bs-parent="#faq">
+                <div class="accordion-body">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+                    <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                </div>
+            </div>
+         </div>
+     </div>
+</body>
+</html>
+
+
+<!-- 
+
+    Customization in Bootstrap is done by using Javascript and JQuery language.
+
+    Bootstrap is build its library by using language is a Ssas.
+
+    If you learn the language like Ssas by using it you can customize bootstrap related lots of functionalities.
+
+    complete bootstrap is build with sass.
+
+    Currently in large scale project they don't use css directly. they write logic in sass it will translated into css.
+
+    By using sass they implement programming featrues like conditions, loops. so it give code reusability to large codes which reduces time or code.
+
+
+
+-->

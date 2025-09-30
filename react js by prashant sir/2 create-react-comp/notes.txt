@@ -1,0 +1,84 @@
+Export Component In React :
+
+  There are Four ways to export react component.
+
+   1) one default export
+
+      export default function Button() {
+        return <>
+          <button>Like This Code.</button>
+        </>
+      }
+
+      - this is valid but not most places acceptable.
+
+      - so less use of this export way.
+
+  2) Normal Way :
+
+    function Button() {
+      return <>
+        <button>Like This Code.</button>
+      </>
+    }
+
+    export default Button;
+
+    - This is good way to export component.
+
+  3) Multiple named exports.
+  
+    - idealy it is not recommended but you can use at the time of components have less size and merge it into single file.
+
+    - here not write default word at the time of exporting component.
+
+    - Exmaple
+
+      export function Button() {
+        return <>
+          <button>Like This Code.</button>
+        </>
+      }
+
+
+
+      export function Random() {
+        return <>
+          <h1>Random</h1>
+        </>
+      }
+
+      export function Random1() {
+        return <>
+          <h1>Random1</h1>
+        </>
+      }
+
+  4) Mixed export components : 
+
+    - Write default with default export compoent.
+    
+    - Write export only with other export components.
+
+
+    - Example  : 
+
+      export default function Button() {
+        return <>
+          <button>Like This Code.</button>
+        </>
+      }
+
+
+
+      export function Random() {
+        return <>
+          <h1>Random</h1>
+        </>
+      }
+
+      export function Random1() {
+        return <>
+          <h1>Random1</h1>
+        </>
+      }

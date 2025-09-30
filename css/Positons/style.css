@@ -23,6 +23,7 @@ CSS :  Postions Property.
         b) relative
         c) absolute
         d) fixed.
+        e) sticky.
 
 position : static 
 
@@ -122,7 +123,7 @@ Z-index
     background: rgb(145, 145, 240);
     margin: 40px 0px 0px 40px;
 
-    position: static; /* it is a default value of position property.*/
+    /* position: static; it is a default value of position property. */
 
 }
 

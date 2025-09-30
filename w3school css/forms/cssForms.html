@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        label{
+            display: block;
+        }
+
+        input[type=text], select{
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h2>Style an HTML Form with CSS</h2>
+
+    <form action="">
+
+        <label for="first-name">First Name</label>
+        <input type="text" name="firstname" id="first-name" placeholder="Your First Name...">
+
+
+        <label for="last-name">Last Name</label>
+        <input type="text" name="lastname" id="last-name" placeholder="Your Last Name...">
+
+        <label for="country">Country</label>
+        <select name="country" id="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+    <a href="https://www.google.com/?zx=1757334665582&no_sw_cr=1" target="blank">Google Link</a><br>
+
+    <ol type="1" start="1">
+        
+        <li>Tea</li>
+        <li>Cofee</li>
+        <li>Juice</li>
+
+    </ol>
+
+    <ol type="a" start="e" >
+
+        <li>Mango</li>
+        <li>Orange</li>
+        <li>Papaya</li>
+    </ol>
+
+    <ul type="*">
+        <li>Drink
+            <ol type="1" reversed >
+                <li>Tea</li>
+                <li>Cofee</li>
+                <li>Juice</li>
+            </ol>
+        </li>
+        <li>Fruit
+            <ol type="a" start="7" reversed >
+                <li>Mango</li>
+                <li>Orange</li>
+                <li>Papaya</li>
+
+            </ol>
+            
+        </li>
+    </ul>
+
+    <table border="1">
+        <tr>
+            <th>DIV</th>
+            <th>Student</th>
+        </tr>
+        <tr>
+            <td rowspan="2">A</td>
+            <td>Sham</td>
+           
+        </tr>
+        <tr>
+            
+            <td>Ram</td>
+        </tr>
+        <tr>
+            <td rowspan="2">B</td>
+            <td >Sharu Nova</td>
+        </tr>
+        <tr>
+          
+            <td>Orewa</td>
+        </tr>
+    </table><br>
+
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <th>DIV</th>
+            <th colspan="2">A</th>
+            <th colspan="2">B</th>
+        </tr>
+        <tr>
+            <td>Student</td>
+            <td>S1</td>
+            <td>S2</td>
+            <td>S3</td>
+            <td>S4</td>
+        </tr>
+
+    </table>
+
+    <form action="">
+        <label for="first-name" >First Name</label>
+        <input type="text" id="first-name" placeholder="First Name">
+
+        <label for="last name">Last Name</label>
+        <input type="text" id="last name" placeholder="Last Name">
+
+        <label for="Email">Email</label>
+        <input type="text" id="Email" placeholder="Email">
+
+        <label for="gender">Gender</label>
+        <input type="checkbox" id="gender" placeholder="Gender">
+
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap workshop : session 3</title>
+
+    <!-- Bootstrap CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body class="container-fluid">
+
+    <!-- Bootstrap Headings -->
+    <div class="m-5 p-2 border border-danger border-3">
+            <div class="p text-center text-success">Heading In Bootstrap</div>
+            <div class="h1">Bootstrap</div>
+            <div class="h2">Bootstrap</div>
+            <div class="h3">Bootstrap</div>
+            <div class="h4">Bootstrap</div>
+            <div class="h5">Bootstrap</div>
+            <div class="h6">Bootstrap</div>
+    </div>
+
+    <!-- Bootstrap font size -->
+    <div class="m-5 p-2 border border-3 border-dark">
+        <div class="p text-center text-success">Font Size in Bootstrap</div>
+        <div class="fs-1">Bootstrap</div>
+        <div class="fs-2">Bootstrap</div>
+        <div class="fs-3">Bootstrap</div>
+        <div class="fs-4">Bootstrap</div>
+        <div class="fs-5">Bootstrap</div>
+        <div class="fs-6">Bootstrap</div>
+    </div>
+
+    <!-- Bootstrap font weight -->
+    <div class="m-5 p-2 border border-3 border-dark">
+        <div class="p text-center text-success">Font Weight in Bootstrap</div>
+        <div class="fw-light">Bootstrap</div>
+        <div class="fw-lighter">Bootstrap</div>
+        <div class="fw-normal">Bootstrap</div>
+        <div class="fw-medium">Bootstrap</div>
+        <div class="fw-bold">Bootstrap</div>
+        <div class="fw-bolder">Bootstrap</div>
+    </div>
+
+    <!-- Bootstrap font style -->
+    <div class="m-5 p-2 border border-3 border-dark">
+        <div class="p text-center text-success">Font Style in Bootstrap</div>
+        <div class="fst-italic">Bootstrap</div>
+        <div class="fst-normal">Bootstrap</div>
+    </div>
+    
+    <!-- Bootstrap text decoration -->
+    <div class="m-5 p-2 border border-3 border-dark">
+        <div class="p text-center text-success">Font Style in Bootstrap</div>
+        <div class="text-decoration-underline">Bootstrap</div>
+        <div class="text-decoration-line-through">Bootstrap</div>
+        <div class="text-decoration-none">Bootstrap</div>
+    </div>
+
+    <!-- Bootstrap Link Text Color -->
+    <div class="m-5 p-2 border border-3 border-dark">
+        <div class="p text-center text-success">Font Style in Bootstrap</div>
+        <a href="#" class="link-primary">primary</a><br>
+        <a href="#" class="link-danger">danger</a><br>
+        <a href="#" class="link-dark">dark</a><br>
+        <a href="#" class="link-warning">warning</a><br>
+        <a href="#" class="link-secondary">secondary</a><br>
+        <a href="#" class="link-success">success</a><br>
+        <a href="#" class="link-light">light</a><br>
+        <a href="#" class="link-info">info</a>
+    </div>
+    
+    <!-- Bootstrap Text Tranformation -->
+    <div class="m-5 p-2 border border-3 border-dark">
+        <div class="p text-center text-success">Font Style in Bootstrap</div>
+        <div class="text-uppercase">Bootstrap Workshop</div>
+        <div class="text-lowercase">Bootstrap Workshop</div>
+        <div class="text-capitalize">Bootstrap Workshop</div>
+    </div>
+
+    <!-- Bootstrap button -->
+     <dl>
+        
+        <dt>Toolbar</dt>
+        <!-- to make tool bar bootstrap provide btn-toolbar class. Toolbar means spreads from left to right. -->
+        <dd class="btn-toolbar bg-danger">
+            <button class="btn btn-danger">Home</button>
+            <button class="btn btn-danger">About</button>
+            <button class="btn btn-danger">Shop</button>
+            <button class="btn btn-danger">Pages</button>
+        </dd>
+        <dt>Ordinary</dt>
+        <dd>
+            <button>Insert</button>
+        </dd>
+        <dt>Bootstrap Base</dt>
+        <dd>
+            <button class="btn">Insert</button>
+        </dd>
+        <dd>
+            <!-- always apply first btn and class and then btn-primary (contextual)-->
+            <button class="btn btn-primary">Insert</button>
+            <button class="btn btn-success">Update</button>
+            <button class="btn btn-danger">Delete</button>
+        </dd>
+        <dd>
+            <!-- always apply first btn and class and then btn-outline-primary (contextual)-->
+            <button class="btn btn-outline-primary">Insert</button>
+            <button class="btn btn-outline-success">Update</button>
+            <button class="btn btn-outline-danger">Delete</button>
+        </dd>
+        <dd>
+            <!-- always apply first btn and class and then btn-primary (contextual)-->
+            <button class="btn btn-primary btn-sm">Insert</button>
+            <button class="btn btn-success">Update</button>
+            <button class="btn btn-danger btn-lg">Delete</button>
+        </dd>
+
+        <!-- all button grouped together by using btn-group -->
+        <dd class="btn-group">
+            <!-- always apply first btn and class and then btn-primary (contextual)-->
+            <button class="btn btn-primary ">Insert</button>
+            <button class="btn btn-success">Update</button>
+            <button class="btn btn-danger ">Delete</button>
+        </dd> <br>
+        
+        <!-- all button grouped together Vertically by using btn-group-vertical -->
+        <dd class="btn-group-vertical">
+            <!-- always apply first btn and class and then btn-primary (contextual)-->
+            <button class="btn btn-primary ">Insert</button>
+            <button class="btn btn-success">Update</button>
+            <button class="btn btn-danger ">Delete</button>
+        </dd>
+
+        <!-- 
+        There are some special buttons in bootstrap.
+
+        special button like close button, sign up button, log in button etc are the buttons called special button.
+
+        button like btn-close this class give special button in bootstrap.
+
+        button like sign up , log in are used to link so that the class like btn-link provided by bootstrap to achieve such buttons.
+        -->
+
+        <dd>
+            <button class="btn btn-close"></button>
+            <button class="btn btn-link">Sign up</button>
+            <button class="btn btn-link">Log in</button>
+        </dd>
+
+        <!-- Btn claases also we use to links in real development -->
+         <dd>
+            <a href="https://www.amazon.com/" class="btn btn-warning">Amazon</a>
+            <a href="https://www.facebook.com/" class="btn btn-success">Facebook</a>
+         </dd>
+     </dl>
+
+
+     
+</body>
+</html>

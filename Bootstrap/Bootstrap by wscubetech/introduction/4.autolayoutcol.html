@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bootstrap : container</title>
+
+  <!-- bootstrap style sheet links -->
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+  <!-- custom style sheet links -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
+</head>
+
+
+
+<body class="container-fluid">
+
+  <!-- py-5 ==> padding in y-axis 48px (5 denotes 3 rem and 1rem=16px --- 3rem = 3 * 16 = 48px) -->
+  <section class="container-fluid py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2> Quick Facts </h2>
+        </div>
+      </div>
+
+      <!-- In Autolayout column if you want to show all columns in single row in large decvices and some column in first-row and other futher row in medium sized screens and small size screen each row has single col that will be it will be cutomized inside row rather than column.
+       
+      classes like row-cols-lg-5 , row-cols-sm-2 , row-cols-1
+      -->
+      <div class="row row-cols-lg-5 row-cols-sm-2 row-cols-1">
+
+        <div class="col">
+          <div class="bg-white text-center py-4">
+            <img src="./images/3d-rendering-house-model.jpg" alt="plot-img" height="50px">
+            <h3>446</h3>
+            <p>PLOTS</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="bg-white text-center py-4">
+            <img src="./images/3d-rendering-house-model.jpg" alt="plot-img" height="50px">
+            <h3>446</h3>
+            <p>PLOTS</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="bg-white text-center py-4">
+            <img src="./images/3d-rendering-house-model.jpg" alt="plot-img" height="50px">
+            <h3>446</h3>
+            <p>PLOTS</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="bg-white text-center py-4">
+            <img src="./images/3d-rendering-house-model.jpg" alt="plot-img" height="50px">
+            <h3>446</h3>
+            <p>PLOTS</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="bg-white text-center py-4">
+            <img src="./images/3d-rendering-house-model.jpg" alt="plot-img" height="50px">
+            <h3>446</h3>
+            <p>PLOTS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- bootstrap scripts -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+
+
+</body>
+
+</html>

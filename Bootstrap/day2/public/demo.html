@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap-workshop : Session 2</title>
+
+    <!-- Bootstrap CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- custom css style (without bootstrap) -->
+    <style>
+        .women{
+            background-image: url(./images/young-woman-beautiful-yellow-dress.jpg);
+            background-size: cover;
+            height: 300px;
+            width: 400px;
+            padding: 30px;
+        }
+
+        .offer{
+            width: 80px;
+            height: 80px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+
+<body class="container-fluid">
+    <h1>Bootstrap <span class="bi bi-cart"></span> <span class="bi bi-facebook"></span> </h1>
+    <p>Component Library</p>
+    
+    <h1>Bootstrap</h1>
+    <p>Open source, cross platform library</p>
+
+    <!-- sticky position example -->
+    <nav class="bg-dark text-white p-2 position-sticky top-0">
+       <h3>CJC Classes</h3>
+    </nav>
+    
+
+    <!-- box model -->
+    <h1>New Paragraph</h1>
+    <p class="mt-5 ms-4 me-4 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat odio totam pariatur natus dignissimos doloribus molestias similique cupiditate obcaecati ducimus iste reiciendis, fuga dolores! Tempore ab corporis cupiditate sed accusamus doloremque eius maxime assumenda quam nobis, quas odio repellendus vel fuga vitae unde iusto reprehenderit commodi aspernatur neque recusandae quis velit! Impedit nihil veniam expedita molestiae veritatis sunt exercitationem consequatur tempora eligendi illum, optio rem, quam esse nesciunt numquam est eaque? Maiores corporis mollitia velit consequuntur quos odio fugit architecto ullam doloribus! Quidem ipsam, fugiat fugit asperiores ipsum expedita deleniti enim voluptatem. Accusantium veniam rerum a asperiores. Doloremque, modi.</p>
+
+    
+    <p class="mt-4 ms-4 border border-4 border-success ps-3  pt-4 pb-2 pe-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim fugit numquam libero nemo placeat a sapiente. Laborum ex eum iure officiis voluptatem deserunt provident minima eveniet, reprehenderit amet laboriosam cumque expedita dolore omnis earum repudiandae perferendis deleniti consectetur reiciendis sapiente optio harum sunt. Ex ipsam minima laudantium architecto dolorem atque accusamus totam maxime. Blanditiis sint, voluptatibus vel libero ab possimus, provident consectetur voluptates esse dicta iste inventore culpa placeat quidem eligendi soluta alias labore nesciunt amet velit! Possimus, cumque? Natus cupiditate reprehenderit accusamus. Sint maiores natus magnam beatae harum cupiditate et nulla delectus id enim? Commodi ipsum deserunt repudiandae ad!</p>
+    
+    <button class="ms-2 mt-5 mb-5 rounded-5 rounded-pill">Visit Bootstrap-workshop</button> <br> <br>
+    
+    
+    <img  src="./images/young-woman-beautiful-yellow-dress.jpg" alt="tradition-women-cloth-img" width="200" height="200"  class="ms-5 mb-5 rounded-circle""> <br> <br>
+    <img  src="./images/young-woman-beautiful-yellow-dress.jpg" alt="tradition-women-cloth-img" width="400" height="200" class="ms-5 mb-5 rounded-pill"">
+
+    <!-- width and height -->
+    <p class="mt-5 ms-4 me-4 mb-5 p-3 border border-3 border-dark w-25 h-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat odio totam pariatur natus dignissimos doloribus molestias similique cupiditate obcaecati ducimus iste reiciendis, </p>
+
+    <p class="mt-5 ms-4 me-4 mb-5 p-3 border border-3 border-dark w-75 h-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat odio totam pariatur natus dignissimos doloribus molestias similique cupiditate obcaecati ducimus iste reiciendis, fuga dolores! Tempore ab corporis cupiditate s</p>
+
+    <!-- background and text color -->
+    <p class="mt-5 ms-4 me-4 mb-5 p-3 border border-3 border-dark w-75 bg-danger text-white ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat odio totam pariatur natus dignissimos doloribus molestias similique cupiditate obcaecati ducimus iste reiciendis, fuga dolores! Tempore ab corporis cupiditate s</p>
+
+    <!-- Positions -->
+    
+    <!-- position relative -->
+     <div class="mt-4">
+        <button class="btn btn-dark bi bi-cart4 position-relative"><span class="badge bg-danger position-absolute top-0 rounded rounded-circle">3</span></button>
+     </div>
+
+    <!-- fixed positions -->
+
+    <aside class="text-info position-fixed start-0 bottom-50">
+        <div class="bi bi-facebook"></div>
+        <div class="bi bi-twitter"></div>
+        <div class="bi bi-instagram"></div>
+        <div class="bi bi-linkedin"></div>
+        <div class="bi bi-google"></div>
+    </aside>
+
+
+
+    <!-- relative and absolute  -->
+
+    <div class="women m-5 position-relative">
+        <div class="bg-danger text-white p-2 rounded rounded-circle offer position-absolute top-0 end-0">
+            <div>save</div>
+            <div>50%</div>
+        </div>
+    </div>
+    
+
+    <!-- summary above alll  (navbar)-->
+
+    <header class="p-3 bg-dark text-white d-flex justify-content-between">
+        <div>
+            <h3>Shopper.</h3>
+        </div>
+        <div>
+            <span class="me-3">Home</span>
+            <span class="me-3">Catalog</span>
+            <span class="me-3">Shop</span>
+            <span class="me-3">Pages</span>
+            <span class="me-3">Blog</span>
+            <span class="me-3">Docs</span>
+        </div>
+        <div>
+            <span class="bi bi-search me-3"></span>
+            <span class="bi bi-person me-3"></span>
+            <span class="bi bi-heart me-3"></span>
+            <button class="bi bi-cart me-3 position-relative"><span class="position-absolut top-0 end-0 badge bg-danger rounded rounded-circle ">2</span></button>
+            <!-- <span class="bi bi-search"></span> -->
+        </div>
+    </header>
+
+    <article class="bg-dark text-white p-2 text-center">
+        <span class="bi text-warning bi-lightning-fill"></span>
+        <span> HAPPY HOLIDAY DEALS ON EVERYTHING </span>
+        <span class="bi text-warning bi-lightning-fill"></span>
+    </article>
+</body>
+</html>
+
+
+
+<!-- 
+<body class="container-fluid">
+    
+</body> 
+-->

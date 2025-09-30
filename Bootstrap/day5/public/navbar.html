@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap-workshop : session-5 (Navbar)</title>
+    <!-- Bootstrap CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+
+</head>
+<body class="container-fluid">
+
+    <!-- navbar -->
+    <!-- navbar-expand-lg is used for navbar  fit to large screens. -->
+
+    <!-- in this navbar-toggler (button) is placed at left side because it is used first and navbar-brand (logo,brand )is placed at right becuase it is used after navbar-toggler (button). -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <!-- any design we have make responsive then make container as fluid -->
+        <div class="container-fluid">
+            <!-- navbar-brand this is used for companys brand name, logos etc. -->
+
+            <!-- here used data-bs-target for target to the navbar and data-bs-toggle for toggle to collapsed navbar. -->
+             <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+                <!-- navbar-toggler-icon is class give icon at reponsive navbar at small screen sizes like (mobile, tab etc) but at the time of large screen sizes it will remove. -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <h2 class="navbar-brand">Shopper</h2>
+            
+            <!-- here we can use div , ul ,ol any of them they will be collapse as screen size is decreases. -->
+            <div class="navbar-collapse collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link">Home</a></li>
+                    <li class="nav-item"><a class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link">Pages</a></li>
+                    <li class="nav-item"><a class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link">Contact</a></li>
+
+                    <!-- add another nav-item to search bar. -->
+                     <li class="nav-item">
+                        <div class="input-group">
+                            <select class="input-group-text">
+                                <option>All</option>
+                            </select>
+                            <input type="text" class="form-control">
+                            <button class="bi bi-search btn btn-warning"></button>
+                        </div>
+
+                     </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- in this navbar-toggler (button) is placed at right side because it is used after the navbar-brand and navbar-brand (logo,brand )is placed at right becuase it is used before the navbar-toggler  -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <!-- any design we have make responsive then make container as fluid -->
+        <div class="container-fluid">
+            <!-- navbar-brand this is used for companys brand name, logos etc. -->
+            <h2 class="navbar-brand">Shopper</h2>
+             <button class="navbar-toggler">
+                <!-- navbar-toggler-icon is class give icon at reponsive navbar at small screen sizes like (mobile, tab etc) but at the time of large screen sizes it will remove. -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+        </div>
+    </nav>
+
+
+</body>
+</html>

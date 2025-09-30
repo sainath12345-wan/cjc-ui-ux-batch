@@ -46,3 +46,4 @@ The :root pseudo-class in CSS is used to target the highest-level parent element
     background: darkcyan;
     border: 2px solid var(--textColor);
 }
+

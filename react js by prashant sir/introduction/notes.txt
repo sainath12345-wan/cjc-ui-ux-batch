@@ -1,0 +1,108 @@
+# Pre-requisite for React js #
+
+1) Complete HTML (Basics)
+2) Complete CSS (Basics)
+3) Complete JS (Basics)
+
+#) What is React :
+
+    - Javascript library to build Dynamic and interactive user interfaces.
+    - Developed at Facebook in 2011.
+    - Currently most widely used JS library for front-end development.
+    - Used to create single page application (SPA).
+
+#) Working Of DOM :
+
+    - Browser takes HTML and create DOM.
+    - JS helps use modify DOM based on user actions or events.
+    - In big applications, Working with DOM becomes complicated.
+
+#) Problems with Javascript : 
+
+    1. React has a simpler mental model. (E.g. Inverter on/off)
+    2. Js is cumbersome.
+    3. JS is Error-prone.
+    4. JS is Hard to maintain.  
+
+#) Working of React : 
+
+    1. No Need to worry about querying and updating DOM.
+    2. React creates a web page with small and reusable componets. 
+    3. React will take care of creating and updating DOM Element.
+    4. It saves a lot of time, cheezein aasan hai, pehele se likhi hui hai.
+
+#) JS VS React : 
+
+    1. JS is imperative : You define steps to reach you desired state.
+
+    2. React is Declarative : You define the target UI state and then react figures out how to react that state.
+
+    To Visit React Components In Dev Tools : 
+
+    Go to Dev Tools ---> select more tools (>>>) ---> select Components
+
+
+#) Introduction to components 
+
+    - Components help us write reusable, modular and better organized code.
+
+    - React application is a tree of components with App component as the root bringing everything together.
+
+#) Introduction Revision : 
+
+    - What is React ? 
+    - Working of DOM 
+    - Problem with JS 
+    - Working of React
+    - JS VS React
+    - Intro to components 
+
+#) Create a React App 
+
+    - Setup IDE
+    - create a React App
+    - Project Structure.
+
+#) What is IDE 
+
+    - IDE stands for Integrated Development Environment.
+    - Software suite that consolidates basic tools required for software development.
+    - Central hub for coding, finding problem, and testing.
+    - Designed for improve developer efficiency.
+
+#) Need of IDE 
+
+    1. Streamlines development.
+    2. Increase productivity.
+    3. Simplifies complex tasks.
+    4. Offers a unified workspace.
+    5. IDE Features 
+        - Code Autocomplete.
+        - Syntax Highlighting
+        - Version Control
+        - Error Checking.
+
+#) Install latest Node
+
+    1) Search Download NodeJS.
+
+#) Installation & setup (vscode)
+
+    1) search VS Code.
+    2) Keep you software up to date.  
+    3) VS Code Extensions and Settings
+
+        - Live Server / Live Preview
+        - Prettier (Format on save)
+        - Line Wrap 
+        - Tab Size from 4 to 2
+
+#) Create a React App 
+
+    1. Official tool is CRA (Create React APP)
+    2. Vite is a modern tool to create React Project.
+    3. Vite produces Quick and small bundle size.
+    4. Vite : Use npm run dev to launch dev server.
+    5. Use npm start for CRA.
+
+

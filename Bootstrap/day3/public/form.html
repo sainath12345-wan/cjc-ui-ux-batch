@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap workshop : session - 3 (forms) </title>
+
+     <!-- Bootstrap CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body class="container-fluid d-flex justify-content-center align-items-center" style="height: 100vh;">
+
+    <form action="" class="border borde-2 rounded border-dark p-3 w-25 bg-dark text-white">
+        <h3 class="bi bi-person-fill text-center">Register User</h3>
+
+        <!-- category 1 : username -->
+        <div class="mb-3">
+            <label for="username" class="form-label">User Name</label>
+            <div>
+                <input type="text" class="form-control" name="UserName" id="username">
+            </div>
+        </div>
+        
+        <!-- category 2 : password -->
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <div>
+                <input type="password" class="form-control" name="password" id="password">
+            </div>
+        </div>
+
+        <!-- category 3 : Age -->
+        <div class="mb-3">
+            <label for="Age" class="form-label">Age</label>
+            <div>
+                <!-- slider for age -->
+                <input type="range" class="form-range" name="Age" id="Age">
+            </div>
+        </div>
+
+        <!-- category 4 : City  -->
+        <div class="mb-3">
+            <label for="" class="form-label">Your City</label>
+            <div>
+               <select name="" id="" class="form-select">
+                    <option value="">Select City</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="pune">Pune</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="nanded">Nanded</option>
+               </select>
+            </div>
+        </div>
+
+        <!-- category 5 : Subscribe  -->
+         <!-- The form-check-label class in Bootstrap is used to apply styling and accessibility improvements to the label element of a checkbox or radio button -->
+        <div class="mb-3">
+            <label for="" class="form-label">Subscribe</label>
+            <div class="form-switch">
+                <input type="checkbox" class="form-check-input" name="" id="" > <label for="" class="form-check-label">Yes</label>
+            </div>
+        </div>
+        <!-- category 6 : Register  -->
+        <div class="mb-3">
+            <button class="btn btn-light w-100">Register</button>
+        </div>
+    </form>
+    
+</body>
+</html>

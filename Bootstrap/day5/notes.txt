@@ -1,0 +1,464 @@
+Bootstrap-workshop : session-4
+
+1.alerts
+2.modal
+3.offcanvas
+4.carousel
+
+5) Collapse
+
+    - collapse is another bootstrap compoent.
+    - collapse is used to show and hide any content in page dynamically.
+    
+    - Classes : 
+
+        .collapse
+        .show 
+
+    - Attributes :
+
+        data-bs-target 
+        data-bs-toggle
+
+    Example 1 : (only for collapse) ---> it is not fullfill netflix FAQ's section.
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Bootstrap workshop : session 5</title>
+
+            <!-- Bootstrap CDN Links -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+        </head>
+        <body class="container-fluid">
+
+            <button class="btn btn-dark w-100 mt-3" data-bs-toggle="collapse" data-bs-target="#q1"> What is Netflix? </button>   
+            <div class="collapse bg-dark text-white p-2 mt-2" id="q1">
+                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+                <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+            </div>
+        </body>
+    </html>
+
+    In Netflix we can seen only one question answer at a time such is not possible by collapse for that new one is use that is Accordion.
+
+6) Accordion
+
+    - It uses a mutex mechanism to show or hide content.
+    - Mutex is "Mutual Exclusion".
+    - It hides all other contents in a category when any one is selected.
+
+    - There are Accordion classes to build it.
+
+    Classes : 
+
+        .accordion
+        .accordion-item
+        .accordion-content
+        .accordion-header 
+        .accordion-body
+        .accordion-collapse
+        .accordion-button
+    
+    - It have some attributes for more functionality : 
+
+    Attributes : 
+        
+        data-bs-target
+        data-bs-toggle
+        data-bs-parent
+    
+    - Collapse and Accordion are different.
+
+    - Inside every accordion item have accordion-header and accordion-body.
+
+    - if we use class as .show in accordion-collapse it will display to its body.
+
+    - How to achieve the property which when clikc one item then other hides its body and body of clickable item only shown.
+
+        - 1 . give accordian to id like "faq"
+        - 2. each accordion-collapse uses attribute like data-bs-parent with its value is "accordion-id(faq)". 
+
+    - These all about Accordon. 
+
+    - Example
+
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Bootstrap workshop : session 5</title>
+
+                <!-- Bootstrap CDN Links -->
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+            </head>
+            <body class="container-fluid">
+                <h1 class="text-center">Frequetly Asked Questions</h1>
+
+                <!-- all Questions are there in this contianer (accordion) -->
+                <div class="accordion" id="faq">
+                    <!-- every question as item (accordion-item) -->
+                    <div class="accordion-item">
+                        <!-- accordion header -->
+                        <div class="accordion-header">
+                            <!-- accordion-button -->
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">What is Netflix</button>
+                        </div>
+                        <div class="accordion-collapse collapse" id="q1" data-bs-parent="#faq">
+                            <div class="accordion-body">
+                                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+                                <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <!-- accordion header -->
+                        <div class="accordion-header" >
+                            <!-- accordion-button -->
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q2">How Much does Netflix Cost</button>
+                        </div>
+                        <div class="accordion-collapse collapse" id="q2" data-bs-parent="#faq">
+                            <div class="accordion-body">
+                                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+                                <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- We can give cutomize button also rather than accordion button -->
+                    <div class="accordion-item">
+                        <!-- accordion header -->
+                        <div class="accordion-header">
+                            <!-- accordion-button -->
+                            <button class="btn btn-dark w-100 text-start" data-bs-toggle="collapse" data-bs-target="#q3">What is Netflix</button>
+                        </div>
+                        <div class="accordion-collapse collapse" id="q3" data-bs-parent="#faq">
+                            <div class="accordion-body">
+                                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+                                <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <!-- accordion header -->
+                        <div class="accordion-header" >
+                            <!-- accordion-button -->
+                            <button class="btn btn-warning w-100 text-start" data-bs-toggle="collapse" data-bs-target="#q4">How Much does Netflix Cost</button>
+                        </div>
+                        <div class="accordion-collapse collapse" id="q4" data-bs-parent="#faq">
+                            <div class="accordion-body">
+                                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.</p>
+                                <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </body>
+        </html>
+
+
+        <!-- 
+
+            Customization in Bootstrap is done by using Javascript and JQuery language.
+
+            Bootstrap is build its library by using language is a Ssas.
+
+            If you learn the language like Ssas by using it you can customize bootstrap related lots of functionalities.
+
+            complete bootstrap is build with sass.
+
+            Currently in large scale project they don't use css directly. they write logic in sass it will translated into css.
+
+            By using sass they implement programming featrues like conditions, loops. so it give code reusability to large codes which reduces time or code.
+         -->
+
+7) Dropdown :
+
+    - This is next compoent which is most important to build website many time it will used that is dropdown.
+
+    - HTML drop down are designed by using selects.
+
+    - Drowback of HTML Drop downs according to design wise they do not allow icons, image, symbols or any thing inside them.
+
+    - Example : Netflix language drop down menu.
+
+    - HTML dropdown will not allow symbos, icons or images as it it  "RC datat type".
+      [Rich Content Data Element]
+
+    - Bootstrap dropdown allows complex content. [symbols, icons, links, formats...]
+
+    - Classes : 
+
+        .dropdown
+        .dropup
+        .dropend
+        .dropstart
+        .dropdown-menu
+        .dropdown-item
+        .dropdown-toggler
+        .dropdown-divider
+        .dropdown-item-text
+
+    - Attributes : 
+
+        data-bs-toggle="dropdown"
+
+        this only one attribute is used in this.
+
+    - difference between html dropdown and bootstrap dropdown
+
+    In htm dropdown we can show complex content but by using bootstrap dropdown we can achive it.
+
+    Example : 
+
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Bootstrap workshop : session 5 (Drop Down Menu) </title>
+
+                <!-- Bootstrap CDN Links -->
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+            </head>
+            <body class="container-fluid">
+
+                <!-- outside the select drop menu icon is working propertly-->
+                <span class="bi bi-globe"></span>
+                <select>
+                    <!-- Inside the select inside the option icon is not working properly. -->
+                    <option> <span class="bi bi-globe"></span> Language</option>
+                    <option>English</option>
+                    <!-- check box is also not use directly inside the drop down if we want to use then we have use bootstrap drop down -->
+                    <option><input type="checkbox">Hindi</option>
+                </select>
+
+
+
+                <!-- dropdown inside dropdown achieve by using javascript -->
+                <!-- Create a Dropdown menu using bootstrap -->
+                <div class="dropdown">
+                    <button data-bs-toggle="dropdown" class="btn btn-dark dropdown-toggle" ><span class="bi bi-translate"></span>Flipkart</button>
+
+                    <!-- to item we create ul -->
+                    <ul class="dropdown-menu" data-bs-theme="dark">
+                        <li class="dropdown-item"><span class="dropdown-item-text"><span class="bi bi-person-circle"></span>Profile</span></li>
+                        <li class="dropdown-item"><span class="dropdown-item-text"><span class="bi bi-heart"></span>Wishlist</span></li>
+                        <!-- .dropdown-divider used to divide dropdown -->
+                        <li class="dropdown-divider"></li>
+                        <li class="dropdown-item"><span class="dropdown-item-text"><span>Help</span></span></li>
+                    </ul>
+                </div>
+            </body>
+        </html>
+
+
+
+
+8) Nav & Tabs : 
+
+    - Nav and Tabs are very popular in website designing.
+
+    - They can create tab based navigation.
+    - You can display multiple categories of content in the one page.
+    - User can Switch between categories dynamically.
+    
+    - Classes : 
+
+        .nav
+        .nav-tabs
+        .nav-pills
+        .nav-item
+        .nav-link
+        .tab-content
+        .tab-pane
+        .active
+
+    - Tab-based navigation : user can switch and select from one. instead of desiging several pages you design single page with mutiple content that will done by using the Tab-based navigations / nav with tabs. 
+
+    - tab have different style also like tab-pills.
+
+    Note : If you are using <a> element then you can define "href" as "data-bs-target".
+
+    Syntax : 
+
+        <button data-bs-target="#login" data-bs-toggle="tab">
+        <a href="#login" data-bs-toggle="tab">
+
+    Example : 
+
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Bootstrap workshop : session - 5 (Nav and Tabs)</title>
+                <!-- Bootstrap CDN Links -->
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+            </head>
+            <body>
+                
+                <!-- navbar -->
+
+                <h1>Shopper</h1>
+                <ul class="nav nav-tabs "> <!-- nav-pills for different sturcture of nav-tabs.-->
+                    <!-- data-bs-target is only required for button not for links. same data-bs-target working do in achor tag by help of href attribute -->
+                    <li class="nav-item "><a class="nav-link active" href="#login" data-bs-toggle="tab" >Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#register" data-bs-toggle="tab">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recover" data-bs-toggle="tab">Recover Account</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <!-- tab-pane -->
+                    <div class="tab-pane active" id="login">
+                        <dl>
+                            <dt>User Name</dt>
+                            <dd><input type="text"></dd>
+                            <dt>Password</dt>
+                            <dd><input type="password"></dd>
+                        </dl>
+                        <button class="btn btn-primary">Login</button>
+                    </div>
+
+                    <div class="tab-pane" id="register">
+                        <dl>
+                            <dt>User Name</dt>
+                            <dd><input type="text"></dd>
+                            <dt>Password</dt>
+                            <dd><input type="password"></dd>
+                            <dt>Mobile</dt>
+                            <dd><input type="text"></dd>
+                            <dt>Age</dt>
+                            <dd><input type="number"></dd>
+                        </dl>
+                        <button class="btn btn-primary">Register</button>
+                    </div>
+
+                    <div class="tab-pane" id="recover">
+                        <input type="email" name="" id="" placeholder="Your email">
+                        <button class="btn btn-primary">Recover</button>
+                    </div>
+                </div>
+
+            </body>
+        </html>
+
+9) Navbar :
+
+    - It configures a responsive navigation.
+    - It can change according to device screen, orientation, width and other values.
+
+    - Classes : 
+
+        .navbar
+        .navbar-expand-{lg|sm}
+        .navbar-toggler
+        .navbar-toggler-icon
+        .navbar-brand
+        .navbar-nav
+        .navbar-collapse 
+        .nav-item
+        .nav-link
+        .navbar-dark
+        .navbar-{contextual}
+        .navbar-light 
+
+    - Bootstrap Navbar and Nav Tabs are both different concepts.
+
+    - add mobile simulator extension in chrome to test you website on mobile.
+
+    - Example :
+
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Bootstrap-workshop : session-5 (Navbar)</title>
+                <!-- Bootstrap CDN Links -->
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+            </head>
+            <body class="container-fluid">
+
+                <!-- navbar -->
+                <!-- navbar-expand-lg is used for navbar  fit to large screens. -->
+
+                <!-- in this navbar-toggler (button) is placed at left side because it is used first and navbar-brand (logo,brand )is placed at right becuase it is used after navbar-toggler (button). -->
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                    <!-- any design we have make responsive then make container as fluid -->
+                    <div class="container-fluid">
+                        <!-- navbar-brand this is used for companys brand name, logos etc. -->
+
+                        <!-- here used data-bs-target for target to the navbar and data-bs-toggle for toggle to collapsed navbar. -->
+                        <button class="navbar-toggler" data-bs-target="#menu" data-bs-toggle="collapse">
+                            <!-- navbar-toggler-icon is class give icon at reponsive navbar at small screen sizes like (mobile, tab etc) but at the time of large screen sizes it will remove. -->
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <h2 class="navbar-brand">Shopper</h2>
+                        
+                        <!-- here we can use div , ul ,ol any of them they will be collapse as screen size is decreases. -->
+                        <div class="navbar-collapse collapse" id="menu">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link">Home</a></li>
+                                <li class="nav-item"><a class="nav-link">Shop</a></li>
+                                <li class="nav-item"><a class="nav-link">Pages</a></li>
+                                <li class="nav-item"><a class="nav-link">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link">Contact</a></li>
+
+                                <!-- add another nav-item to search bar. -->
+                                <li class="nav-item">
+                                    <div class="input-group">
+                                        <select class="input-group-text">
+                                            <option>All</option>
+                                        </select>
+                                        <input type="text" class="form-control">
+                                        <button class="bi bi-search btn btn-warning"></button>
+                                    </div>
+
+                                </li>
+                                
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+
+
+                <!-- in this navbar-toggler (button) is placed at right side because it is used after the navbar-brand and navbar-brand (logo,brand )is placed at right becuase it is used before the navbar-toggler  -->
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                    <!-- any design we have make responsive then make container as fluid -->
+                    <div class="container-fluid">
+                        <!-- navbar-brand this is used for companys brand name, logos etc. -->
+                        <h2 class="navbar-brand">Shopper</h2>
+                        <button class="navbar-toggler">
+                            <!-- navbar-toggler-icon is class give icon at reponsive navbar at small screen sizes like (mobile, tab etc) but at the time of large screen sizes it will remove. -->
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        
+                    </div>
+                </nav>
+
+            </body>
+        </html>
+
+
+
+

@@ -1,0 +1,809 @@
+#######
+
+Dropdown
+Nav & Tabs
+Navbar
+Collapse
+Accordion
+
+########
+
+
+- There have Few More Compenents as follow as :
+
+1) Cards :
+
+    - it also important design/component in web site designing.
+
+    - Classes : 
+
+            .card
+            .card-header
+            .card-body
+            .card-footer
+            .card-title
+            .card-subtitle
+            .card-img-top
+            .card-img-overlay.
+
+            - These are the card related classes. they don't have interaction they only designs.
+
+            - There is no any functionality for cards.
+
+        Syntax :
+
+            <div class="card">
+                <div class="card-header"></div>
+                <div class="card-body"></div>
+                <div class="card-footer"></div>
+            </div>
+        
+        Example :
+        
+            <!DOCTYPE html>
+            <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Bootstrap-workshop : session 6</title>
+                    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+                    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+                </head>
+                <body class="container-fluid">
+                    <!-- <button class="bi bi-facebook">Facebook</button> -->
+
+                    <!-- bootstrap cards -->
+
+                    <main class="mt-4 d-flex">
+                        <div class="card p-1 m-2" style="width: 300px;">
+                            <div class="card-header">
+                                <h5 class="card-title">Creating Business Solutions</h5>
+                            </div>    
+                            <div class="card-body">
+                                <img src="./images/card-image.png" alt="card-img" class="card-img-top">
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary w-100 bi bi-cart4">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="card p-1 m-2" style="width: 300px;">
+                            <div class="card-header">
+                                <h5 class="card-title">Creating Business Solutions</h5>
+                            </div>    
+                            <div class="card-body">
+                                <img src="./images/card-image.png" alt="card-img" class="card-img-top">
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary w-100 bi bi-cart4">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="card p-1 m-2" style="width: 300px;">
+                            <div class="card-header">
+                                <h5 class="card-title">Creating Business Solutions</h5>
+                            </div>    
+                            <div class="card-body">
+                                <img src="./images/card-image.png" alt="card-img" class="card-img-top">
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary w-100 bi bi-cart4">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="card p-1 m-2" style="width: 300px;">
+                            <div class="card-header">
+                                <h5 class="card-title">Creating Business Solutions</h5>
+                            </div>    
+                            <div class="card-body">
+                                <img src="./images/card-image.png" alt="card-img" class="card-img-top">
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary w-100 bi bi-cart4">Add to Cart</button>
+                            </div>
+                        </div>
+                        <div class="card p-1 m-2 bg-success text-white" style="width: 300px;">
+                            <img src="./images/card-image.png" alt="card-img" class="card-img-top">
+                            <div class="card-header">
+                                <h5 class="card-title">Creating Business Solutions</h5>
+                            </div>    
+                            <div class="card-body">
+                                <ul>
+                                    <li>Fossil</li>
+                                    <li>Fastrack</li>
+                                    <li>Apple</li>
+                                </ul>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary w-100 bi bi-cart4">Add to Cart</button>
+                            </div>
+                        </div>
+                    </main>
+                    
+
+
+
+                    <script src="../node_modules/jquery/dist/jquery.js"></script>
+                    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+                </body>
+            </html>
+        
+        - In website we needs this classes to build cards using bootstrap.
+
+2) badge : 
+
+    Classes :
+
+        .badge 
+        .bg-{contextual}
+        .text-{contextual}
+
+    - badge have only one class.
+
+    - Example :
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Bootstrap-workshop : session-6 (badge)</title>
+            <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+            <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        </head>
+        <body>
+            <!-- badge bootstrap -->
+            <button class="btn btn-dark mt-3 position-relative">
+                <span class="bi bi-bell-fill">
+                    <span>Subscribed <span class="badge bg-danger rounded rounded-circle position-absolute">4</span></span>
+                </span>
+            </button>
+            <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+            <script src="../node_modules/jquery/dist/jquery.js"></script>
+        </body>
+        </html>
+
+3) Pagination :
+    
+    - Pagination have classes as follow as:
+
+    Classes :
+
+        .pagination
+        .page-item
+        .page-link
+        .active
+        .disabled
+
+    Example :
+
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Bootstrap-workshop : session-6 (badge)</title>
+                <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+                <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+            </head>
+            <body class="container-fluid">
+                
+                <!-- Pagination in bootstrap -->
+                <!-- 
+                
+                &laquo;   for  << 
+                &raquo;   for  >>
+                -->
+                <h2>Pagination</h2>
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link"> &laquo;</a></li>
+                    <li class="page-item"><a class="page-link">1</a></li>
+                    <li class="page-item"><a class="page-link">2</a></li>
+                    <!-- .active class in  page-item used for active page-item -->
+                    <li class="page-item active" ><a class="page-link">3</a></li>
+                    <!-- .disabled class is  used which is show disabled item. -->
+                    <li class="page-item disabled"><a class="page-link">4</a></li>
+                    <li class="page-item"><a class="page-link"> &raquo; </a></li>
+                </ul>
+
+                <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+                <script src="../node_modules/jquery/dist/jquery.js"></script>
+            </body>
+        </html>
+
+4) Progress Bar : 
+
+    - It is achived by using HTML also they not give that much features so we use bootstrap progress bar.
+
+    - bootstrap progress bar following classes are provided.
+
+    Classes : 
+
+        .progress 
+        .progress-bar
+        .progress-bar-striped
+        .progress-bar-animated
+    
+    Examples : 
+     
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Bootstrap-workshop : session-6 (badge)</title>
+                <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+                <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+            </head>
+            <body class="container-fluid">
+                
+                <!--  it will used to how much percent downloading will done. -->
+                <h2>HTML Progress Bar</h2>
+                <progress min="1" max="100" value="20"></progress> 20% completed
+
+                <!-- bootstrap progress bar -->
+                <h2>Bootstrap Progress Bar</h2>
+                <div class="progress">
+                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated me-1" style="width: 25%;"> 25% Completed </div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated  bg-warning me-1" style="width: 50%;"> 50% pending </div>
+                    <div class="progress-bar bg-danger" style="width: 25%;"> Unknown </div>
+                </div>
+                <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+                <script src="../node_modules/jquery/dist/jquery.js"></script>
+            </body>
+        </html>
+
+    - Most of the websites are not use this progress bar for loading show purpose they use Spinners.
+
+5) Spinners :
+
+    Classes : 
+
+        .spinner-border
+        .spinner-border-{sm|lg}
+        .spinner-grow
+        .spinner-grow-{sm|lg}
+
+    Example :
+
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Bootstrap-workshop : session-6 (badge)</title>
+                <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+                <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+            </head>
+            <body class="container-fluid">
+                <!-- spinners bootstrap -->
+                <h2>Spinners</h2>
+                <!-- type of spinner : rotating spinner -->
+                <div class="spinner-border text-success">
+                    <!-- we can kept anything but not recommended. -->
+                    50%
+                </div>
+                <!-- type of spinner : blink spinner -->
+                <div class="spinner-grow text-danger">
+
+                </div>
+
+                <button class="btn btn-primary">
+                    <span class="spinner-border"></span> Loading...
+                </button>
+                
+                <!-- get a small size spinner -->
+                <button class="btn btn-primary">
+                    <span class=" spinner-border spinner-border-sm"></span> Loading...
+                </button>
+                <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+                <script src="../node_modules/jquery/dist/jquery.js"></script>
+            </body>
+        </html>
+
+6) Tables : 
+
+    - Next Important we also have some classes related to tables.
+    - In html we learn how design table they have lot of attributes.
+    - we have ready made design for tables. which will be provided by Tables.
+
+    Classes : 
+
+        .table
+        .table-hover
+        .table-{contextual}
+        .table-striped
+        .table-bordered
+        .table-responsive
+        .caption-top
+    
+    - If too many columns are there then page will becomes scrollable(that is not good idea).
+
+    - Example 
+
+        <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Bootstrap-workshop : session-6 (badge)</title>
+                <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+                <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+            </head>
+            <body class="container-fluid">
+                <!-- table in bootstrap -->
+                <table class="mt-4 table table-hover table-danger table-striped table-bordered caption-top">
+                    <caption>Updated on 10-02-2023</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- table in bootstrap (there have too many colums it allows scroll bar that is not good way.) -->
+                <table class="mt-4 table table-hover table-danger table-striped table-bordered caption-top">
+                    <caption>Updated on 10-02-2023</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+                
+                <!-- to solve above problem due to add lots of columns then we kept table in div and div give class as table-responsive. -->
+                
+
+                <div class="table-responsive">
+                    <table class="mt-4 table table-hover table-danger table-striped table-bordered caption-top">
+                    <caption>Updated on 10-02-2023</caption>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        
+                    </tbody>
+                    </table>
+                </div>
+                <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+                <script src="../node_modules/jquery/dist/jquery.js"></script>
+            </body>
+        </html>
+
+7) Bread Crumb
+
+    - It is important/popular  component in web designing. but you rquire good knowledge (complete) of css also.
+
+    -You are doing some shopping in the they some steps.
+        step1 : select a product
+        step2 : add to cart.
+        step3 : select the payment 
+        step4 : enter you details.
+        step5 : checkout.
+
+    - You know some websites show status like banking or etc .
+        s1,s2,s3, currenlty you are in which step , how many steps are there such know as bread crumb.
+
+    Classes : 
+
+        .breadcrumb
+        .breadcrumb-item
+        .active
+
+    - actually showing the bread crumb you will learn in css selectors. how to design bread crumb like this by your own seperator. 
+
+    - Example By using Bootstrap.
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Bootstrap-workshop : session-6 (badge)</title>
+            <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+            <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        </head>
+        <body class="container-fluid">
+            
+            <!-- Bread Crumb by using bootstrap -->
+
+            <h2>Shopper</h2>
+
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item">Home</li>
+                <li class="breadcrumb-item">Electornics</li>
+                <li class="breadcrumb-item">Mobiles</li>
+                <li class="breadcrumb-item active text-primary">Apple</li>
+                <li class="breadcrumb-item">Iphone 14</li>
+            </ul>
+            <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+            <script src="../node_modules/jquery/dist/jquery.js"></script>
+        </body>
+    </html>
+
+
+8) Grid Style : 
+
+    Classes : 
+
+        .row
+        .col
+        .col-{size (1 to 12) } ---> grid comes with 12 fractions.
+        
+        grid come with maximum 12 fractions only . beacuse the maximum size of any webpage is 1200px so that if you divided any thing into grid it will show 12 fractions only.
+
+    Example 1 
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Bootstrap-workshop : session-6 (badge)</title>
+            <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+            <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+            <!-- style for grid style using css (without bootstrap ) -->
+            <style>
+        
+
+            </style>
+        </head>
+        <body class="container-fluid">
+            
+            <!-- Bootstrap Grid-Style -->
+
+            <!-- <button class="btn btn-secondary w-100 mt-3"> Bact to Top</button> -->
+            <footer class="row bg-dark p-3 text-white">
+                <div class="col">
+                    <ul class="list-unstyled">
+                        <div class="fw-bold">Get to Know Us</div>
+
+                        <li>Careers</li>
+                        <li>Blog</li>
+                        <li>About Amazon</li>
+                        <li>Investor Relations</li>
+                        <li>Amazon Devices</li>
+                        <li>Amazon Science</li>
+
+                    </ul>
+        
+                </div>
+                <div class="col">
+
+                    <ul class="list-unstyled">
+                        <div class="fw-bold">Get to Know Us</div>
+
+                        <li>Careers</li>
+                        <li>Blog</li>
+                        <li>About Amazon</li>
+                        <li>Investor Relations</li>
+                        <li>Amazon Devices</li>
+                        <li>Amazon Science</li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="list-unstyled"> 
+                        <div class="fw-bold">Get to Know Us</div>
+
+                        <li>Careers</li>
+                        <li>Blog</li>
+                        <li>About Amazon</li>
+                        <li>Investor Relations</li>
+                        <li>Amazon Devices</li>
+                        <li>Amazon Science</li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <ul class="list-unstyled">
+                        <div class="fw-bold">Get to Know Us</div>
+
+                        <li>Careers</li>
+                        <li>Blog</li>
+                        <li>About Amazon</li>
+                        <li>Investor Relations</li>
+                        <li>Amazon Devices</li>
+                        <li>Amazon Science</li>
+
+                    </ul>
+                </div>
+            </footer>
+
+            <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+            <script src="../node_modules/jquery/dist/jquery.js"></script>
+        </body>
+    </html>
+
+    Example 2 
+
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Bootstrap-workshop : session-6 (badge)</title>
+            <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+            <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+            <!-- style for grid style using css (without bootstrap ) -->
+            <style>
+        
+
+            </style>
+        </head>
+        <body class="container-fluid">
+            
+            <!-- Bootstrap Grid-Style -->
+
+            <header class="bg-primary row">
+                Header 
+            </header>
+            <div class="row">
+                <nav class="col-3 border border-1 bg-dark text-white">Nav</nav>
+                <main class="col-7 bg-warning text-white" style="height: 300px;">Main</main>
+                <aside class="col-2 bg-danger text-white">Ads</aside>
+            </div>
+            <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+            <script src="../node_modules/jquery/dist/jquery.js"></script>
+        </body>
+    </html>
+
+- In this way bootstrap has classes and attributes they allow you to desing website and webpage very fast.
+
+- This all components are doesnot require javascript code. but other component requires / needs javascript / jquery knowledge to control them.

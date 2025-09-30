@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap workshop : session 4 (offcanvas)</title>
+
+    <!-- Bootstrap CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+<body class="container-fluid">
+
+    
+    <!-- 
+        
+    offcanvas - this class apply for nav element.
+    
+    id - to select unique element.
+    
+    tabindex - tabindex means by default it is not active its value is '-1'  by default active means its value is '0'. 
+    
+    dialog  by default inactive that means by default they not display. 
+    
+    but offcanvas by default active (display) so to make it as inactive (non display) we have to use tabindex as -1 (don't open at all).
+    
+    start--- left  and end --- right
+    offcanvas needs a direction it will get by using offcanvas-{start | end | top | bottom} this class of offcanvas.
+    
+    offcanvas will be open when we click on button. it will be achieve by data-bs-toggle as 'offcanvas'. target to paticular offcanvas component we use data-bs-target with its id_name. and to close that we use data-bs-dismiss value as offcanvas.
+    
+    
+    -->
+
+    <button class="btn btn-primary bi bi-justify mt-4 " data-bs-toggle="offcanvas" data-bs-target="#navbar"></button>
+    
+    <nav class="offcanvas offcanvas-top" id="navbar" tabindex="-1">
+        <div class="offcanvas-header bg-dark text-white">
+            <h1>Amazon</h1>
+            <button class="btn btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ol>
+                <li>Electronics</li>
+                <li>Footwear</li>
+                <li>Fashion</li>
+            </ol>
+        </div>
+    </nav>
+</body>
+</html>

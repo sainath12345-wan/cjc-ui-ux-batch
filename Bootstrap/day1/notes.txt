@@ -1,0 +1,222 @@
+Bootstap : Session 1
+
+- Issues In Building Websites :
+
+    Lots of Desings are required ,Interactive Functionalities are required etc which will be done by manually by using css/JS/HTML.
+
+    Desing manually by using html/css/js takes a lot of time.
+
+    Main Intension in Real Time Project is as much as possible save time and build good interactive interfaces faster.
+
+
+
+1. What is Bootstrap ? 
+
+    - It is a Component library used to build interactive UI faster.
+
+    Component Library : it is nothingbut already some templates are designed and given to you and you have just implement them and customize according requirement.
+
+    It is an open source and cross platfrom library for building UI.
+
+    Open Source : it means customize according to our requirement.
+
+    Free : licence freely (we can use without purchasing that).
+
+    cross-platfrom : it can run on every browser.
+
+2. Component library ? 
+
+    A Component comprises of 
+        a) Markup         ----> (HTML)
+        b) Styles         ----> (CSS)
+        c) Functionality  ----> (JAVASCRIPT)
+
+3. What are other libraries like bootstrap?
+
+    a) Twitter Bootstrap
+    b) Tailwind
+    c) Telerik
+    d) Mui
+    e) DevExpress
+    etc...
+
+    main goal of all the libraries is build interactive UI Faster.
+
+4. Bootstrap Versions.
+
+    - Bootstrap have lots of versions.
+    - Projects in real-time may be using bootstrap 3 & 4 versions.
+    - Latest version of bootstrap is "Bootstrap 5"(Introduce several new things in this version to make mordern web-design).
+
+Main Aim To Learn Bootstap is the Rapidly build Interactive UI.
+
+5. Setup Evironment for Bootstrap in Project :
+
+   1. Download and Install "Node JS" on Your PC.
+        - Node JS provides a package manager tool called NPM (Node Package Manager).
+
+        - Package Manager is used to install, update or uninstall any library required for package.
+
+        - There are various other package managers 
+
+            a) Yarn
+            b) Bower
+            c) RubyGEMS
+            d) Composer
+            etc...
+
+            ---> getboostrap.com --->dowload ---> package managers. (check package managers supported by bootstrap)
+
+        - Install the NodeJS from official website : 
+
+            https://nodejs.org/en ---> click download ---> select  LTS version (Long Term Supported Version).
+
+        - After Installing check the versions from command prompt 
+            command :  
+            
+            node -v (to check node version)
+            npm -v (to check npm version)
+
+    2. Download and Install "Visual Studio Code." (IDE)
+
+        https://code.visualstudio.com/download
+    
+    3. Open Visual Studio Code editor and install the following extensions.
+
+        - Live Server (Required for testing our webpages on server)
+        - vscode-icons (Required for icons to different extension of files)
+        - IntelliSense for CSS class names in HTML (suggest CSS class name )
+
+Create a Project for boostrap template design.
+
+    1. Open any location on your PC and create a folder
+
+        folder-name : bootstrap-workshop
+    
+    2. Open folder in Visual Studio Code
+
+    3. Open Terminal in Visual Studio Code [ Ctrl + ` ]
+
+            Terminal Menu -> New Terminal
+
+            > 
+            
+            1)npm install bootstrap bootstrap-icons jquery --save (to install bootstrap in system) (i- install) 
+
+            2) added the new folder name as node_modules and package-lock.json , package.json this files are added.
+
+                node_modules : all the libraries are installed are kept in this folder.(all bootstrap related files kept here)
+
+                package-lock.json : is metadata that means it contains the information about project (versions, library versions, several shortcut commands and etc)
+
+    4. All library files are installed into a folder "node_modules"
+
+    5. The project with bootstrap requires following libraries
+
+        a) Pooper
+        b) Bootstrap
+        c) Bootstrap-icons
+        d) jQuery
+
+    6. Add following folders into project
+
+        - public  ---> used to keep all static resouces (html, images , docs, video...)
+        - src    ---> used to keep all dynamic resources (css, scss, js, ts, jsx etc..)
+
+    7. Add a new file "index.html" into public folder
+
+    8. Desing you HMTL page 
+
+    9. Right Click in the page ==> Open with Live Server
+
+    10. To use bootstrap in any page you have to link the following files.
+
+    // boostrap style file link in head section.
+    // css files order is not matter.
+    <head>
+        <link rel="stylesheet" href ="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href ="../node_modules/bootstrap-icons/dist/css/bootstrap.css">
+    </head>
+
+    // boostrap script file link in body section.(we can add script inside the head section also but recommended way to add script in body section is good)
+
+    // js files order is matter.
+
+    <body>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <body>
+
+##########################################
+
+Bootstrap Icons : 
+
+- bootstrap provides lots of icons.
+
+- Every icon is defined using class name.
+
+    bi bi-Twitter
+    bi bi-facebook
+    bi bi-house
+    bi bi-person-fill
+
+- Classes are applied to any HTML element by using "class" attribute.
+
+    https://icons.getbootstrap.com/ --> visit this website to get all classes required to the bootstrap icons.
+    
+
+To use bootstrap and icons in any page you can link CDN directly and implement. (without installing package manager.)
+
+CDN : some files kept on the server and to access that files without downloading and installing we have to use then some links are created such links are called as CDN (content delivery links).
+
+
+#) Steps to set up the CDN our project :
+
+1) Visit the website "getbootstrap.com".
+2) Click on "Download".
+3) Go ot "CDN" category
+
+4) Copy the links and paste in Head section of page.
+
+     <!-- Bootstrap CDN Links -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+ 
+#) Steps to add bootstrap-icons cdn link : 
+
+1) Visit the website "getbootstrap.com".
+2) Click on "Download".
+3) Go ot "Icons" category
+4) Go to bottom the page there have cdn link for bootstrap-icons.
+4) Copy the links and paste in Head section of page.
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+// Problem in this way (without downloading npm for boostrap directly adding the cdn-links for it from boostrap. )
+
+    By this process every time we need to connect with internet to test the webpage beacuse the library is live come from their website.
+
+    If we Download then it will be used offline as well with in the system.
+
+// to use the boostrap in project there have two ways
+
+1) By downloading it in system (it will used to without internet also)
+
+2) By Adding CDN (to use this we have require internet)
+
+
+
+
+###################### Now Bootstap Is Configured In Project ##########################################################
+
+
+
+    
+
+
+
+

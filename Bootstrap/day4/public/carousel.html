@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap workshop : session 4 (carousel)</title>
+
+    <!-- Bootstrap CDN Links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+
+<body class="container-fluid">
+
+    <!-- 
+    
+    - .carousel this class is used to create carousel.
+    - banners id is used to to select particular carousel for perform task from many of the carousel.
+
+    - .carousel-inner give the container to the .carousel class container.
+ 
+    - inside .carousel-inner container there have carousel items which are define by using .carousel-item class.
+
+                - It is Important Bootstap Component used in many of the website to show case hero-section of website.
+
+            - It is used to design sliding and fading content in page.
+
+            - It can be controlled manually or with auto timing.
+
+            Basic Carousel Classes : 
+
+                - This are three important classes.
+
+                .carousel 
+                .carousel-inner
+                .carousel-item 
+
+                - Make sure that one carousel-item is "active". not all carousel-item should not be "active".
+
+                    <div class="carousel-item active"></div>
+
+                - Carousel will not have any default animation, to start animation you have to define the attribute "data-bs-ride=carousel"
+
+                - Carousel will not have a smooth animation, to define animation you have to apply the classes "slide" or "carousel-fade".
+
+            
+                
+
+    -->
+
+    <!-- Basic Carousel -->
+    <div class="carousel slide" data-bs-theme="dark" data-bs-ride="carousel" id="banners">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+                <img src="./images/slide1.png" alt="slide1" height="200" class="w-100 d-block">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="./images/slide2.png" alt="slide2" height="200" class="w-100 d-block">
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+                <img src="./images/slide3.png" alt="slide3" height="200" class="w-100 d-block">
+            </div>
+        </div>
+        <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#banners">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#banners">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        <!-- add carousel indicators -->
+        <div class="carousel-indicators">
+            <button class="active" data-bs-slide-to="0" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="1" data-bs-target="#banners"></button>
+            <button data-bs-slide-to="2" data-bs-target="#banners"></button>
+        </div>
+    </div>
+
+</body>
+
+</html>

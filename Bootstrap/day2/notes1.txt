@@ -1,0 +1,52 @@
+Bootstrap-Workshop : Session-2
+
+To use bootstrap and icons in any page you can link CDN directly and implement. (without installing package manager.)
+
+CDN : some files kept on the server and to access that files without downloading and installing we have to use then some links are created such links are called as CDN (content delivery links).
+
+
+Steps to set up the CDN our project :
+
+1) Visit the website "getbootstrap.com".
+2) Click on "Download".
+3) Go ot "CDN" category
+
+4) Copy the links and paste in Head section of page.
+
+     <!-- Bootstrap CDN Links -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+ 
+
+Steps to add bootstrap-icons cdn link : 
+
+1) Visit the website "getbootstrap.com".
+2) Click on "Download".
+3) Go ot "Icons" category
+4) Go to bottom the page there have cdn link for bootstrap-icons.
+4) Copy the links and paste in Head section of page.
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+// Problem in this way (without downloading npm for boostrap directly adding the cdn-links for it from boostrap. )
+
+    By this process every time we need to connect with internet to test the webpage beacuse the library is live come from their website.
+
+    If we Download then it will be used offline as well with in the system.
+
+// to use the boostrap in project there have two ways
+
+1) By downloading it in system (it will used to without internet also)
+
+2) By Adding CDN (to use this we have require internet)
+
+###################### Now Bootstap Is Configured In Project ##########################################################
+
+
+
+
+

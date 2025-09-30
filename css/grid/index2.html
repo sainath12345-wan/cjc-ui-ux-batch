@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+            :root{
+                --backgroundColor : #111;
+                --textColor : #fff;
+                --gridFontFamily: sans-serif;
+            }
+
+
+            *{
+                margin : 0px;
+                padding : 0px;
+                box-sizing: border-box;
+                background-color: var(--backgroundColor);
+                color: var(--textColor);
+                font-family: var(--gridFontFamily);
+            }
+
+            .grid-item{
+                height: 200px;
+                width: 200px;           
+                background-color: white;
+                margin: 20px 15px; 
+            }
+
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-item-1">grid 1</div>
+        <div class="grid-item grid-item-2">grid 2</div>
+        <div class="grid-item grid-item-3">grid 3</div>
+        <div class="grid-item grid-item-4">grid 4</div>
+        <div class="grid-item grid-item-5">grid 5</div>
+    </div>
+</body>
+</html>
