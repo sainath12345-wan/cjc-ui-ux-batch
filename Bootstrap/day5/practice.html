@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap workshop : session 5</title>
+
+  <!-- Bootstrap CDN Links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+
+<body class="container-fluid">
+
+  <!-- Normal  Collapse -->
+
+  <h1>Collapse Example</h1>
+  <button class="btn btn-dark w-100 mt-3" data-bs-toggle="collapse" data-bs-target="#q1">What is Netflix?</button>
+
+  <div class="collapse" id="q1">
+    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries
+      and more – on thousands of internet-connected devices.</p>
+    <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price.
+      There's always something new to discover, and new TV shows and movies are added every week!</p>
+  </div>
+
+  <hr>
+  <!-- Accordion  -->
+  <h1>Accordion Example</h1>
+
+  <h1 class="h1 text-center">Frequently Asked Questions</h1>
+
+  <div class="accordion" id="faq">
+    <!-- accordion item -1 -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#aq1">What is
+          Netflix?</button>
+      </div>
+      <div class="accordion-collapse collapse " id="aq1" data-bs-parent="#faq">
+        <div class="accordion-body">
+          <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,
+            documentaries
+            and more – on thousands of internet-connected devices.</p>
+          <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price.
+            There's always something new to discover, and new TV shows and movies are added every week!</p>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- accordion item - 2 -->
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#aq2">How Much does Netflix
+          Cost</button>
+      </div>
+      <div class="accordion-collapse collapse" id="aq2" data-bs-parent="#faq">
+        <div class="accordion-body">
+          <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime,
+            documentaries and more – on thousands of internet-connected devices.</p>
+          <p>You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price.
+            There's always something new to discover, and new TV shows and movies are added every week!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown -->
+  <h1>Dropdown Examples</h1>
+
+  <div class="dropdown">
+    <button data-bs-toggle="dropdown" class="btn btn-dark dropdown-toggle"><span
+        class="bi bi-translate"></span>Flipkart</button>
+
+    <ul class="dropdown-menu" data-bs-theme="dark">
+      <li class="dropdown-item"><span class="dropdown-item-text"><span class="bi bi-person-circle"> </span>
+          Profile</span></li>
+      <li class="dropdown-item"><span class="dropdown-item-text"><span class="bi bi-heart"></span>Whishlist</span></li>
+      <li class="dropdown-divider"></li>
+      <li class="dropdown-item"><span class="dropdown-item-text">Help</span></li>
+    </ul>
+  </div>
+
+</body>
+
+</html>

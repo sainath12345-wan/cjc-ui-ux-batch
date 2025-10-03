@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components Assignment (Part 2)</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <style>
+    table,
+    thead,
+    tbody,
+    tr,
+    td,
+    th {
+      border: 2px solid black;
+    }
+  </style>
+</head>
+
+<body class="p-4">
+
+  <h1 class="text-center mb-4">Bootstrap Components Assignment (Collapse, Accordion, Dropdown, Nav & Tabs, Navbar)</h1>
+
+  <!-- ========================================================= -->
+  <!-- 📌 COLLAPSE -->
+  <!-- ========================================================= -->
+
+  <!-- Problem 21: Blog Post Read More (Collapse)
+  Scenario:
+  A blog website shows only an introduction by default.
+  Task:
+  Create a collapse section that expands with a “Read More” button and collapses back with “Read Less”.
+  -->
+
+  <h1 class="text-center h1">Question 1</h1>
+  <div class="mb-4">
+    <!-- Code here -->
+    <div class="blog-post">
+      <div class="w-100 bg-light p-4 m-4 text-center">
+        <h1 class="text-center">Lion</h1>
+        <img src="./lion.png" alt="blog-image" class=" w-50" style="margin: 0px auto;">
+        <p class="justify-content-start mt-4">The lion (Panthera leo) is a large cat of the genus Panthera, native to
+          Sub-Saharan Africa and India. It has
+          a muscular, broad-chested body; a short, rounded head; round ears; and a dark, hairy tuft at the tip of its
+          tail. It is sexually dimorphic; adult male lions are larger than females and have a prominent mane. It is a
+          social species, forming groups called prides. A lion's pride consists of a few adult males, related females,
+          and cubs. Groups of female lions usually hunt together, preying mostly on medium-sized and large ungulates.
+          The lion is an apex and keystone predator.
+
+          The lion inhabits grasslands, savannahs, and shrublands. It is usually more diurnal than other wild cats, but
+          when persecuted, it adapts to being active at night and at twilight. During the Neolithic period, the lion
+          ranged throughout Africa and Eurasia, from Southeast Europe to India, but it has been reduced to fragmented
+          populations in sub-Saharan Africa and one population in western India. It has been listed as Vulnerable on the
+          IUCN Red List since 1996 because populations in African countries have declined by about 43% since the early
+          1990s. Lion populations are untenable outside designated protected areas. Although the cause of the decline is
+          not fully understood, habitat loss and conflicts with humans are the greatest causes for concern.</p>
+
+        <button class="btn btn-success align-items-start" data-bs-toggle="collapse" data-bs-target="#lion-collapse">Read
+          More</button>
+
+        <!-- collapse -->
+        <div class="collapse" id="lion-collapse">
+          <h3>Etymology</h3>
+          <p>The English word lion is derived via Anglo-Norman liun from Latin leōnem (nominative: leō), which in turn
+            was
+            a borrowing from Ancient Greek λέων léōn. The Hebrew word לָבִיא lavi may also be related.[4] The generic
+            name
+            Panthera is traceable to the classical Latin word 'panthēra' and the ancient Greek word πάνθηρ 'panther'.[5]
+          </p>
+          <hr>
+          <h3> Taxonomy</h3>
+          <p>
+            Felis leo was the scientific name used by Carl Linnaeus in 1758, who described the lion in his work Systema
+            Naturae.[3] The genus name Panthera was coined by Lorenz Oken in 1816.[7] Between the mid-18th and mid-20th
+            centuries, 26 lion specimens were described and proposed as subspecies, of which 11 were recognised as valid
+            in 2005.[1] They were distinguished mostly by the size and colour of their manes and skins.[8]
+
+          </p>
+          <hr>
+          <h3> Subspecies</h3>
+          <p>
+            In the 19th and 20th centuries, several lion type specimens were described and proposed as subspecies, with
+            about a dozen recognised as valid taxa until 2017.[1] Between 2008 and 2016, IUCN Red List assessors used
+            only two subspecific names: P. l. leo for African lion populations, and P. l. persica for the Asiatic lion
+            population.[2][9][10] In 2017, the Cat Classification Task Force of the Cat Specialist Group revised lion
+            taxonomy, and recognises two subspecies based on results of several phylogeographic studies on lion
+            evolution, namely:[11]
+
+            P. l. leo (Linnaeus, 1758) − the nominate lion subspecies includes the Asiatic lion, the regionally extinct
+            Barbary lion, and lion populations in West and northern parts of Central Africa.[11] Synonyms include P. l.
+            persica (Meyer, 1826), P. l. senegalensis (Meyer, 1826), P. l. kamptzi (Matschie, 1900), and P. l. azandica
+            (Allen, 1924).[1] It has been called 'northern lion' and 'northern subspecies'.[12][13]
+            P. l. melanochaita (Smith, 1842) − includes the extinct Cape lion and lion populations in East and Southern
+            African regions.[11] Synonyms include P. l. somaliensis (Noack 1891), P. l. massaica (Neumann, 1900), P. l.
+            sabakiensis (Lönnberg, 1910), P. l. bleyenberghi (Lönnberg, 1914), P. l. roosevelti (Heller, 1914), P. l.
+            nyanzae (Heller, 1914), P. l. hollisteri (Allen, 1924), P. l. krugeri (Roberts, 1929), P. l. vernayi
+            (Roberts, 1948), and P. l. webbiensis (Zukowsky, 1964).[1][8] It has been referred to as 'southern
+            subspecies' and 'southern lion'.[13]
+            However, there seems to be some degree of overlap between both groups in northern Central Africa. DNA
+            analysis from a more recent study indicates that Central African lions are derived from both northern and
+            southern lions, as they cluster with P. leo leo in mtDNA-based phylogenies whereas their genomic DNA
+            indicates a closer relationship with P. leo melanochaita.[14]
+
+            Lion samples from some parts of the Ethiopian Highlands cluster genetically with those from Cameroon and
+            Chad, while lions from other areas of Ethiopia cluster with samples from East Africa. Researchers,
+            therefore, assume Ethiopia is a contact zone between the two subspecies.[15] Genome-wide data of a wild-born
+            historical lion sample from Sudan showed that it clustered with P. l. leo in mtDNA-based phylogenies, but
+            with a high affinity to P. l. melanochaita; this suggested that the taxonomic position of lions in Central
+            Africa may require revision.[16]
+
+            Fossil records
+            Other lion subspecies or sister species to the modern lion existed in prehistoric times:[17]
+
+            P. fossilis was larger than the modern lion and lived in the Middle Pleistocene. Bone fragments were
+            excavated in caves in the United Kingdom, Germany, Italy and Czech Republic.[18][19]
+            P. spelaea, or the cave lion, lived in Eurasia and Beringia during the Late Pleistocene. It became extinct
+            due to climate warming or human expansion latest by 11,900 years ago.[20] Bone fragments excavated in
+            European, North Asian, Canadian and Alaskan caves indicate that it ranged from Europe across Siberia into
+            western Alaska.[21] It likely derived from P. fossilis,[22] and was genetically isolated and highly distinct
+            from the modern lion in Africa and Eurasia.[23][22] It is depicted in Paleolithic cave paintings, ivory
+            carvings, and clay busts.[24]
+            P. atrox, or the American lion, ranged in the Americas from Canada to possibly Patagonia during the Late
+            Pleistocene.[25] It diverged from the cave lion around 165,000 years ago.[26]
+            Additionally, in 1938 paleontologist Paulus Deraniyagala named a subspecies P. l. sinhaleyus based on two
+            fossils, a lower left carnassial and a damaged right lower canine tooth, both excavated from deposits in
+            Kuruwita, Sri Lanka. He called it "narrower and more elongate" but otherwise failed to distinguish P. l.
+            sinhaleyus from other lion subspecies. A subsequent study of felid fossils from the Kuruwita deposits in
+            2005 described the fossils in further detail but only assigned to them to P. leo.[27][28]
+          </p>
+          <button class="btn btn-danger align-items-start" data-bs-toggle="collapse"
+            data-bs-target="#lion-collapse">Read
+            less</button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Problem 22: Restaurant Menu (Collapse) -->
+  <!-- Scenario:
+  A restaurant wants to display its menu categories (Starters, Main Course, Desserts).
+  Task:
+  Create collapsible sections for each category. Only titles visible by default.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 23: Student Dashboard (Collapse) -->
+  <!-- Scenario:
+  A student portal shows Assignments, Exams, and Results.
+  Task:
+  Create collapsible panels for each section with content hidden initially.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 24: Course Outline (Collapse) -->
+  <!-- Scenario:
+  An online course lists subjects and topics.
+  Task:
+  Use collapse to hide/show topics under each subject.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 25: Order History (Collapse) -->
+  <!-- Scenario:
+  An e-commerce site displays past orders.
+  Task:
+  Each order ID should expand to show items purchased and delivery status.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 📌 ACCORDION -->
+  <!-- ========================================================= -->
+
+  <!-- Problem 26: FAQ Section (Accordion)
+  Scenario:
+  Netflix-style FAQ where only one answer is visible at a time.
+  Task:
+  Create an accordion with at least 3 questions and answers.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 27: Travel Website (Accordion) -->
+  <!-- Scenario:
+  A travel booking site wants categories Flights, Hotels, Packages.
+  Task:
+  Build an accordion with these 3 items, only one open at a time.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+    <h2>Travel Website Accordion</h2>
+    <div class="accordion" id="travel-accordion">
+      <!-- flight -->
+      <div class="accordion-item">
+        <div class="accordion-content">
+          <div class="accordion-header">
+            <button class="btn btn-success w-100 text-center" data-bs-toggle="collapse" data-bs-target="#flight">✈
+              Flights</button>
+          </div>
+          <div class="accordion-collpase collapse" id="flight" data-bs-parent="#travel-accordion">
+            <div class="accordion-body">
+              <p>We offer affordable domestic and international flights with flexible cancellation policies.
+                Popular routes include New York to London, Delhi to Dubai, and Sydney to Singapore.
+                Enjoy exclusive discounts when booking round trips.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Hotels -->
+      <div class="accordion-item">
+        <div class="accordion-content">
+          <div class="accordion-header">
+            <button class="btn btn-success w-100 text-center" data-bs-toggle="collapse" data-bs-target="#hotels">🏨
+              Hotels</button>
+          </div>
+          <div class="accordion-collapse collapse" id="hotels" data-bs-parent="#travel-accordion">
+            <div class="accordion-body">
+              <p>Choose from over 10,000 hotels worldwide ranging from budget stays to luxury resorts.
+                Each hotel listing includes reviews, star ratings, and free cancellation options.
+                Special offers available for family and group bookings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Packages -->
+      <div class="accordion-item">
+        <div class="accordion-content">
+          <div class="accordion-header">
+            <button class="btn btn-success w-100 text-center" data-bs-toggle="collapse" data-bs-target="#packages">🧳
+              Packages</button>
+          </div>
+          <div class="accordion-collapse collapse" id="packages" data-bs-parent="#travel-accordion">
+            <div class="accordion-body">
+              <p>
+                Explore our curated travel packages including flights, hotels, and sightseeing tours.
+                Top packages: Bali 5N/6D Honeymoon, Europe 10N/11D Explorer, Goa Weekend Getaway.
+                Book now to enjoy early bird discounts and seasonal offers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Problem 28: Student Profile (Accordion) -->
+  <!-- Scenario:
+  A portal displays student details under Personal Info, Academics, Projects.
+  Task:
+  Build an accordion with 3 sections where only one expands at a time.
+  -->
+  <div class="mb-4">
+    <h2>Student Profile</h2>
+    <!-- Code here -->
+    <div class="accordion" id="student-accordion">
+      <div class="accordion-item">
+        <div class="accordion-content">
+          <div class="accordion-header">
+            <button class="btn btn-primary w-100 text-center" data-bs-toggle="collapse"
+              data-bs-target="#personal-info">Personal Information</button>
+          </div>
+          <div class="accordion-collapse collapse" id="personal-info" data-bs-parent="#student-accordion">
+            <div class="accordion-body">
+              <table class="w-100">
+                <thead>
+                  <tr>
+                    <th colspan="2" class="text-center">Student Personal Information</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Name</th>
+                    <td>Sainath Wankhede</td>
+                  </tr>
+                  <tr>
+                    <th>Gender</th>
+                    <td>Male</td>
+                  </tr>
+                  <tr>
+                    <th>Age</th>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <th>ID Card Number</th>
+                    <td>1234 5678 1234</td>
+                  </tr>
+                  <tr>
+                    <th>Contact Number</th>
+                    <td>8766775336</td>
+                  </tr>
+                  <tr>
+                    <th>Home Address</th>
+                    <td>Naik Nagar , Nanded.</td>
+                  </tr>
+                  <tr>
+                    <th>Nationality</th>
+                    <td>Indian</td>
+                  </tr>
+                </tbody>
+
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-content">
+          <div class="accordion-header">
+            <button class="btn btn-primary w-100 text-center" data-bs-toggle="collapse"
+              data-bs-target="#academics">Academics</button>
+          </div>
+          <div class="accordion-collapse collapse" id="academics" data-bs-parent="#student-accordion">
+            <div class="accordion-body">
+              <table class="w-100">
+                <thead>
+                  <tr>
+                    <th>Course Name</th>
+                    <th>School/College Name</th>
+                    <th>Percentage/CGPA</th>
+                    <th>Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SSC</td>
+                    <td>Mahatma Phule High School</td>
+                    <td>91.20%</td>
+                    <td>Distinction</td>
+                  </tr>
+                  <tr>
+                    <td>HSC</td>
+                    <td>Yeshwant Mahavidyalaya</td>
+                    <td>93.83%</td>
+                    <td>Distinction</td>
+                  </tr>
+                  <tr>
+                    <td>SSC</td>
+                    <td>Sinhgad Institute Of Technology</td>
+                    <td>8.87 cgpa</td>
+                    <td>Distinction</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-content">
+          <div class="accordion-header">
+            <button class="btn btn-primary w-100 text-center" data-bs-toggle="collapse"
+              data-bs-target="#projects">Projects</button>
+          </div>
+          <div class="accordion-collapse collapse" id="projects">
+            <div class="accordion-body">
+              <h2 class="text-center">Projects</h2>
+              <hr>
+              <!-- project 1 -->
+              <div class="project-container px-3">
+                <p class="p-0 m-0 fw-medium fs-5">Project Name :To-Do List App Using HTML | CSS | JS</p>
+                <p>Jan 2024 - Present</p>
+                <div class="company-info d-flex">
+                  <img src="./company-img.png" alt="Project 1" width="30" height="30">
+                  <p class="justify-content-center align-content-center ms-2 mt-3s">Associated with InternPe</p>
+                </div>
+                <p>
+                  This To-Do List App will Saved the task list. This task still present after the reloading the
+                  website
+                  or if close the website and again open the website the task will saved.
+                </p>
+                <div class="skills">
+                  <span class="fw-bolder">Skills: </span>
+                  <span>Javascript | Cascading Style Sheets (CSS) | HTML5</span>
+                </div>
+                <div class="project-link d-flex mt-3">
+                  <a href="https://to-do-register.netlify.app/" class="border  border-2 rounded-2 position-relative">
+                    <span class="bi bi-arrow-up-right-square-fill position-absolute end-0 top-50 me-2"></span>
+                    <img class="rounded-2 me-4" src="./project-1.png" alt="project 1" height="50px" width="70px">
+                  </a>
+                  <a href="https://to-do-register.netlify.app/"
+                    class="align-content-center ms-2 text-dark text-decoration-none ">
+                    <h4 class="fs-5 ">To-Do List App</h4>
+                  </a>
+                </div>
+              </div>
+              <hr>
+              <!-- project 2 -->
+              <div class="project-container px-3">
+                <p class="p-0 m-0 fw-medium fs-5">Project Name : E-Commerce Website With the help of HTML | CSS | JS</p>
+                <p>Dec 2023 - Present</p>
+                <div class="company-info d-flex">
+                  <img src="./company-img.png" alt="Project 1" width="30" height="30">
+                  <p class="justify-content-center align-content-center ms-2 mt-3s">Associated with InternPe</p>
+                </div>
+                <p>
+                  This Project Is Build using the Web Development Frontend Technologies like HTML , CSS, JS. This Second
+                  Project Which will be completed at InternPe internship. This E-Commerce Website Responsive and user
+                  friendly Designed.
+                </p>
+                <div class="skills">
+                  <span class="fw-bolder">Skills: </span>
+                  <span>Javascript | Cascading Style Sheets (CSS) | HTML5</span>
+                </div>
+                <div class="project-link d-flex mt-3">
+                  <a href="https://ecloth.netlify.app/" class="border  border-2 rounded-2 position-relative">
+                    <span class="bi bi-arrow-up-right-square-fill position-absolute end-0 top-50 me-2"></span>
+                    <img class="rounded-2 me-4" src="./project-2.png" alt="project 1" height="50px" width="70px">
+                  </a>
+                  <a href="https://ecloth.netlify.app/"
+                    class="align-content-center ms-2 text-dark text-decoration-none">
+                    <h4 class="fs-5">E-commerce Website</h4>
+                  </a>
+                </div>
+              </div>
+              <hr>
+              <!-- project 3 -->
+              <div class="project-container px-3">
+                <p class="p-0 m-0 fw-medium fs-5">Project Name : Calculator Web App Using HTML | CSS | JS</pp>
+                <p>Dec 2023 - Present</p>
+                <div class="company-info d-flex">
+                  <img src="./company-img.png" alt="Project 1" width="30" height="30">
+                  <p class="justify-content-center align-content-center ms-2 mt-3s">Associated with InternPe</p>
+                </div>
+                <p>
+                  In This Project I Implement My HTML , CSS & JS Skills To Build Basic Calculator. The Calculator
+                  perform operations like Addition, Subtraction, Multiplication, Division and etc operations. This is
+                  first Project of My Web Development Journey and Really I enjoy the project based learning from this
+                  project.
+                </p>
+                <div class="skills">
+                  <span class="fw-bolder">Skills: </span>
+                  <span>Javascript | Cascading Style Sheets (CSS) | HTML5</span>
+                </div>
+                <div class="project-link d-flex mt-3">
+                  <a href="https://arithcalci.netlify.app/" class="border  border-2 rounded-2 position-relative">
+                    <span class="bi bi-arrow-up-right-square-fill position-absolute end-0 top-50 me-2"></span>
+                    <img class="rounded-2 me-4" src="./project-3.png" alt="project 1" height="50px" width="70px">
+                  </a>
+                  <a href="https://arithcalci.netlify.app/"
+                    class="align-content-center ms-2 text-dark text-decoration-none">
+                    <h4 class="fs-5">Calculator Web App Using Javascript</h4>
+                  </a>
+                </div>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- Problem 29: Job Portal (Accordion) -->
+  <!-- Scenario:
+  Job listings with title, description, and Apply button.
+  Task:
+  Use accordion so only one job expands at a time.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 30: Real Estate Listing (Accordion) -->
+  <!-- Scenario:
+  A property page shows Overview, Pricing, Location.
+  Task:
+  Create an accordion for these property details.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 📌 DROPDOWN -->
+  <!-- ========================================================= -->
+
+  <!-- Problem 31: Profile Menu (Dropdown)
+  Scenario:
+  A website needs a profile dropdown with options.
+  Task:
+  Create a dropdown with: View Profile, Settings, Logout.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 32: Language Selector (Dropdown) -->
+  <!-- Scenario:
+  A site allows language selection.
+  Task:
+  Build a dropdown with English, Hindi, French. Add flag icons if possible.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 33: Payment Method (Dropdown) -->
+  <!-- Scenario:
+  A checkout page allows payment selection.
+  Task:
+  Create a dropdown with UPI, Credit Card, Net Banking options.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 34: Product Categories (Dropdown) -->
+  <!-- Scenario:
+  An e-commerce site has categories.
+  Task:
+  Create a dropdown with Electronics, Clothing, Books.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 35: Shopping Cart Preview (Dropdown) -->
+  <!-- Scenario:
+  Clicking the cart icon shows recently added items.
+  Task:
+  Create a dropdown with 3 items and a Checkout button.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 📌 NAV & TABS -->
+  <!-- ========================================================= -->
+
+  <!-- Problem 36: Authentication Tabs (Nav & Tabs)
+  Scenario:
+  A student portal has Login, Register, and Forgot Password forms.
+  Task:
+  Create a nav-tab interface to switch between these forms.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 37: Music App (Nav & Tabs) -->
+  <!-- Scenario:
+  A music app needs tabs for Songs, Albums, Playlists.
+  Task:
+  Use nav-tabs to switch between sections.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 38: Course Details (Nav & Tabs) -->
+  <!-- Scenario:
+  An online course displays Overview, Syllabus, and Reviews.
+  Task:
+  Create tab navigation for these sections.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 39: News Categories (Nav & Tabs) -->
+  <!-- Scenario:
+  A news site shows Sports, Politics, Entertainment.
+  Task:
+  Create nav-tabs to display news by category.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 40: Student Portal (Nav & Tabs) -->
+  <!-- Scenario:
+  A student portal has Dashboard, Courses, Grades.
+  Task:
+  Build tabs to switch between these pages dynamically.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 📌 NAVBAR -->
+  <!-- ========================================================= -->
+
+  <!-- Problem 41: Basic Navbar (Navbar)
+  Scenario:
+  A company website with Home, About, Contact.
+  Task:
+  Create a responsive navbar with logo left and links right.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 42: Services Dropdown (Navbar) -->
+  <!-- Scenario:
+  A software company offers multiple services.
+  Task:
+  Add a dropdown under Services with Web Development, Mobile Apps, Cloud Solutions.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 43: E-Commerce Navbar (Navbar) -->
+  <!-- Scenario:
+  An online store requires search functionality.
+  Task:
+  Add a search bar in the navbar with a cart icon on the right.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 44: Sticky Navbar (Navbar) -->
+  <!-- Scenario:
+  A blog site wants a navigation bar that stays on top when scrolling.
+  Task:
+  Create a sticky navbar with blog categories.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+  <!-- Problem 45: Social Media Navbar (Navbar) -->
+  <!-- Scenario:
+  A startup wants a brand-focused navbar.
+  Task:
+  Build a dark navbar with brand name left and social icons (FB, IG, Twitter) right.
+  -->
+  <div class="mb-4">
+    <!-- Code here -->
+  </div>
+
+
+
+
+</body>
+
+</html>

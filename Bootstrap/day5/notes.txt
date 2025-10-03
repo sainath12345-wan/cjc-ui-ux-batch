@@ -1,4 +1,4 @@
-Bootstrap-workshop : session-4
+Bootstrap-workshop : session-5
 
 1.alerts
 2.modal
@@ -79,7 +79,7 @@ Bootstrap-workshop : session-4
 
     - if we use class as .show in accordion-collapse it will display to its body.
 
-    - How to achieve the property which when clikc one item then other hides its body and body of clickable item only shown.
+    - How to achieve the property which when click one item then other hides its body and body of clickable item only shown.
 
         - 1 . give accordian to id like "faq"
         - 2. each accordion-collapse uses attribute like data-bs-parent with its value is "accordion-id(faq)". 
@@ -240,7 +240,7 @@ Bootstrap-workshop : session-4
                 <select>
                     <!-- Inside the select inside the option icon is not working properly. -->
                     <option> <span class="bi bi-globe"></span> Language</option>
-                    <option>English</option>
+                    <option>English</option>  
                     <!-- check box is also not use directly inside the drop down if we want to use then we have use bootstrap drop down -->
                     <option><input type="checkbox">Hindi</option>
                 </select>
