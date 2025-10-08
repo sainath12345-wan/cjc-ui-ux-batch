@@ -24,6 +24,8 @@
 
 <body class="p-4">
 
+
+
   <h1 class="text-center mb-4">Bootstrap Components Assignment (Collapse, Accordion, Dropdown, Nav & Tabs, Navbar)</h1>
 
   <!-- ========================================================= -->
@@ -557,7 +559,15 @@
   Create a nav-tab interface to switch between these forms.
   -->
   <div class="mb-4">
+    <h2 class="h2 text-center">Authentication Tabs</h2>
     <!-- Code here -->
+    <div class="nav nav-pills nav-tabs ">
+      <li class="nav-item "><a class="nav-link" href="">Login</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+      <li class="nav-item"><a class="nav-link" href="">Forgot Password</a></li>
+    </div>
+
+
   </div>
 
   <!-- Problem 37: Music App (Nav & Tabs) -->
@@ -653,6 +663,68 @@
   <div class="mb-4">
     <!-- Code here -->
   </div>
+
+
+  <hr>
+
+
+  <div>
+    <h2 class="h2 text-center bg-dark text-white">Calculate Table</h2>
+    <input id="table" type="number" placeholder="Enter Number">
+    <button class="btn btn-dark text-white text-center w-100" onclick="displayTable()">
+      Display Table
+    </button>
+    <div id="table-data">
+
+    </div>
+  </div>
+
+  <div>
+    <h2 class="h2 text-center bg-dark text-white">Check Number Is Prime ?</h2>
+    <input type="number" id="primeNumber" placeholder="Enter Number">
+    <button class="btn btn-dark text-white text-center w-100" onclick="isPrimeNumber()">Is Prime</button>
+  </div>
+
+  <script>
+
+    function displayTable() {
+      let number = document.getElementById('table').value;
+      console.log(number)
+
+      for (let i = 1; i <= 10; i++) {
+        let tableRef = document.getElementById('table-data');
+        console.log(tableRef);
+        let tableRow = document.createElement('p')
+        tableRow.innerHTML = `<p> ${number} X ${i} = ${number * i} </p>`
+        tableRef.appendChild(tableRow)
+        // document.writeln(`${number} X ${i} = ${number * i} <br>`)
+      }
+    }
+
+    function isPrimeNumber() {
+      let number = document.getElementById('primeNumber').value;
+
+      if (number == 1) {
+        alert(`${number} is not  prime number.`)
+      }
+      let count = 0;
+      for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+          count++;
+        }
+      }
+
+      if (count == 0) {
+        alert(`${number} is a prime number.`)
+      } else {
+        alert(`${number} is not a  prime number.`)
+      }
+    }
+  </script>
+
+
+
+
 
 
 

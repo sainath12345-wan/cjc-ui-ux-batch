@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collapse</title>
+  <!-- Bootstrap CDN Links -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body class="container-fluid">
+  <!-- Collapse -->
+  <!-- <button class="btn btn-dark text-white w-100 text-center mt-3" data-bs-toggle="collapse" data-bs-target="#q1">What is
+    Netflix?</button>
+
+  <div class="collapse " id="q1">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem pariatur est architecto. Officia labore,
+      vitae, id voluptate harum sint provident quam rerum est corrupti distinctio. Consectetur numquam pariatur eaque
+      quasi.</p>
+  </div>
+
+  <button class="btn btn-dark text-white w-100 text-center mt-3" data-bs-toggle="collapse" data-bs-target="#q2">How Much
+    Does
+    Netflix Cost ?</button>
+
+  <div class="collapse show" id="q2">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, amet facilis. Velit nesciunt excepturi ut
+      voluptates esse itaque unde omnis nobis dignissimos? Fugit aut tempora eveniet aliquid saepe. Illo, voluptate.
+    </p>
+  </div> -->
+
+  <!-- accordion -->
+
+  <div class="accordion" id="faq">
+    <!-- first item -->
+    <div class="accordion-item">
+      <div class="accordion-content">
+        <div class="accordion-header">
+          <button class="btn btn-primary w-100 text-center" data-bs-toggle="collapse" data-bs-target="#q1">What is
+            Netflix?</button>
+        </div>
+        <div class="accordion-collpase collapse" id="q1" data-bs-parent="#faq">
+          <div class="accordion-body bg-success">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam unde, similique, perferendis, voluptates
+            commodi amet dolorum ab impedit accusantium magni nam eum. Architecto modi consequatur, adipisci maiores
+            odit nulla perspiciatis?
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- second item -->
+    <div class="accordion-item">
+      <div class="accordion-content">
+        <div class="accordion-header">
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q2">How Much
+            Does Netflix cost
+            ?</button>
+        </div>
+        <div class="accordion-collapse collapse" id="q2" data-bs-parent="#faq">
+          <div class="accordion-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptate dolorum tempora in, quasi omnis
+            ratione obcaecati libero voluptas quibusdam fugiat pariatur harum hic incidunt soluta vel consequatur nam
+            aperiam id. Quisquam eligendi quo maxime consequuntur veritatis quaerat ratione eum. Vitae exercitationem
+            iste ratione impedit, sed nulla doloremque aperiam dolore officiis error tempora hic temporibus excepturi
+            sint deserunt voluptatum nesciunt culpa, repudiandae totam? Eaque unde odit eveniet sequi, deserunt ab odio?
+            Saepe delectus aperiam iusto blanditiis nihil animi! Nulla quidem unde, praesentium est, architecto facilis,
+            reiciendis nihil ratione debitis delectus voluptates fugiat ipsum laboriosam animi quaerat accusantium
+            ducimus odit cumque.
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+</body>
+
+</html>
