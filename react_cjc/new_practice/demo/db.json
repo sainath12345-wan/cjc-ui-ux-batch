@@ -1,0 +1,60 @@
+{
+  "course": [
+    {
+      "id": "C01",
+      "courseName": "Java Full Stack",
+      "courseType": "Regular",
+      "courseDuration": "5 Months",
+      "courseFees": "80000"
+    },
+    {
+      "id": "C02",
+      "courseName": "Python Full Stack",
+      "courseType": "Regular",
+      "courseDuration": "5 Months",
+      "courseFees": "80000"
+    },
+    {
+      "id": "C03",
+      "courseName": "MERN Stack",
+      "courseType": "Regular",
+      "courseDuration": "5 Months",
+      "courseFees": "80000"
+    },
+    {
+      "id": "b79e",
+      "courseName": "Angular Js",
+      "courseType": "Full Day",
+      "courseDuration": "3 months",
+      "courseFees": "90000"
+    },
+    {
+      "id": "d894",
+      "courseName": "React Full Stack",
+      "courseType": "Hybrid",
+      "courseDuration": "6 months",
+      "courseFees": "30000"
+    },
+    {
+      "id": "feea",
+      "courseName": "Cloud Computing",
+      "courseType": "Online",
+      "courseDuration": "12 month",
+      "courseFees": "40000"
+    },
+    {
+      "id": "491d",
+      "courseName": "data analytics",
+      "courseType": "full day",
+      "courseDuration": "8month",
+      "courseFees": "900000"
+    },
+    {
+      "id": "28ab",
+      "courseName": "kamal",
+      "courseType": "kdkdl",
+      "courseDuration": "dfkjlajl",
+      "courseFees": "ldfkjk"
+    }
+  ]
+}

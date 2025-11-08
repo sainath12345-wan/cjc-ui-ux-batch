@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- React CDN Links -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel js Compiler CDN links -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- custom style -->
+  <style>
+    .header {
+      display: flex;
+      background-color: lightblue;
+      justify-content: space-around;
+
+    }
+
+    .left-part {
+      display: flex;
+      background-color: lightblue;
+
+    }
+
+    .nav {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      /* gap: px; */
+
+
+    }
+
+    .nav a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+
+  </div>
+
+  <script type="text/babel">
+
+    // const Header = <header>This is header component.</header>
+    // const main = <main>This is Main Componenet.</main>
+    // const footer = <footer>This is Footer Component.</footer>
+
+    const Header = () => {
+      return <>
+        <h1>This is Header Component.</h1>
+        <div className="container header">
+          <div className="left-part">
+            <h1>Sainath</h1>
+
+          </div>
+          <div className="nav">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">More</a>
+          </div>
+
+        </div>
+      </>
+    }
+
+
+    const Main = () => {
+      return <>
+        <h1>This is Main Component.</h1>
+      </>
+    }
+
+    const Footer = () => {
+      return <>
+        <h1>This is Footer Component.</h1>
+      </>
+    }
+
+    const App = () => {
+      return <>
+        <Header />
+        <Main />
+        <Footer />
+      </>
+    }
+
+    let root = ReactDOM.createRoot(document.getElementById('root'));
+
+    root.render(<App />)
+  </script>
+
+</body>
+
+
+
+</html>

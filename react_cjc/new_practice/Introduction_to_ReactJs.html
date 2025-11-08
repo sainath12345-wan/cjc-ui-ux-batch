@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Day 1 : Create React Element</title>
+
+  <!-- React and ReactDOM CDN links -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Bable.js compiler CDN links -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+
+<body>
+  <div id="root">
+
+  </div>
+
+  <!-- script without jsx -->
+  <script>
+
+    // When We use below the we got following warning in console : 
+
+    // hook.js:608  Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+    // overrideMethod @ hook.js:608
+    // Introduction_to_ReactJs.html:55 Live reload enabled.
+
+    // let h1Ref = React.createElement('h1', { id: 'heading' }, "Welcome to CJC");
+    // ReactDOM.render(h1Ref, document.getElementById('root'))
+
+
+    // Fix Above Warning Issue By using createRoot() method of ReactDOM and by using that root we can call the render method instead of ReactDOM render method. as follow as
+
+    // let rootRef = ReactDOM.createRoot(document.getElementById('root'));
+
+    // let h1Ref = React.createElement('h1', { id: 'heading' }, 'hello world.')
+    // rootRef.render(h1Ref)
+  </script>
+
+
+  <!-- script with jsx -->
+  <script type="text/babel">
+
+    // same here also show the warning :
+    // var btnRef = <button>Welcome To React Js</button>
+    // ReactDOM.render(btnRef, document.getElementById('root'))
+
+    // solve warning by using createRoot() method ReactDOM API.
+
+    // var btnRef = <button>Welcome To React Js</button>
+    // let rootRef = ReactDOM.createRoot(document.getElementById('root'))
+    // rootRef.render(btnRef)
+
+
+    // Extra Example
+
+    // const App = () => <h1> hello </h1>
+
+    // const App = () => {
+    //   <h1>hello</h1>
+    // }
+
+
+    // const App = () => {
+    //   return <h1>hello</h1>
+    // }
+
+    // const App = () => {
+    //   return
+    //   <h1>hello</h1>
+    // }
+    // console.log(App())
+
+    // const App = () => {
+    //   return <h1>hello</h1>
+    //   <button>welcome to react js</button>
+    // }
+
+
+
+
+    // const App = () => {
+    //   return <div>
+    //     <h1>hello world</h1>
+    //     <button>welcome to react js</button>
+    //   </div>
+    // }
+
+    // const App = () => {
+    //   return <>
+    //     <h1>hello world</h1>
+    //     <button>welcome to react js</button>
+    //   </>
+    // }
+
+    // const root = ReactDOM.createRoot(document.getElementById('root'));
+
+    // root.render(<App />)
+
+
+    // flow of react project
+
+    const Header = () => <h1>Header Component. </h1>
+    const Card = () => <h1> Card Component </h1>
+    const Hero = () => <h1>Hero Component</h1>
+    const Footer = () => <h1>Footer Component</h1>
+
+    const App = () => {
+      return <>
+        <Header />
+        <Card />
+        <Hero />
+        <Footer />
+      </>
+    }
+
+    let rootRef = ReactDOM.createRoot(document.getElementById('root'))
+
+    rootRef.render(<App />)
+
+  </script>
+</body>
+
+</html>

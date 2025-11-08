@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootstrap Components Assignment (Part 2)</title>
   <!-- Bootstrap 5 CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
 
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
   <style>
     table,
     thead,
@@ -160,8 +162,180 @@
   Task:
   Create collapsible panels for each section with content hidden initially.
   -->
+  <hr>
   <div class="mb-4">
+    <button class="btn btn-danger text-center text-dark w-100" data-bs-toggle="collapse"
+      data-bs-target="#student-dashboard">Student Dashboard</button>
     <!-- Code here -->
+    <div class="collapse" id="student-dashboard">
+      <div class="accordion" id="student-dashboard-items">
+        <div class="accordion-item">
+          <div class="accordion-content">
+            <div class="accordion-header justify-content-center">
+              <button class="btn btn-primary w-100 text-center text-white" data-bs-toggle="collapse"
+                data-bs-target="#assignments">Assignments</button>
+            </div>
+            <div class="accordion-collapse collapse" id="assignments" data-bs-parent="#student-dashboard-items">
+              <div class="accordion-body">
+                <div class="assignment-details">
+                  <table class="text-center">
+                    <thead>
+                      <tr>
+                        <th>Assignment Topic</th>
+                        <th>Assignment</th>
+                        <th>Assignment Marks</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Basic Java (Operators , Conditionals, Loops)</td>
+                        <td><button class="btn btn-warning text-dark"><a class="text-decoration-none" href="#">View
+                              Assignment</a></button></td>
+                        <td>95/100</td>
+                      </tr>
+                      <tr>
+                        <td>OOP'S</td>
+                        <td><button class="btn btn-warning text-dark"><a class="text-decoration-none" href="#">View
+                              Assignment</a></button></td>
+                        <td>100/100</td>
+                      </tr>
+
+                      <tr>
+                        <td>Core Java</td>
+                        <td><button class="btn btn-warning text-dark"><a class="text-decoration-none" href="#">View
+                              Assignment</a></button></td>
+                        <td>80/100</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-content">
+            <div class="accordion-header">
+              <button class="btn btn-primary text-white text-center w-100" data-bs-toggle="collapse"
+                data-bs-target="#exams">Exams</button>
+            </div>
+            <div class="accordion-collapse collapse" id="exams" data-bs-parent="#student-dashboard-items">
+              <div class="accordion-body">
+                <div class="exams-details">
+                  <table class="text-center w-100">
+                    <thead>
+                      <tr>
+                        <th>Topic Name</th>
+                        <th>Exam Date</th>
+                        <th>Exam Duration/Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Core Java</td>
+                        <td>23/08/2023</td>
+                        <td>9:00 am to 12:00 pm</td>
+                      </tr>
+                      <tr>
+                        <td>Advanced Java</td>
+                        <td>25/08/2023</td>
+                        <td>9:00 am to 12:00 pm</td>
+                      </tr>
+                      <tr>
+                        <td>Frontend Technologies</td>
+                        <td>27/08/2023</td>
+                        <td>9:00 am to 12:00 pm</td>
+                      </tr>
+                      <tr>
+                        <td>Full Stack Technologies</td>
+                        <td>29/08/2023</td>
+                        <td>9:00 am to 12:00 pm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-content">
+            <div class="accordion-header">
+              <button class="btn btn-primary w-100 text-center text-white" data-bs-toggle="collapse"
+                data-bs-target="#results">Results</button>
+            </div>
+            <div class="accordion-collapse collapse" id="results" data-bs-parent="#student-dashboard-items">
+              <div class="accrodion-body">
+                <div class="result-details">
+                  <table class="text-center w-100">
+                    <thead>
+                      <tr>
+                        <th>Stduent Name</th>
+                        <th colspan="2">Student Subject Wise Marks</th>
+                        <th>Grades</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- student1 -->
+                      <tr>
+                        <td rowspan="4">Tushar Mirase</td>
+                        <td>Core Java</td>
+                        <td>80/100</td>
+                        <td rowspan="4">A+</td>
+                      </tr>
+                      <tr>
+                        <!-- <td></td> -->
+                        <td>Advanced Java</td>
+                        <td>90/100</td>
+                        <!-- <td></td> -->
+                      </tr>
+                      <tr>
+                        <!-- <td></td> -->
+                        <td>Frontend Technologies</td>
+                        <td>70/100</td>
+                        <!-- <td></td> -->
+                      </tr>
+                      <tr>
+                        <!-- <td></td> -->
+                        <td>Full Stack Technologies</td>
+                        <td>85/100</td>
+                        <!-- <td></td> -->
+                      </tr>
+                      <!-- student2 -->
+                      <tr>
+                        <td rowspan="4">Shubham Wankhede</td>
+                        <td>Core Java</td>
+                        <td>80/100</td>
+                        <td rowspan="4">A+</td>
+                      </tr>
+                      <tr>
+                        <!-- <td></td> -->
+                        <td>Advanced Java</td>
+                        <td>90/100</td>
+                        <!-- <td></td> -->
+                      </tr>
+                      <tr>
+                        <!-- <td></td> -->
+                        <td>Frontend Technologies</td>
+                        <td>70/100</td>
+                        <!-- <td></td> -->
+                      </tr>
+                      <tr>
+                        <!-- <td></td> -->
+                        <td>Full Stack Technologies</td>
+                        <td>85/100</td>
+                        <!-- <td></td> -->
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
   <!-- Problem 24: Course Outline (Collapse) -->
@@ -171,7 +345,133 @@
   Use collapse to hide/show topics under each subject.
   -->
   <div class="mb-4">
+    <button class=" btn btn-danger w-100 text-center text-dark  rounded rounded-3 border-0 " data-bs-toggle="collapse"
+      data-bs-target="#course-outline">Course Outline</button>
     <!-- Code here -->
+    <div class="collapse" id="course-outline">
+      <div class="accordion" id="course-outline-items">
+        <div class="accordion-item">
+          <div class="accordion-content">
+            <div class="accordion-header">
+              <button class="btn btn-primary w-100 text-center text-white" data-bs-toggle="collapse"
+                data-bs-target="#java-j2ee">JAVA | J2EE</button>
+            </div>
+            <div class="accordion-collapse collapse" id="java-j2ee" data-bs-parent="#course-outline-items">
+              <div class="accordion-body">
+                <div class="main-container border border-1 border-dark rounded rounded-1">
+                  <div class="title">
+                    <h2 class="h2 text-primary fw-bolder p-2">Java | J2EE</h2>
+                  </div>
+                  <hr class="bg-dark">
+                  <div class="sub-title">
+                    <p class="text-primary fs-3 px-2">Full Stack Java (Core Java & Advance Java)</p>
+                  </div>
+                  <!-- <div class="topic">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th colspan="2">JDK 1.8 New Features</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><span class="bi bi-check-circle-fill text-warning"></span> Java 8 Interface default method
+                          </td>
+                          <td><span class="bi bi-check-circle-fill text-warning"></span> Java 8 Interface default method
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div> -->
+
+                  <div class="topic">
+                    <p class="fs-4 fw-medium px-2">JDK 1.8 New Features</p>
+                    <div class="d-flex flex-row w-100 px-2">
+                      <div class="flex flex-column w-50 ">
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Java 8 Interface default method
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Java 8 Functional Interface
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Java 8 Lambda Expression
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Java 8 Stream API
+                        </p>
+
+
+                      </div>
+                      <div class="flex flex-column w-50 ">
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Java 8 Interface static Method
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Java 8 Functional Interface
+                          Examples
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Java 8 for Each () Method
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Java 8 Collection
+                        </p>
+
+
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <hr>
+
+                  <div class="topic">
+                    <p class="fs-4 fw-medium px-2">Important Features of Java</p>
+                    <div class="d-flex flex-row w-100 px-2">
+                      <div class="flex flex-column w-50 ">
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> History of Java
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> JVM Architecture
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Java Keywords
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Java Flow Control
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Class and Objects
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Constructor
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Instance & Static variable
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Has-A Relation (secondary
+                          Reference)
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Method return type (primitive type
+                          and class type)
+                        </p>
+
+
+                      </div>
+                      <div class="flex flex-column w-50 ">
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Important Features of Java
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> JDK 1.8, JRE and JVM
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Simple Hello World Program
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span> Source File
+                        </p>
+                        <p><span class="bi bi-check-circle-fill text-warning"></span>
+                        <ul>
+                          Data Types
+                        </ul>
+                        </p>
+
+
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Problem 25: Order History (Collapse) -->
@@ -481,7 +781,74 @@
   Use accordion so only one job expands at a time.
   -->
   <div class="mb-4">
+    <h2>Job Portal (Accordion)</h2>
     <!-- Code here -->
+    <div class="accordion" id="job-portal">
+      <div class="accordion-item">
+        <div class="accordion-content">
+          <div class="accordion-header">
+            <button class="btn btn-primary text-center w-100 text-white" data-bs-toggle="collapse"
+              data-bs-target="#software-engineer">Software Engineer</button>
+          </div>
+          <div class="accordion-collapse collapse" id="software-engineer" data-bs-parent="#job-portal">
+            <div class="accordion-body">
+              <div class="job-details">
+                <p><strong>Description : </strong>We are seeking a skilled Software Engineer to join our team. You will
+                  be responsible for developing and maintaining software applications. Proficiency in JavaScript,
+                  Python, and familiarity with cloud services are required.</p>
+
+                <p><strong>Location : </strong> San Francisco, CA</p>
+
+                <p><strong>Employment Type : </strong> Full-time</p>
+              </div>
+              <button class="btn btn-danger text-center text-white w-100">Apply Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-content">
+          <div class="accordion-header">
+            <button class="btn btn-primary text-center text-white w-100" data-bs-toggle="collapse"
+              data-bs-target="#ui-ux-designer">UI/UX
+              Designer</button>
+          </div>
+          <div class="accordion-collapse collapse" id="ui-ux-designer" data-bs-parent="#job-portal">
+            <div class="accordion-body">
+              <div class="job-details">
+                <p><strong>Description:</strong> We are looking for a creative UX/UI Designer to craft engaging user
+                  experiences. You will collaborate with product and engineering teams to design and implement new
+                  features. A strong portfolio and experience with modern design tools are a must.</p>
+                <p><strong>Location:</strong> Remote</p>
+                <p><strong>Employment Type:</strong> Full-time</p>
+              </div>
+              <button class="btn btn-danger w-100 text-center text-white">Apply Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-content">
+          <div class="accordion-header">
+            <button class="btn btn-primary text-white text-center w-100" data-bs-toggle="collapse"
+              data-bs-target="#automation-testing">Automation Testing</button>
+          </div>
+          <div class="accordion-collapse collapse" id="automation-testing" data-bs-parent="#job-portal">
+            <div class="accordion-body">
+              <div class="job-details">
+                <p><strong>Description : </strong>We are seeking a skilled Automation Tester to join our team. You will
+                  be responsible for testing and maintaining software applications. Proficiency in Java, Selenium, and
+                  Jenkins with cloud services are required.</p>
+                <p><strong>Location : </strong> Hinjewadi , Pune</p>
+                <p><strong>Employment Type : </strong> Full-time</p>
+              </div>
+              <div class="btn btn-danger w-100 text-center text-white">Apply Now</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Problem 30: Real Estate Listing (Accordion) -->
@@ -506,6 +873,7 @@
   -->
   <div class="mb-4">
     <!-- Code here -->
+
   </div>
 
   <!-- Problem 32: Language Selector (Dropdown) -->
@@ -514,9 +882,9 @@
   Task:
   Build a dropdown with English, Hindi, French. Add flag icons if possible.
   -->
-  <div class="mb-4">
-    <!-- Code here -->
-  </div>
+
+
+
 
   <!-- Problem 33: Payment Method (Dropdown) -->
   <!-- Scenario:
@@ -665,62 +1033,12 @@
   </div>
 
 
-  <hr>
 
 
-  <div>
-    <h2 class="h2 text-center bg-dark text-white">Calculate Table</h2>
-    <input id="table" type="number" placeholder="Enter Number">
-    <button class="btn btn-dark text-white text-center w-100" onclick="displayTable()">
-      Display Table
-    </button>
-    <div id="table-data">
+  <script src="./node_modules/jquery/dist/jquery.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 
-    </div>
-  </div>
 
-  <div>
-    <h2 class="h2 text-center bg-dark text-white">Check Number Is Prime ?</h2>
-    <input type="number" id="primeNumber" placeholder="Enter Number">
-    <button class="btn btn-dark text-white text-center w-100" onclick="isPrimeNumber()">Is Prime</button>
-  </div>
-
-  <script>
-
-    function displayTable() {
-      let number = document.getElementById('table').value;
-      console.log(number)
-
-      for (let i = 1; i <= 10; i++) {
-        let tableRef = document.getElementById('table-data');
-        console.log(tableRef);
-        let tableRow = document.createElement('p')
-        tableRow.innerHTML = `<p> ${number} X ${i} = ${number * i} </p>`
-        tableRef.appendChild(tableRow)
-        // document.writeln(`${number} X ${i} = ${number * i} <br>`)
-      }
-    }
-
-    function isPrimeNumber() {
-      let number = document.getElementById('primeNumber').value;
-
-      if (number == 1) {
-        alert(`${number} is not  prime number.`)
-      }
-      let count = 0;
-      for (let i = 2; i < number; i++) {
-        if (number % i == 0) {
-          count++;
-        }
-      }
-
-      if (count == 0) {
-        alert(`${number} is a prime number.`)
-      } else {
-        alert(`${number} is not a  prime number.`)
-      }
-    }
-  </script>
 
 
 

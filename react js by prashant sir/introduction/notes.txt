@@ -83,7 +83,7 @@
         - Error Checking.
 
 #) Install latest Node
-
+ 
     1) Search Download NodeJS.
 
 #) Installation & setup (vscode)
@@ -96,8 +96,8 @@
         - Prettier (Format on save)
         - Line Wrap 
         - Tab Size from 4 to 2
-
-#) Create a React App 
+ 
+#) Create a React App (using vite)
 
     1. Official tool is CRA (Create React APP)
     2. Vite is a modern tool to create React Project.

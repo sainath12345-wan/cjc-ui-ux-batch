@@ -1,0 +1,34 @@
+{
+  "student": [
+    {
+      "name": "abc",
+      "username": "abc",
+      "password": "abc123",
+      "id": "1237"
+    },
+    {
+      "name": "xyz",
+      "username": "xyz",
+      "password": "xyz345",
+      "id": "31c1"
+    },
+    {
+      "id": "bbbc",
+      "name": "sainath",
+      "username": "sainath",
+      "password": "sainath1431"
+    },
+    {
+      "id": "c6bf",
+      "name": "vijay",
+      "username": "vijayk",
+      "password": "vijay04@"
+    },
+    {
+      "id": "4b5e",
+      "name": "shubham",
+      "username": "shubhp",
+      "password": "shub123"
+    }
+  ]
+}

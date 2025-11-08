@@ -1,0 +1,20 @@
+{
+  "students" : [
+    {
+      "id" : "101",
+      "name" : "sainath wankhede",
+      "age" : "23"
+    },
+    {
+      "id" : "102",
+      "name" : "tushar mirase",
+      "age" : "24"
+    },
+    {
+      "id" : "103",
+      "name" : "shrinivas barse",
+      "age" : "19"
+    }
+
+  ]
+}

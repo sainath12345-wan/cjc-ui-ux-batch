@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake VDOM Without React</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    let count = 0;
+
+    function createElement(tag, props = {}, ...children) {
+      const element = document.createElement(tag);
+
+      for (let key in props) {
+        if (key.startsWith('on')) {
+          element.addEventListener(key.substring(2).toLowerCase(), props[key]);
+        } else {
+          element.setAttribute(key, props[key]);
+        }
+      }
+
+      children.forEach(child => {
+        if (typeof child === 'string') {
+          element.appendChild(document.createTextNode(child));
+        } else {
+          element.appendChild(child);
+        }
+      });
+
+      return element;
+    }
+
+    function Counter() {
+      console.log('Component rendered!');
+      return createElement(
+        'div',
+        {},
+        createElement('h1', {}, `Counter: ${count}`),
+        createElement('button', {
+          onclick: () => {
+            count++;
+            render();
+          }
+        }, 'Increase')
+      );
+    }
+
+    function render() {
+      const root = document.getElementById('root');
+      root.innerHTML = ''; // Clear old UI (simulated diffing)
+      root.appendChild(Counter());
+    }
+
+    render();
+  </script>
+</body>
+</html>
