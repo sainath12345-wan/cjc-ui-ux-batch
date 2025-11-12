@@ -1,0 +1,65 @@
+
+1. Create the `Pen` table with columns: `penId`, `penName`, `penType`, `penPrice`.
+-> create table Pen (penId int,penName varchar(45),penType varchar(45), penPrice int);
+
+2. Add a column `penColor` to the `Pen` table.
+-> Alter table Pen ADD COLUMN penColor varchar(45) to Pen;
+-> Alter table pen add column penMRP int;
+-> Alter table pen drop column penMRP;(deleted column)
+
+3. Modify the `penPrice` column to `DECIMAL(8,2)`.
+-> Alter table pen MODIFY column penPrice DECIMAL(8,2);
+
+4. Set `penId` as the primary key.
+-> Alter table Pen ADD PRIMARY KEY(penId);
+
+5. Add a `NOT NULL` constraint to `penName`.
+-> Alter table pen add CONSTAINT NOT NULL (pname);
+
+6. Drop the column `penColor` from the table.
+-> alter table pen drop penColor;
+
+7. Insert five records into the `Pen` table.
+->insert into Pen values (105,'China Pen','Ink Pen',80.0);
+
+8. Update the `penPrice` of the pen with `penId = 2` to `25.50`.
+-> Update pen SET penPrice=25 where penId=102;
+
+9. Delete the pen whose `penName` is `'Reynolds'`.
+10. Increase the price of all pens by 10%.
+11. Set the `penType` of all pens priced above `30` to `'Premium'`.
+12. Insert a pen record without specifying `penType`.
+13. Update both `penName` and `penPrice` for pen with `penId = 3`.
+14. Delete pens where `penPrice` is `NULL`.
+15. Insert a pen with `penType = 'Gel'` and price `20.00`.
+16. Remove all records from the `Pen` table without deleting the table.
+17. Select all pens with `penType = 'Ballpoint'`.
+18. Retrieve pens priced above `25`.
+19. Select pens whose `penName` starts with `'C'`.
+20. Find pens priced between `15` and `30`.
+21. Select pens with `penType` in (`'Gel'`, `'Fountain'`).
+22. Retrieve pens where `penPrice` is `NULL`.
+23. Select pens whose `penName` contains `'max'`.
+24. Find pens whose `penPrice` is not equal to `20`.
+25. Sort pens by `penPrice` in ascending order.
+26. Sort pens by `penName` in descending order.
+27. Retrieve the top 3 most expensive pens.
+28. Select distinct `penType` values from the table.
+29. Count how many pens are of type `'Gel'`.
+30. Find the average price of all pens.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+1) 
+
+CREATE TABLE EMPLOYEE (
+emp_id int auto_increment primary key,
+emp-name varchar(25),
+department varchar(25),
+hire_date date);
+
+
+
+
+
+
+

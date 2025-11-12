@@ -1,0 +1,32 @@
+*Assignment:
+
+1) Write the program to check 46 is a even number. (Using condition)
+
+2) Write the program to check 23 is a odd number. (Using condition)
+
+3) Write a program to print weekday by using ladder  if-else.
+
+	(When input is 1 print monday, When 2 print tuesday..........likewise)
+
+4) Write a program to print 
+	a. Fail when marks are less than 33%
+	b. Pass when marks are greater than 33% and upto to 60%
+	c.Top when marks are greater than 60% and upto to 74%
+	d. Distinction when marks are equal to or greater than 75%.
+
+
+5) Write the program for eligibility of voting 
+   	(if age is in between zero to 18 print not eligibility for voting.....
+	if age is above 18 print eligibility for voting).
+
+6) Write the program to print criteria of age.
+   	i) age above 0 and upto 18 print child
+	ii) age above 18 and below 40 print young
+	iii) age from 40 to 100 print old
+    	iv) age 0 print not valid age
+	v) age other than this print invalid age problem.
+
+7) Write the program to find greater number of a=600, b=500, c=30. ( Output- a is greater than b & c  )
+       (i) Using nested if-else and Lader if-else
+       (ii) Using && operator and Lader if-else
+
